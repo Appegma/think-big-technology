@@ -8,7 +8,7 @@ const Status1= ({value ,statusDotsG ,status1Main}) => {
     return (
         <div className={status1Main}>
             <div className="status1Text">
-                <h3>About<span className={statusDotsG}>.</span></h3>
+                <h3>{value}<span className={statusDotsG}>.</span></h3>
             </div>
             <div className="status1Line"> </div>
         </div>

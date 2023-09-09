@@ -14,9 +14,9 @@ const App = () => {
       <div className="container1">
         <SideBar>
           <Banner bannarHeadingG1="color1" BtnValue="Contact me" />
-          <div className="section1">
+          <div className="section">
             <Status1
-              value="javascript"
+              value="About"
               statusDotsG="color1"
               status1Main="status1Main"
             />
@@ -42,8 +42,7 @@ const App = () => {
                   my ¢2 with the design systems teams from time to time (once an
                   artist, always an artist, amirite?).
                 </div>
-              
-                    
+
                 <div className="mylink">
                   <span className="color1 font_s">My Link </span>
                   <button className="SideBarBtn">
@@ -103,7 +102,39 @@ const App = () => {
               </div>
             </div>
           </div>
-          {/* <Card /> */}
+
+          <div className="section1">
+            <Status1
+              value="Projects"
+              statusDotsG="color1"
+              status1Main="left status1Main"
+            />
+            <div className="projectContainer">
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+            </div>
+          </div>
+
+          <div className="section">
+            <div className="sectionA">
+              <div className="footerHeading">
+                <h1>
+                  Contact<span className="color1">.</span>
+                </h1>
+              </div>
+              <div className="footerHeading">
+                <p>
+                  Shoot me an email if you want to connect! You can also find me
+                  on Linkedin or Twitter if that's more your speed.
+                </p>
+              </div>
+              <div className="footerHeading">
+                <h3><FontAwesomeIcon icon={faCoffee} /><span className="footerEmail">bob.ross@notreal.com</span></h3>
+              </div>
+            </div>
+          </div>
         </SideBar>
       </div>
     </>

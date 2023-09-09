@@ -30,7 +30,7 @@ body {
   max-width: 1150px;
   height: auto;
   margin: 100px auto;
-  padding: 96px;
+  padding: 96px 75px;
   z-index: 10;
   position: relative;
 }
@@ -143,12 +143,9 @@ body {
 }
 
 .status1Main {
-  width: 100%;
-  max-width: 950px;
   height: auto;
   margin: 0px auto 24px auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
@@ -173,7 +170,7 @@ body {
 }
 
 .status1Line {
-  width: 75%;
+  width: 65%;
   height: 1px;
   background-color: #ebecf3;
   opacity: 0.3;
@@ -428,12 +425,52 @@ body {
   flex-wrap: wrap;
 }
 
-.mylink{
-    display: flex;
-    gap: 1.2rem;
-    align-items: center;
+.mylink {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
 }
 
-.font_s{
-  font-size:1.2em ;
+.font_s {
+  font-size: 1.2em;
+}
+
+.projectContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sectionA{
+width: 100%;
+max-width: 954px;
+margin: 0 auto;
+
+}
+.footerHeading {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 10px;
+}
+
+.footerHeading > h1 {
+  font-size: 6em;
+  font-weight: 900;
+  margin: 0;
+}
+
+.footerHeading>p{
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+.footerEmail{
+  margin-left: 10px;
+}
+.footerHeading>h3{
+  font-size: 1.5em!important;
+  font-weight: 400;
 }
