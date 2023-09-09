@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faGithub,
+  faLinkedin,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const SideBar = ({ children }) => {
   const [active, setActive] = useState("main");
@@ -27,7 +32,7 @@ const SideBar = ({ children }) => {
           className={`sideBarLinks ${active === "project" && "active"}`}
           onClick={() => handleActive("project")}
         >
-          project
+          Project
         </div>
         <div
           className={`sideBarLinks ${active === "experence" && "active"}`}
@@ -45,14 +50,25 @@ const SideBar = ({ children }) => {
 
       <div className="sideBarTop">
         <div className="NavbarBtn margin-l">
-          <button className="SideBarBtn"><FontAwesomeIcon icon={faGithub} /></button>
-          <button className="SideBarBtn"> <FontAwesomeIcon icon={faLinkedin} /></button>
-          <button className="SideBarBtn"> <FontAwesomeIcon icon={faTwitter} /></button>
-          <button className="SideBarBtn"> <FontAwesomeIcon icon={faFacebook} /></button>
+          <button className="SideBarBtn">
+            <FontAwesomeIcon icon={faGithub} />
+          </button>
+          <button className="SideBarBtn">
+            {" "}
+            <FontAwesomeIcon icon={faLinkedin} />
+          </button>
+          <button className="SideBarBtn">
+            {" "}
+            <FontAwesomeIcon icon={faTwitter} />
+          </button>
+          <button className="SideBarBtn">
+            {" "}
+            <FontAwesomeIcon icon={faFacebook} />
+          </button>
         </div>
-        <div className="NavbarBtn margin-r"><button className="SideBarBtn2">My resume</button></div>
-        
-        
+        <div className="NavbarBtn margin-r">
+          <button className="SideBarBtn2">Think Big Technology.</button>
+        </div>
       </div>
 
       <div className="screen">{children}</div>

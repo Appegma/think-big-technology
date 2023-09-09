@@ -5,15 +5,66 @@ import { Status, Status1 } from "./Components/status";
 import Card from "./Components/Cards";
 import { SideBar } from "./Components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee, faHouse } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBuilding,
+  faHeart,
+  faHouse,
+  faMailForward,
+} from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Reveal from "./Components/Animation/Reveal";
 
 const App = () => {
+  const status = [
+    "JavaScript",
+    "React",
+    "HTML",
+    "Css",
+    "Angular",
+    "Vue JS",
+    "TypeScript",
+    "Node",
+    "Express",
+    "Github",
+    "Redux",
+  ];
+
+  const card = [
+    {
+      title: "Project 1",
+      img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
+      detail:
+        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      link: "https://think-big-technology.web.app/",
+    },
+    {
+      title: "Project 2",
+      img: "https://codequotient.com/blog/wp-content/uploads/2023/04/Showcasing-Your-Web-Developer-Skills-Crafting-a-Portfolio-That-Packs-a-Punch.jpg",
+      detail:
+        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      link: "https://think-big-technology.web.app/",
+    },
+    {
+      title: "Project 3",
+      img: "https://5.imimg.com/data5/MH/FQ/OV/SELLER-52007146/personal-portfolio-website-500x500.jpg",
+      detail:
+        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      link: "https://think-big-technology.web.app/",
+    },
+    {
+      title: "Project 4",
+      img: "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/292121659/original/c8d7a4162986e94e44e348f85b2ffeb77feb0a8d/develop-personal-portfolio-website-blog-or-business-website.jpg",
+      detail:
+        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      link: "https://think-big-technology.web.app/",
+    },
+  ];
+
   return (
     <>
       <div className="container1">
         <SideBar>
-          <Banner bannarHeadingG1="color1" BtnValue="Contact me" />
+          <Banner bannarHeadingG1="color1" BtnValue="Contact Us" />
           <div className="section">
             <Status1
               value="About"
@@ -22,82 +73,92 @@ const App = () => {
             />
             <div className="divider">
               <div className="dividerText">
-                <div className="dividerText1">
-                  I currently work for Google on Google Photos. I also toss in
-                  my ¢2 with the design systems teams from time to time (once an
-                  artist, always an artist, amirite?).
-                </div>
-                <div className="dividerText1">
-                  I currently work for Google on Google Photos. I also toss in
-                  my ¢2 with the design systems teams from time to time (once an
-                  artist, always an artist, amirite?).
-                </div>
-                <div className="dividerText1">
-                  I currently work for Google on Google Photos. I also toss in
-                  my ¢2 with the design systems teams from time to time (once an
-                  artist, always an artist, amirite?).
-                </div>
-                <div className="dividerText1">
-                  I currently work for Google on Google Photos. I also toss in
-                  my ¢2 with the design systems teams from time to time (once an
-                  artist, always an artist, amirite?).
-                </div>
+                <Reveal>
+                  <div className="dividerText1">
+                    Excepteur cillum ut qui anim id. Cillum ex laboris Lorem
+                    deserunt anim exercitation laboris minim duis velit nulla eu
+                    aute ex. Id id exercitation exercitation proident dolor.
+                  </div>
+                </Reveal>
 
-                <div className="mylink">
-                  <span className="color1 font_s">My Link </span>
-                  <button className="SideBarBtn">
-                    <FontAwesomeIcon icon={faGithub} />
-                  </button>
-                  <button className="SideBarBtn">
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </button>
-                  <button className="SideBarBtn">
-                    <FontAwesomeIcon icon={faGithub} />
-                  </button>
-                </div>
+                <Reveal>
+                  <div className="dividerText1">
+                    Nulla eiusmod aute ea nulla. Eiusmod eiusmod cillum ullamco
+                    excepteur non. Labore sint est duis do cupidatat ipsum do
+                    quis eiusmod non anim est. Fugiat ad consequat nostrud est
+                    officia et nulla consequat esse enim consequat aliquip.
+                    Veniam Lorem nostrud sunt aliqua.
+                  </div>
+                </Reveal>
+
+                <Reveal>
+                  <div className="dividerText1">
+                    Aliqua nostrud aute amet sint velit occaecat laborum fugiat
+                    adipisicing sunt dolore et elit. Eu do reprehenderit amet
+                    officia magna dolor exercitation adipisicing laboris ea id
+                    deserunt. Excepteur amet nisi id dolore dolor veniam
+                    occaecat sunt cillum incididunt nulla officia ea cupidatat.
+                  </div>
+                </Reveal>
+
+                <Reveal>
+                  <div className="dividerText1">
+                    Eu exercitation ex ex et. Ea magna ut aute et officia
+                    excepteur nisi anim excepteur. Adipisicing incididunt
+                    cupidatat occaecat ex eu veniam velit proident est irure
+                    voluptate officia minim do.
+                  </div>
+                </Reveal>
+
+                <Reveal>
+                  <div className="mylink">
+                    <span className="color1 font_s">My Link </span>
+                    <button className="SideBarBtn">
+                      <FontAwesomeIcon icon={faGithub} />
+                    </button>
+                    <button className="SideBarBtn">
+                      <FontAwesomeIcon icon={faLinkedin} />
+                    </button>
+                    <button className="SideBarBtn">
+                      <FontAwesomeIcon icon={faGithub} />
+                    </button>
+                  </div>
+                </Reveal>
               </div>
 
               <div className="dividerStatus">
                 <div className="dividerStatusContaioner">
-                  <div className="dividerHeadingMain">
-                    <FontAwesomeIcon icon={faHouse} />
-                    <h1>Use at work</h1>
-                  </div>
+                  <Reveal>
+                    <div className="dividerHeadingMain">
+                      <FontAwesomeIcon icon={faBuilding} />
+                      <h1>Use at work</h1>
+                    </div>
+                  </Reveal>
 
-                  <div className="statusContainer">
-                    <Status value="javascript" />
-                    <Status value="react" />
-                    <Status value="html" />
-                    <Status value="css" />
-                    <Status value="Angular" />
-                    <Status value="Vue JS" />
-                    <Status value="TypeScript" />
-                    <Status value="Node" />
-                    <Status value="Express" />
-                    <Status value="Github" />
-                    <Status value="Redux" />
-                  </div>
+                  <Reveal>
+                    <div className="statusContainer">
+                      {status.map((value) => (
+                        <Status value={value} />
+                      ))}
+                    </div>
+                  </Reveal>
                 </div>
 
                 <div className="dividerStatusContaioner">
-                  <div className="dividerHeadingMain">
-                    <FontAwesomeIcon icon={faHouse} />
-                    <h1>Use at work</h1>
-                  </div>
+                  <Reveal>
+                    <div className="dividerHeadingMain">
+                      <FontAwesomeIcon icon={faHeart} />
+                      <h1>Love to Work with</h1>
+                    </div>
+                  </Reveal>
 
-                  <div className="statusContainer">
-                    <Status value="javascript" />
-                    <Status value="react" />
-                    <Status value="html" />
-                    <Status value="css" />
-                    <Status value="Angular" />
-                    <Status value="Vue JS" />
-                    <Status value="TypeScript" />
-                    <Status value="Node" />
-                    <Status value="Express" />
-                    <Status value="Github" />
-                    <Status value="Redux" />
-                  </div>
+                  <Reveal>
+                    <div className="statusContainer">
+                      {status.map((value) => (
+                        <Status value={value} />
+                      ))}
+                    </div>
+                  </Reveal>
                 </div>
               </div>
             </div>
@@ -110,29 +171,39 @@ const App = () => {
               status1Main="left status1Main"
             />
             <div className="projectContainer">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
+              {card.map((value) => (
+                <Card {...value} />
+              ))}
             </div>
           </div>
 
           <div className="section">
             <div className="sectionA">
-              <div className="footerHeading">
-                <h1>
-                  Contact<span className="color1">.</span>
-                </h1>
-              </div>
-              <div className="footerHeading">
-                <p>
-                  Shoot me an email if you want to connect! You can also find me
-                  on Linkedin or Twitter if that's more your speed.
-                </p>
-              </div>
-              <div className="footerHeading">
-                <h3><FontAwesomeIcon icon={faCoffee} /><span className="footerEmail">bob.ross@notreal.com</span></h3>
-              </div>
+              <Reveal>
+                <div className="footerHeading">
+                  <h1>
+                    Contact<span className="color1">.</span>
+                  </h1>
+                </div>
+              </Reveal>
+              <Reveal>
+                <div className="footerHeading">
+                  <p>
+                    Shoot me an email if you want to connect! You can also find
+                    me on Linkedin or Twitter if that's more your speed.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal>
+                <div className="footerHeading">
+                  <h3>
+                    <FontAwesomeIcon icon={faMailForward} />
+                    <span className="footerEmail">
+                      info@thinkbigtechnology.com
+                    </span>
+                  </h3>
+                </div>
+              </Reveal>
             </div>
           </div>
         </SideBar>
