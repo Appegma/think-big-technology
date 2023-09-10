@@ -1,7 +1,7 @@
 import "./App.css";
 import Banner from "./Components/Banner";
 import { Button1 } from "./Components/Button";
-import { Status, Status1 } from "./Components/status";
+import { Status, Status1, Status2, status2 } from "./Components/status";
 import Card from "./Components/Cards";
 import { SideBar } from "./Components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,6 +27,37 @@ const App = () => {
     "Express",
     "Github",
     "Redux",
+  ];
+
+  const status2 = [
+    {
+      heading: "Google",
+      city: "Atlanta",
+      date: "2022 - Present",
+      title: "Software Engineer",
+      detail:
+        "I help build and scale Google Photos. Increased throughput of our primary services by 70%. Migrated backend service from Java to Go. Also helped make it look prettier.",
+        status: status.splice(0, 5),
+    },
+    {
+      heading: "Facebook",
+      city: "San Francisco",
+      date: "2020 - 2022",
+      title: "Software Engineer",
+      detail:
+        "Senior Full Stack Engineer for Facebook Marketplace. Created a service from scratch to handle new listings. Also played some ping pong. It was fun.",
+       status: status.splice(3, 8),
+
+    },
+    {
+      heading: "Amazon",
+      city: "Seattle",
+      date: "2016 - 2020",
+      title: "Software Engineer",
+      detail:
+        "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
+        status: status.splice(1, 6),
+    },
   ];
 
   const card = [
@@ -176,16 +207,22 @@ const App = () => {
               ))}
             </div>
           </div>
-
+          <div className="section">
+            {status2.map((value) => (
+              <Status2 {...value} />
+            ))}
+          </div>
           <div className="section">
             <div className="sectionA">
-              <Reveal>
-                <div className="footerHeading">
-                  <h1>
-                    Contact<span className="color1">.</span>
-                  </h1>
-                </div>
-              </Reveal>
+              <div className="footerHeading1">
+                <Reveal>
+                  <div className="footerHeading">
+                    <h1>
+                      Contact<span className="color1">.</span>
+                    </h1>
+                  </div>
+                </Reveal>
+              </div>
               <Reveal>
                 <div className="footerHeading">
                   <p>
@@ -194,16 +231,18 @@ const App = () => {
                   </p>
                 </div>
               </Reveal>
-              <Reveal>
-                <div className="footerHeading">
-                  <h3>
-                    <FontAwesomeIcon icon={faMailForward} />
-                    <span className="footerEmail">
-                      info@thinkbigtechnology.com
-                    </span>
-                  </h3>
-                </div>
-              </Reveal>
+              <div className="footerHeading1">
+                <Reveal>
+                  <div className="footerHeading">
+                    <h3>
+                      <FontAwesomeIcon icon={faMailForward} />
+                      <span className="footerEmail">
+                        info@thinkbigtechnology.com
+                      </span>
+                    </h3>
+                  </div>
+                </Reveal>
+              </div>
             </div>
           </div>
         </SideBar>

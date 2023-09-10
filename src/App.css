@@ -1,10 +1,9 @@
 /*Montserrat*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*Roboto*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /*Poppins*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -27,7 +26,7 @@ body {
 .section {
   width: 100%;
   max-width: 1150px;
-  height: 650px;
+  height: auto;
   margin: 0 auto 50px auto;
   padding: 96px;
   z-index: 10;
@@ -36,13 +35,14 @@ body {
 
 .section1 {
   width: 100%;
-  max-width: 1150px;
+  max-width: 1200px;
   height: auto;
-  margin: 100px auto;
-  padding: 96px 75px;
+  margin: 20px auto;
+  padding: 50px 60px;
   z-index: 10;
   position: relative;
 }
+
 .bannarHeading {
   position: relative;
   width: 700px;
@@ -66,7 +66,6 @@ body {
 .bannarH1opacity > h1 {
   font-weight: 900;
   font-size: 5.8rem;
-  /* line-height: 1.1; */
   margin: 0;
 }
 
@@ -79,7 +78,7 @@ body {
 }
 
 .color1 {
-  color: #0FA0FF;
+  color: #0fa0ff;
   font-weight: 700;
 }
 
@@ -94,7 +93,7 @@ body {
   outline: none;
   font-size: 1.2rem;
   max-width: 160px;
-  background-color: #0FA0FF;
+  background-color: #0fa0ff;
   color: #080808;
   padding: 12px 25px;
   border-radius: 5px;
@@ -102,7 +101,7 @@ body {
 }
 
 .btn1:hover {
-  background-color: #0FA0FF;
+  background-color: #0fa0ff;
 }
 
 .statusMain {
@@ -116,7 +115,7 @@ body {
   cursor: text;
   margin: 5px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: capitalize;
 }
 
@@ -150,7 +149,7 @@ body {
 }
 
 .bannerDotes:hover {
-  background: linear-gradient(180deg, #111, #0FA0FF);
+  background: linear-gradient(180deg, #111, #0fa0ff);
   opacity: 1;
 }
 
@@ -244,7 +243,7 @@ body {
 .cardBtn {
   /* width: 28px;
     height: 28px; */
-    font-size: 30px;
+  font-size: 30px;
   background-color: transparent;
   border: none;
   color: #fff;
@@ -252,7 +251,7 @@ body {
 
 .cardGreenHeading {
   width: fit-content;
-  color: #0FA0FF;
+  color: #0fa0ff;
   margin: 15px 0px 15px 0px;
   font-weight: 500;
 }
@@ -311,7 +310,7 @@ body {
   align-self: center;
   margin: 1.8rem auto;
   border-radius: 5px;
-  cursor: text;
+  cursor: pointer;
 }
 
 .SideBarLogo > p {
@@ -334,7 +333,7 @@ body {
 .sideBarLinks:hover,
 .active {
   background-color: #111;
-  border-right: 1px solid #0FA0FF;
+  border-right: 1px solid #0fa0ff;
   color: #c5c5cb;
 }
 
@@ -368,8 +367,8 @@ body {
 }
 
 .SideBarBtn2 {
-  color: #0FA0FF;
-  border: 1px solid #0FA0FF;
+  color: #0fa0ff;
+  border: 1px solid #0fa0ff;
   background-color: transparent;
   border-radius: 5px;
   font-size: 1.2em;
@@ -379,7 +378,7 @@ body {
 }
 
 .SideBarBtn2:hover {
-  background-color: #0FA0FF;
+  background-color: #0fa0ff;
   color: #111;
 }
 .divider {
@@ -420,7 +419,7 @@ body {
   padding: 10px;
   margin-bottom: 10px;
   display: flex;
-  color: #0FA0FF !important;
+  color: #0fa0ff !important;
   align-items: center;
   font-size: 1.3em;
 }
@@ -457,11 +456,17 @@ body {
   flex-wrap: wrap;
 }
 
-.sectionA{
-width: 100%;
-max-width: 954px;
-margin: 0 auto;
+.sectionA {
+  width: 100%;
+  max-width: 954px;
+  margin: 0 auto;
+}
 
+.footerHeading1 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footerHeading {
   width: 100%;
@@ -472,9 +477,8 @@ margin: 0 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #080808;
+  background-color: #111;
   align-self: center;
-  
 }
 
 .footerHeading > h1 {
@@ -483,15 +487,85 @@ margin: 0 auto;
   margin: 0;
 }
 
-.footerHeading>p{
+.footerHeading > p {
   font-size: 1.5em;
   font-weight: 200;
 }
 
-.footerEmail{
+.footerEmail {
   margin-left: 10px;
 }
-.footerHeading>h3{
-  font-size: 1.5em!important;
+.footerHeading > h3 {
+  font-size: 1.5em !important;
   font-weight: 400;
+}
+
+.statue2Area {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 10px auto;
+}
+
+.status2Heading {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.status2Sides {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0px 5px 0px;
+}
+
+.status2Sides > h4 {
+  font-size: 1.39rem;
+  margin: 2px auto;
+}
+.status2Sides > p {
+  font-size: 1.2em;
+  margin: 2px;
+}
+
+.status2Sides > h5 {
+  font-size: 1.3rem;
+  margin: 2px auto;
+  color: #0fa0ff;
+}
+
+.status2DeatailArea {
+  width: 100%;
+  height: auto;
+  margin: 5px auto;
+}
+
+.status2DetailArea {
+  width: 95%;
+  height: auto;
+}
+.status2DetailArea > p {
+  margin: 2px 0px 2px 0;
+  font-weight: 200;
+  font-size: 1.2em;
+}
+
+.status2balloon {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Status2LineHolder {
+  width: 100%;
+  height: 1px;
+  background-color: #454545d2;
+  margin: 30px auto;
 }
