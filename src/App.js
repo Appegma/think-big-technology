@@ -1,7 +1,6 @@
 import "./App.css";
 import Banner from "./Components/Banner";
-import { Button1 } from "./Components/Button";
-import { Status, Status1, Status2, status2 } from "./Components/status";
+import { Status, Status1, Status2 } from "./Components/status";
 import Card from "./Components/Cards";
 import { SideBar } from "./Components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,8 +12,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Reveal from "./Components/Animation/Reveal";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+ 
   const status = [
     "JavaScript",
     "React",

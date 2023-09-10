@@ -390,7 +390,7 @@ body {
 
 .dividerText {
   width: 65%;
-  height: 100px;
+  height: auto;
 }
 
 .dividerText1 {

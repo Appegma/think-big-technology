@@ -1,5 +1,8 @@
+import { useEffect } from "react";
 import Reveal from "../Animation/Reveal";
 import { Button1 } from "../Button";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Dots = () => {
   const dotes = [];
@@ -7,7 +10,7 @@ const Dots = () => {
     dotes.push(
       <div className="dotesGrid">
         <div className="bannerDotes" />
-      </div>,
+      </div>
     );
   }
 
@@ -15,9 +18,12 @@ const Dots = () => {
 };
 
 const Banner = ({ bannarHeadingG1, BtnValue }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
-      <div className="section">
+      <div data-aos="fade-left" className="section">
         <div className="bannarHeading">
           <div className="bannarheading1">
             <Reveal>
