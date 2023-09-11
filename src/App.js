@@ -1,8 +1,8 @@
 import "./App.css";
-import Banner from "./Components/Banner";
-import { Status, Status1, Status2 } from "./Components/Status";
-import Card from "./Components/Cards";
-import { SideBar } from "./Components/Navbar";
+import Banner from "./components/Banner";
+import { Status, Status1, Status2 } from "./components/Status";
+import Card from "./components/Cards";
+import { SideBar } from "./components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAddressBook,
@@ -14,7 +14,7 @@ import {
   faMailForward,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import Reveal from "./Components/Animation/Reveal";
+import Reveal from "./components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 
