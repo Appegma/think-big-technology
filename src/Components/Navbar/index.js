@@ -7,45 +7,49 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-const SideBar = ({ children }) => {
-  const [active, setActive] = useState("main");
+const SideBar = ({
+  children,
+  menuItems,
+  activeMenu = "main",
+  handleActiveMenu,
+}) => {
+  const [rotate, setRotate] = useState(true);
 
   const handleActive = (arg) => {
-    setActive(arg);
+    setRotate(!rotate);
+    if (handleActiveMenu) handleActiveMenu(arg);
   };
 
   return (
     <>
       <div className="sideBarMain">
-        <div className="SideBarLogo" onClick={() => handleActive("main")}>
-          <p>
-            T<span className="color1">.</span>
-          </p>
-        </div>
         <div
-          className={`sideBarLinks ${active === "about" && "active"}`}
-          onClick={() => handleActive("about")}
+          className="SideBarLogo"
+          style={{
+            transform: rotate
+              ? "perspective(600px) rotateY(0deg)"
+              : "perspective(600px) rotateY(360deg)",
+          }}
+          onClick={() => handleActive("main")}
         >
-          About
+          {menuItems?.length > 0 &&
+            menuItems.map((data) => activeMenu === data.id && data.logo)}
         </div>
-        <div
-          className={`sideBarLinks ${active === "project" && "active"}`}
-          onClick={() => handleActive("project")}
-        >
-          Project
-        </div>
-        <div
-          className={`sideBarLinks ${active === "experence" && "active"}`}
-          onClick={() => handleActive("experence")}
-        >
-          Exp.
-        </div>
-        <div
-          className={`sideBarLinks ${active === "contact" && "active"}`}
-          onClick={() => handleActive("contact")}
-        >
-          Contact
-        </div>
+
+        {menuItems?.length > 0 &&
+          menuItems.map(
+            (data) =>
+              data.id !== "main" && (
+                <div
+                  className={`sideBarLinks ${
+                    activeMenu === data.id && "active"
+                  }`}
+                  onClick={() => handleActive(data.id)}
+                >
+                  {data.title}
+                </div>
+              ),
+          )}
       </div>
 
       <div className="sideBarTop">

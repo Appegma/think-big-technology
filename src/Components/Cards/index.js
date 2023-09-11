@@ -3,14 +3,8 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Reveal from "../Animation/Reveal";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Card = ({ title, detail, img, link }) => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-  
   return (
     <>
       <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">

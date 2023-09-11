@@ -1,11 +1,6 @@
 import Reveal from "../Animation/Reveal";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-const Status = ({ value }) => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+
+function Status({ value }) {
   return (
     <Reveal>
       <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
@@ -13,12 +8,9 @@ const Status = ({ value }) => {
       </div>
     </Reveal>
   );
-};
+}
 
-const Status1 = ({ value, statusDotsG, status1Main }) => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+function Status1({ value, statusDotsG, status1Main }) {
   return (
     <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
       <div className={status1Main}>
@@ -34,12 +26,9 @@ const Status1 = ({ value, statusDotsG, status1Main }) => {
       </div>
     </div>
   );
-};
+}
 
-const Status2 = ({ status, detail, heading, date, title, city }) => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+function Status2({ status, detail, heading, date, title, city }) {
   return (
     <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
       <div className="statue2Area">
@@ -85,5 +74,5 @@ const Status2 = ({ status, detail, heading, date, title, city }) => {
       </div>
     </div>
   );
-};
+}
 export { Status, Status1, Status2 };

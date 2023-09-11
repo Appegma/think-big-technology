@@ -1,27 +1,60 @@
 import "./App.css";
 import Banner from "./Components/Banner";
-import { Status, Status1, Status2 } from "./Components/status";
+import { Status, Status1, Status2 } from "./Components/Status";
 import Card from "./Components/Cards";
 import { SideBar } from "./Components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faAddressBook,
+  faBarsProgress,
   faBuilding,
+  faCircleInfo,
   faHeart,
-  faHouse,
+  faListCheck,
   faMailForward,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Reveal from "./Components/Animation/Reveal";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
 
 const App = () => {
-
   useEffect(() => {
     AOS.init();
   }, []);
- 
+
+  const menuItems = [
+    {
+      id: "main",
+      logo: (
+        <p>
+          T<span className="color1">.</span>
+        </p>
+      ),
+      title: "Home",
+    },
+    {
+      id: "about",
+      logo: <FontAwesomeIcon icon={faCircleInfo} />,
+      title: "About",
+    },
+    {
+      id: "projects",
+      logo: <FontAwesomeIcon icon={faBarsProgress} />,
+      title: "Projects",
+    },
+    {
+      id: "experience",
+      logo: <FontAwesomeIcon icon={faListCheck} />,
+      title: "Experience",
+    },
+    {
+      id: "contact",
+      logo: <FontAwesomeIcon icon={faAddressBook} />,
+      title: "Contact",
+    },
+  ];
+
   const status = [
     "JavaScript",
     "React",
@@ -44,7 +77,7 @@ const App = () => {
       title: "Software Engineer",
       detail:
         "I help build and scale Google Photos. Increased throughput of our primary services by 70%. Migrated backend service from Java to Go. Also helped make it look prettier.",
-        status: status.splice(0, 5),
+      status: status.splice(0, 5),
     },
     {
       heading: "Facebook",
@@ -53,8 +86,7 @@ const App = () => {
       title: "Software Engineer",
       detail:
         "Senior Full Stack Engineer for Facebook Marketplace. Created a service from scratch to handle new listings. Also played some ping pong. It was fun.",
-       status: status.splice(3, 8),
-
+      status: status.splice(3, 8),
     },
     {
       heading: "Amazon",
@@ -63,7 +95,7 @@ const App = () => {
       title: "Software Engineer",
       detail:
         "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
-        status: status.splice(1, 6),
+      status: status.splice(1, 6),
     },
   ];
 
@@ -98,12 +130,55 @@ const App = () => {
     },
   ];
 
+  const [activeDiv, setActiveDiv] = useState(0);
+  const handleScroll = () => {
+    // Calculate the index of the active div based on scroll position
+    // You may need to customize this logic based on your layout
+    // const scrollTop = window.scrollY;
+    const divElements = document.querySelectorAll(".scroll-div");
+    let newIndex = 0;
+
+    for (let i = 0; i < divElements.length; i++) {
+      const div = divElements[i];
+      const rect = div.getBoundingClientRect();
+
+      if (rect.top <= window.innerHeight / 2) {
+        newIndex = div.id;
+      }
+    }
+
+    setActiveDiv(newIndex);
+  };
+
+  // Attach the scroll event listener when the component mounts
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToDiv = (id) => {
+    const element = document.getElementById(id);
+    setActiveDiv(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="container1">
-        <SideBar>
-          <Banner bannarHeadingG1="color1" BtnValue="Contact Us" />
-          <div className="section">
+        <SideBar
+          menuItems={menuItems}
+          activeMenu={activeDiv}
+          handleActiveMenu={scrollToDiv}
+        >
+          <div className={`scroll-div`} id="main">
+            <Banner bannarHeadingG1="color1" BtnValue="Contact Us" />
+          </div>
+
+          <div className={`scroll-div section`} id="about">
             <Status1
               value="About"
               statusDotsG="color1"
@@ -112,7 +187,11 @@ const App = () => {
             <div className="divider">
               <div className="dividerText">
                 <Reveal>
-                  <div className="dividerText1">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                    className="dividerText1"
+                  >
                     Excepteur cillum ut qui anim id. Cillum ex laboris Lorem
                     deserunt anim exercitation laboris minim duis velit nulla eu
                     aute ex. Id id exercitation exercitation proident dolor.
@@ -120,7 +199,11 @@ const App = () => {
                 </Reveal>
 
                 <Reveal>
-                  <div className="dividerText1">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                    className="dividerText1"
+                  >
                     Nulla eiusmod aute ea nulla. Eiusmod eiusmod cillum ullamco
                     excepteur non. Labore sint est duis do cupidatat ipsum do
                     quis eiusmod non anim est. Fugiat ad consequat nostrud est
@@ -130,7 +213,11 @@ const App = () => {
                 </Reveal>
 
                 <Reveal>
-                  <div className="dividerText1">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                    className="dividerText1"
+                  >
                     Aliqua nostrud aute amet sint velit occaecat laborum fugiat
                     adipisicing sunt dolore et elit. Eu do reprehenderit amet
                     officia magna dolor exercitation adipisicing laboris ea id
@@ -140,7 +227,11 @@ const App = () => {
                 </Reveal>
 
                 <Reveal>
-                  <div className="dividerText1">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                    className="dividerText1"
+                  >
                     Eu exercitation ex ex et. Ea magna ut aute et officia
                     excepteur nisi anim excepteur. Adipisicing incididunt
                     cupidatat occaecat ex eu veniam velit proident est irure
@@ -202,7 +293,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="section1">
+          <div className={`scroll-div section1`} id="projects">
             <Status1
               value="Projects"
               statusDotsG="color1"
@@ -214,12 +305,14 @@ const App = () => {
               ))}
             </div>
           </div>
-          <div className="section">
+
+          <div className={`scroll-div section`} id="experience">
             {status2.map((value) => (
               <Status2 {...value} />
             ))}
           </div>
-          <div className="section">
+
+          <div className={`scroll-div section`} id="contact">
             <div className="sectionA">
               <div className="footerHeading1">
                 <Reveal>
