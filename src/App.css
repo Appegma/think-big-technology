@@ -354,6 +354,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0px 0px 10px 0px #080808;
+  overflow: hidden;
 }
 
 .sideBarLinks {

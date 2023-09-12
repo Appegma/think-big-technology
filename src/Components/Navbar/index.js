@@ -6,6 +6,7 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import Cube from "../Cube";
 import { NavLink } from "react-router-dom";
 
 const SideBar = ({
@@ -27,21 +28,23 @@ const SideBar = ({
     if (handleActiveMenu) handleActiveMenu(arg);
   };
 
-
+  const activeIndex = menuItems.findIndex((data) => data.id === activeMenu);
   return (
     <>
       <div className="sideBarMain">
         <div
           className="SideBarLogo"
-          style={{
-            transform: rotate
-              ? "perspective(600px) rotateY(0deg)"
-              : "perspective(600px) rotateY(360deg)",
-          }}
+          // style={{
+          //   transform: rotate
+          //     ? "perspective(600px) rotateY(0deg)"
+          //     : "perspective(600px) rotateY(360deg)",
+          // }}
           onClick={() => handleActive("main")}
         >
-          {menuItems?.length > 0 &&
-            menuItems.map((data) => activeMenu === data.id && data.logo)}
+          {/* {menuItems?.length > 0 &&
+            menuItems.map((data) => activeMenu === data.id && data.logo)} */}
+
+          <Cube items={menuItems} active={activeIndex} />
         </div>
 
         {menuItems?.length > 0 &&

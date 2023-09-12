@@ -1,0 +1,61 @@
+.carousel-container {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  perspective: 200px;
+  width: 50px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.carousel {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.cube-face {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  background: #0fa0ff50;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* color: #333; */
+  transition: transform 0.5s;
+  backface-visibility: hidden;
+}
+
+.cube-face.active {
+  background: #0fa0ff90;
+  color: white;
+}
+
+/* .prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+} */
