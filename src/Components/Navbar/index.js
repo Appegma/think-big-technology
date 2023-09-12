@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -6,6 +6,7 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { NavLink } from "react-router-dom";
 
 const SideBar = ({
   children,
@@ -14,11 +15,18 @@ const SideBar = ({
   handleActiveMenu,
 }) => {
   const [rotate, setRotate] = useState(true);
+  const [activeRoute, setActiveRoute] = useState("Home");
+
+  const topActive = (arg) => {
+   setActiveRoute(arg)
+  };
+
 
   const handleActive = (arg) => {
     setRotate(!rotate);
     if (handleActiveMenu) handleActiveMenu(arg);
   };
+
 
   return (
     <>
@@ -42,13 +50,13 @@ const SideBar = ({
               data.id !== "main" && (
                 <div
                   className={`sideBarLinks ${
-                    activeMenu === data.id && "active"
+                    activeMenu === data.id && "activeSidebar"
                   }`}
                   onClick={() => handleActive(data.id)}
                 >
                   {data.title}
                 </div>
-              ),
+              )
           )}
       </div>
 
@@ -58,18 +66,40 @@ const SideBar = ({
             <FontAwesomeIcon icon={faGithub} />
           </button>
           <button className="SideBarBtn">
-            {" "}
             <FontAwesomeIcon icon={faLinkedin} />
           </button>
           <button className="SideBarBtn">
-            {" "}
             <FontAwesomeIcon icon={faTwitter} />
           </button>
           <button className="SideBarBtn">
-            {" "}
             <FontAwesomeIcon icon={faFacebook} />
           </button>
         </div>
+        <div className="topLinks">
+          <ul className="topName">
+            <li>
+              <NavLink className={`topNameStyle ${activeRoute === "home" && "active"} `} onClick={()=>topActive("home")} to={"/"}>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={`topNameStyle ${activeRoute === "services"  && "active"}` } onClick={()=>topActive("services")} to={"/Services"}>
+                Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={`topNameStyle ${activeRoute ===  "porjects"  && "active"}`} onClick={()=>topActive("projects")} to={"/Projects"}>
+                Projects
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={`topNameStyle ${activeRoute ===  "info"  && "active"}`} onClick={()=>topActive("info")} to={"/Info"}>
+                Info
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+
         <div className="NavbarBtn margin-r">
           <button className="SideBarBtn2">Think Big Technology.</button>
         </div>

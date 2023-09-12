@@ -131,6 +131,7 @@ body {
 }
 
 .dotesGrid {
+  height: fit-content;
   padding: 0.5rem;
   cursor: crosshair;
   transition: 0.25s;
@@ -299,6 +300,47 @@ body {
   justify-content: space-between;
 }
 
+.topLinks {
+  width: 100%;
+  height: auto;
+  /* background-color:#0fa0ff ; */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topName {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topNameStyle {
+  text-decoration: none;
+  padding: 20px 20px;
+  cursor: pointer;
+  color: #717171;
+  font-weight: 400;
+  font-size: 1.3rem;
+  transition: 0.1s !important;
+  border: none;
+}
+
+.topNameStyle:hover,
+.active {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #0fa0ff;
+  color: #c5c5cb;
+}
+
+.topNameStyle:hover,
+.active {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #0fa0ff;
+  color: #c5c5cb;
+}
+
 .SideBarLogo {
   width: 45px;
   height: 45px;
@@ -314,7 +356,6 @@ body {
   box-shadow: 0px 0px 10px 0px #080808;
 }
 
-
 .sideBarLinks {
   padding: 20px 0;
   cursor: pointer;
@@ -329,7 +370,7 @@ body {
 }
 
 .sideBarLinks:hover,
-.active {
+.activeSidebar {
   background-color: #111;
   border-right: 1px solid #0fa0ff;
   color: #c5c5cb;

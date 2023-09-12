@@ -17,6 +17,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Reveal from "./components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import AppRouter from "./config/Routers";
 
 const App = () => {
   useEffect(() => {
@@ -168,7 +169,8 @@ const App = () => {
 
   return (
     <>
-      <div className="container1">
+    <AppRouter/>
+      {/* <div className="container1">
         <SideBar
           menuItems={menuItems}
           activeMenu={activeDiv}
@@ -346,7 +348,7 @@ const App = () => {
             </div>
           </div>
         </SideBar>
-      </div>
+      </div> */}
     </>
   );
 };
