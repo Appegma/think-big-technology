@@ -13,7 +13,13 @@ import {
   faListCheck,
   faMailForward,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faAmazon,
+  faFacebook,
+  faGithub,
+  faGoogle,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
@@ -45,9 +51,19 @@ const Home = () => {
       title: "Projects",
     },
     {
-      id: "experience",
-      logo: <FontAwesomeIcon icon={faListCheck} />,
-      title: "Experience",
+      id: "google",
+      logo: <FontAwesomeIcon icon={faGoogle} />,
+      title: "Google",
+    },
+    {
+      id: "facebook",
+      logo: <FontAwesomeIcon icon={faFacebook} />,
+      title: "Facebook",
+    },
+    {
+      id: "amazone",
+      logo: <FontAwesomeIcon icon={faAmazon} />,
+      title: "Amazone",
     },
     {
       id: "contact",
@@ -128,6 +144,39 @@ const Home = () => {
       detail:
         "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
       link: "https://think-big-technology.web.app/",
+    },
+  ];
+
+  const project = [
+    {
+      id: "google",
+      title: "Google",
+      img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
+      detail:
+        "A social community for painters to connect with others in their community. We handle everything backend (50K monthly active users).",
+      percentage: "40%",
+      percentageDescription:
+        "Of sales attributed to digital alone, in 2023 (Q1).",
+    },
+    {
+      id: "facebook",
+      title: "Facebook",
+      img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
+      detail:
+        "A social community for painters to connect with others in their community. We handle everything backend (50K monthly active users).",
+      percentage: "40%",
+      percentageDescription:
+        "Of sales attributed to digital alone, in 2023 (Q1).",
+    },
+    {
+      id: "amazone",
+      title: "Amazone",
+      img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
+      detail:
+        "A social community for painters to connect with others in their community. We handle everything backend (50K monthly active users).",
+      percentage: "40%",
+      percentageDescription:
+        "Of sales attributed to digital alone, in 2023 (Q1).",
     },
   ];
 
@@ -307,7 +356,12 @@ const Home = () => {
             </div>
           </div>
 
-          <ProjectCard />
+          {project.map((value) => (
+            <div className={`scroll-div section`} id={value.id}>
+              <ProjectCard {...value} />
+            </div>
+          ))}
+
           {/* <div className={`scroll-div section`} id="experience">
             {status2.map((value) => (
               <Status2 {...value} />

@@ -4,7 +4,7 @@ import Reveal from "../Animation/Reveal";
 
 function ProjectCard({
   title,
-  description,
+  detail,
   image,
   percentage,
   percentageDescription,
@@ -36,7 +36,7 @@ function ProjectCard({
             d
           >
             <p>
-              {description ||
+              {detail ||
                 `Reinventing McDonald’s ordering experience into a multi-billion dollar sales channel.`}
             </p>
           </div>
