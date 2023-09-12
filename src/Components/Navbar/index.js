@@ -19,9 +19,8 @@ const SideBar = ({
   const [activeRoute, setActiveRoute] = useState("Home");
 
   const topActive = (arg) => {
-   setActiveRoute(arg)
+    setActiveRoute(arg);
   };
-
 
   const handleActive = (arg) => {
     setRotate(!rotate);
@@ -32,18 +31,7 @@ const SideBar = ({
   return (
     <>
       <div className="sideBarMain">
-        <div
-          className="SideBarLogo"
-          // style={{
-          //   transform: rotate
-          //     ? "perspective(600px) rotateY(0deg)"
-          //     : "perspective(600px) rotateY(360deg)",
-          // }}
-          onClick={() => handleActive("main")}
-        >
-          {/* {menuItems?.length > 0 &&
-            menuItems.map((data) => activeMenu === data.id && data.logo)} */}
-
+        <div className="SideBarLogo" onClick={() => handleActive("main")}>
           <Cube items={menuItems} active={activeIndex} />
         </div>
 
@@ -59,7 +47,7 @@ const SideBar = ({
                 >
                   {data.title}
                 </div>
-              )
+              ),
           )}
       </div>
 
@@ -81,22 +69,44 @@ const SideBar = ({
         <div className="topLinks">
           <ul className="topName">
             <li>
-              <NavLink className={`topNameStyle ${activeRoute === "home" && "active"} `} onClick={()=>topActive("home")} to={"/"}>
+              <NavLink
+                className={`topNameStyle ${
+                  activeRoute === "home" && "active"
+                } `}
+                onClick={() => topActive("home")}
+                to={"/"}
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink className={`topNameStyle ${activeRoute === "services"  && "active"}` } onClick={()=>topActive("services")} to={"/Services"}>
+              <NavLink
+                className={`topNameStyle ${
+                  activeRoute === "services" && "active"
+                }`}
+                onClick={() => topActive("services")}
+                to={"/Services"}
+              >
                 Services
               </NavLink>
             </li>
             <li>
-              <NavLink className={`topNameStyle ${activeRoute ===  "porjects"  && "active"}`} onClick={()=>topActive("projects")} to={"/Projects"}>
+              <NavLink
+                className={`topNameStyle ${
+                  activeRoute === "porjects" && "active"
+                }`}
+                onClick={() => topActive("projects")}
+                to={"/Projects"}
+              >
                 Projects
               </NavLink>
             </li>
             <li>
-              <NavLink className={`topNameStyle ${activeRoute ===  "info"  && "active"}`} onClick={()=>topActive("info")} to={"/Info"}>
+              <NavLink
+                className={`topNameStyle ${activeRoute === "info" && "active"}`}
+                onClick={() => topActive("info")}
+                to={"/Info"}
+              >
                 Info
               </NavLink>
             </li>

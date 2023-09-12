@@ -1,6 +1,6 @@
 import "../../App.css";
 import Banner from "../../components/Banner";
-import { Status, Status1, Status2  } from "../../components/Status";
+import { Status, Status1, Status2 } from "../../components/Status";
 import Card from "../../components/Cards";
 import { SideBar } from "../../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -168,10 +168,10 @@ const Home = () => {
 
   return (
     <>
-     <div className="container1">
+      <div className="container1">
         <SideBar
           menuItems={menuItems}
-          activeMenu={activeDiv}
+          activeMenu={activeDiv || "main"}
           handleActiveMenu={scrollToDiv}
         >
           <div className={`scroll-div`} id="main">
@@ -346,7 +346,7 @@ const Home = () => {
             </div>
           </div>
         </SideBar>
-      </div> 
+      </div>
     </>
   );
 };
