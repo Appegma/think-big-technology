@@ -1,7 +1,7 @@
 import "../../App.css";
 import Banner from "../../components/Banner";
 import { Status, Status1, Status2 } from "../../components/Status";
-import Card from "../../components/Cards";
+import {Card} from "../../components/Cards";
 import { SideBar } from "../../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

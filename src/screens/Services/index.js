@@ -1,7 +1,6 @@
 import "../../App.css";
 import Banner from "../../components/Banner";
-import { Status, Status1, Status2  } from "../../components/Status";
-import Card from "../../components/Cards";
+import { Status, Status1, Status2 } from "../../components/Status";
 import { SideBar } from "../../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,6 +16,8 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import Carousel from "../../components/Carousel";
+import { Form } from "react-router-dom";
 
 const Services = () => {
   useEffect(() => {
@@ -33,26 +34,26 @@ const Services = () => {
       ),
       title: "Services",
     },
-    {
-      id: "about",
-      logo: <FontAwesomeIcon icon={faCircleInfo} />,
-      title: "About",
-    },
+    // {
+    //   id: "about",
+    //   logo: <FontAwesomeIcon icon={faCircleInfo} />,
+    //   title: "About",
+    // },
     {
       id: "projects",
       logo: <FontAwesomeIcon icon={faBarsProgress} />,
       title: "Projects",
     },
-    {
-      id: "experience",
-      logo: <FontAwesomeIcon icon={faListCheck} />,
-      title: "Experience",
-    },
-    {
-      id: "contact",
-      logo: <FontAwesomeIcon icon={faAddressBook} />,
-      title: "Contact",
-    },
+    // {
+    //   id: "experience",
+    //   logo: <FontAwesomeIcon icon={faListCheck} />,
+    //   title: "Experience",
+    // },
+    // {
+    //   id: "contact",
+    //   logo: <FontAwesomeIcon icon={faAddressBook} />,
+    //   title: "Contact",
+    // },
   ];
 
   const status = [
@@ -168,185 +169,17 @@ const Services = () => {
 
   return (
     <>
-     <div className="container1">
+      <div className="container1">
         <SideBar
           menuItems={menuItems}
           activeMenu={activeDiv}
           handleActiveMenu={scrollToDiv}
         >
-          <div className={`scroll-div`} id="main">
-            <Banner bannarHeadingG1="color1" BtnValue="Contact Us" />
-          </div>
-
-          <div className={`scroll-div section`} id="about">
-            <Status1
-              value="About"
-              statusDotsG="color1"
-              status1Main="status1Main"
-            />
-            <div className="divider">
-              <div className="dividerText">
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Excepteur cillum ut qui anim id. Cillum ex laboris Lorem
-                    deserunt anim exercitation laboris minim duis velit nulla eu
-                    aute ex. Id id exercitation exercitation proident dolor.
-                  </div>
-                </Reveal>
-
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Nulla eiusmod aute ea nulla. Eiusmod eiusmod cillum ullamco
-                    excepteur non. Labore sint est duis do cupidatat ipsum do
-                    quis eiusmod non anim est. Fugiat ad consequat nostrud est
-                    officia et nulla consequat esse enim consequat aliquip.
-                    Veniam Lorem nostrud sunt aliqua.
-                  </div>
-                </Reveal>
-
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Aliqua nostrud aute amet sint velit occaecat laborum fugiat
-                    adipisicing sunt dolore et elit. Eu do reprehenderit amet
-                    officia magna dolor exercitation adipisicing laboris ea id
-                    deserunt. Excepteur amet nisi id dolore dolor veniam
-                    occaecat sunt cillum incididunt nulla officia ea cupidatat.
-                  </div>
-                </Reveal>
-
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Eu exercitation ex ex et. Ea magna ut aute et officia
-                    excepteur nisi anim excepteur. Adipisicing incididunt
-                    cupidatat occaecat ex eu veniam velit proident est irure
-                    voluptate officia minim do.
-                  </div>
-                </Reveal>
-
-                <Reveal>
-                  <div className="mylink">
-                    <span className="color1 font_s">My Link </span>
-                    <button className="SideBarBtn">
-                      <FontAwesomeIcon icon={faGithub} />
-                    </button>
-                    <button className="SideBarBtn">
-                      <FontAwesomeIcon icon={faLinkedin} />
-                    </button>
-                    <button className="SideBarBtn">
-                      <FontAwesomeIcon icon={faGithub} />
-                    </button>
-                  </div>
-                </Reveal>
-              </div>
-
-              <div className="dividerStatus">
-                <div className="dividerStatusContaioner">
-                  <Reveal>
-                    <div className="dividerHeadingMain">
-                      <FontAwesomeIcon icon={faBuilding} />
-                      <h1>Use at work</h1>
-                    </div>
-                  </Reveal>
-
-                  <Reveal>
-                    <div className="statusContainer">
-                      {status.map((value) => (
-                        <Status value={value} />
-                      ))}
-                    </div>
-                  </Reveal>
-                </div>
-
-                <div className="dividerStatusContaioner">
-                  <Reveal>
-                    <div className="dividerHeadingMain">
-                      <FontAwesomeIcon icon={faHeart} />
-                      <h1>Love to Work with</h1>
-                    </div>
-                  </Reveal>
-
-                  <Reveal>
-                    <div className="statusContainer">
-                      {status.map((value) => (
-                        <Status value={value} />
-                      ))}
-                    </div>
-                  </Reveal>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className={`scroll-div section1`} id="projects">
-            <Status1
-              value="Projects"
-              statusDotsG="color1"
-              status1Main="left status1Main"
-            />
-            <div className="projectContainer">
-              {card.map((value) => (
-                <Card {...value} />
-              ))}
-            </div>
-          </div>
-
-          <div className={`scroll-div section`} id="experience">
-            {status2.map((value) => (
-              <Status2 {...value} />
-            ))}
-          </div>
-
-          <div className={`scroll-div section`} id="contact">
-            <div className="sectionA">
-              <div className="footerHeading1">
-                <Reveal>
-                  <div className="footerHeading">
-                    <h1>
-                      Contact<span className="color1">.</span>
-                    </h1>
-                  </div>
-                </Reveal>
-              </div>
-              <Reveal>
-                <div className="footerHeading">
-                  <p>
-                    Shoot me an email if you want to connect! You can also find
-                    me on Linkedin or Twitter if that's more your speed.
-                  </p>
-                </div>
-              </Reveal>
-              <div className="footerHeading1">
-                <Reveal>
-                  <div className="footerHeading">
-                    <h3>
-                      <FontAwesomeIcon icon={faMailForward} />
-                      <span className="footerEmail">
-                        info@thinkbigtechnology.com
-                      </span>
-                    </h3>
-                  </div>
-                </Reveal>
-              </div>
-            </div>
+          <div className={`scroll-div section2`} id="about">
+            <Carousel />
           </div>
         </SideBar>
-      </div> 
+      </div>
     </>
   );
 };

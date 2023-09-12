@@ -3,6 +3,7 @@ import Home from "../../screens/Home";
 import Projects from "../../screens/Projects";
 import Services from "../../screens/Services";
 import Info from "../../screens/Info";
+import PageNotFound from "../../screens/PageNotFound";
 
 const AppRouter = () => {
   return (
@@ -13,6 +14,7 @@ const AppRouter = () => {
           <Route path="/services" element={<Services/>} />
           <Route path="/Projects" element={<Projects/>} />
           <Route path="/Info" element={<Info/>} />
+          <Route path="*" element={<PageNotFound/>} />
         </Routes>
       </BrowserRouter>
     </>
