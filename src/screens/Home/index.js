@@ -1,7 +1,7 @@
 import "../../App.css";
 import Banner from "../../components/Banner";
 import { Status, Status1, Status2 } from "../../components/Status";
-import {Card} from "../../components/Cards";
+import { Card } from "../../components/Cards";
 import { SideBar } from "../../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,6 +17,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import ProjectCard from "../../components/ProjectCard";
 
 const Home = () => {
   useEffect(() => {
@@ -306,11 +307,12 @@ const Home = () => {
             </div>
           </div>
 
-          <div className={`scroll-div section`} id="experience">
+          <ProjectCard />
+          {/* <div className={`scroll-div section`} id="experience">
             {status2.map((value) => (
               <Status2 {...value} />
             ))}
-          </div>
+          </div> */}
 
           <div className={`scroll-div section`} id="contact">
             <div className="sectionA">
