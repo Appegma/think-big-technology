@@ -1,0 +1,16 @@
+.iframeContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.clip-container {
+  clip-path: polygon(
+    calc(5.9052% + 12rem) 0%,
+    94.0948% 0%,
+    94.0948% calc(94.0948% - 12rem),
+    calc(94.0948% - 12rem) 94.0948%,
+    5.9052% 94.0948%,
+    5.9052% 12rem
+  );
+  aspect-ratio: 16/9;
+}

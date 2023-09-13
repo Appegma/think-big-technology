@@ -12,6 +12,7 @@ import {
   faHeart,
   faListCheck,
   faMailForward,
+  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faAmazon,
@@ -24,6 +25,7 @@ import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import ProjectCard from "../../components/ProjectCard";
+import Iframe from "../../components/Iframe";
 
 const Home = () => {
   useEffect(() => {
@@ -44,6 +46,11 @@ const Home = () => {
       id: "about",
       logo: <FontAwesomeIcon icon={faCircleInfo} />,
       title: "About",
+    },
+    {
+      id: "iframes",
+      logo: <FontAwesomeIcon icon={faVideo} />,
+      title: "video",
     },
     {
       id: "projects",
@@ -180,7 +187,35 @@ const Home = () => {
     },
   ];
 
+  const [scrollCount, setScrollCount] = useState(0);
   const [activeDiv, setActiveDiv] = useState(0);
+
+  const [zoomLevel, setZoomLevel] = useState(0.5);
+
+  useEffect(() => {
+    const handleScroll = (e) => {
+      const div = document.getElementById("iframes");
+      const rect = div.getBoundingClientRect();
+
+      if (rect.top <= window.innerHeight ) {
+        console.log("hello")
+        if (e.deltaY > 0) {
+          // Scrolling up, zoom in
+          setZoomLevel((prevZoom) => Math.min(1.3, prevZoom + 0.1));
+        } else {
+          // Scrolling down, zoom out
+          setZoomLevel((prevZoom) => Math.max(0.5, prevZoom - 0.1));
+        }
+      }
+    };
+
+    window.addEventListener("wheel", handleScroll);
+
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+    };
+  }, []);
+
   const handleScroll = () => {
     // Calculate the index of the active div based on scroll position
     // You may need to customize this logic based on your layout
@@ -196,7 +231,6 @@ const Home = () => {
         newIndex = div.id;
       }
     }
-
     setActiveDiv(newIndex);
   };
 
@@ -341,6 +375,14 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div
+            className={`scroll-div section1`}
+            style={{ transform: `scale(${zoomLevel})` }}
+            id="iframes"
+          >
+            <Iframe zoomLevel={zoomLevel} />
           </div>
 
           <div className={`scroll-div section1`} id="projects">

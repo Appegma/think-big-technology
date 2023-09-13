@@ -13,15 +13,6 @@
   scroll-behavior: smooth;
 }
 
-.container11 {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 body {
   background-color: #111;
 }
@@ -42,15 +33,6 @@ body {
   position: relative;
 }
 
-.section3 {
-  width: 100%;
-  max-width: 1150px;
-  height: auto;
-  margin: 0 auto 50px auto;
-  padding: 96px 0px 96px 0px;
-  z-index: 10;
-  position: relative;
-}
 .section1 {
   width: 100%;
   max-width: 1200px;
@@ -68,6 +50,17 @@ body {
   z-index: 10;
   position: relative;
 }
+
+.section3 {
+  width: 100%;
+  max-width: 1150px;
+  height: auto;
+  margin: 0 auto 50px auto;
+  padding: 96px 0px 96px 0px;
+  z-index: 10;
+  position: relative;
+}
+
 .bannarHeading {
   position: relative;
   width: 700px;
