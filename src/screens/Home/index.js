@@ -47,11 +47,11 @@ const Home = () => {
       logo: <FontAwesomeIcon icon={faCircleInfo} />,
       title: "About",
     },
-    {
-      id: "iframes",
-      logo: <FontAwesomeIcon icon={faVideo} />,
-      title: "video",
-    },
+    // {
+    //   id: "iframes",
+    //   logo: <FontAwesomeIcon icon={faVideo} />,
+    //   title: "video",
+    // },
     {
       id: "projects",
       logo: <FontAwesomeIcon icon={faBarsProgress} />,
@@ -197,8 +197,8 @@ const Home = () => {
       const div = document.getElementById("iframes");
       const rect = div.getBoundingClientRect();
 
-      if (rect.top <= window.innerHeight ) {
-        console.log("hello")
+      if (rect.top <= window.innerHeight) {
+        console.log("hello");
         if (e.deltaY > 0) {
           // Scrolling up, zoom in
           setZoomLevel((prevZoom) => Math.min(1.3, prevZoom + 0.1));
@@ -260,6 +260,10 @@ const Home = () => {
         >
           <div className={`scroll-div`} id="main">
             <Banner bannarHeadingG1="color1" BtnValue="Contact Us" />
+          </div>
+
+          <div style={{ transform: `scale(${zoomLevel})` }} id="iframes">
+            <Iframe zoomLevel={zoomLevel} />
           </div>
 
           <div className={`scroll-div section`} id="about">
@@ -375,14 +379,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div
-            className={`scroll-div section1`}
-            style={{ transform: `scale(${zoomLevel})` }}
-            id="iframes"
-          >
-            <Iframe zoomLevel={zoomLevel} />
           </div>
 
           <div className={`scroll-div section1`} id="projects">
