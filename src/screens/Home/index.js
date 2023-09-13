@@ -191,24 +191,22 @@ const Home = () => {
   const [activeDiv, setActiveDiv] = useState(0);
 
   const [zoomLevel, setZoomLevel] = useState(0.5);
-
   useEffect(() => {
     const handleScroll = (e) => {
       const div = document.getElementById("iframes");
       const rect = div.getBoundingClientRect();
-
-      if (rect.top <= window.innerHeight) {
-        console.log("hello");
+      if (rect.top <= window.innerHeight && rect.bottom >= window.innerHeight) {
         if (e.deltaY > 0) {
+          console.log("zoon in");
           // Scrolling up, zoom in
           setZoomLevel((prevZoom) => Math.min(1.3, prevZoom + 0.1));
         } else {
+          console.log("zoom out");
           // Scrolling down, zoom out
           setZoomLevel((prevZoom) => Math.max(0.5, prevZoom - 0.1));
         }
       }
     };
-
     window.addEventListener("wheel", handleScroll);
 
     return () => {
@@ -262,7 +260,13 @@ const Home = () => {
             <Banner bannarHeadingG1="color1" BtnValue="Contact Us" />
           </div>
 
-          <div style={{ transform: `scale(${zoomLevel})` }} id="iframes">
+          <div
+            style={{
+              transition: `all 0.40s ease-in`,
+              transform: `scale(${zoomLevel})`,
+            }}
+            id="iframes"
+          >
             <Iframe zoomLevel={zoomLevel} />
           </div>
 
