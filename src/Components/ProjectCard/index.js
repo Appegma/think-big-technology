@@ -12,7 +12,7 @@ function ProjectCard({
   return (
     <div className="projectContainerLive">
       <div
-        className="divider"
+        className="divider1"
         data-aos="fade-left"
         data-aos-easing="ease-in-sine"
         data-aos-offset="300"
@@ -49,7 +49,7 @@ function ProjectCard({
             data-aos-duration="1800"
           >
             <div className="projectHeadingDivider">
-              <div className="projectheading1">
+              <div className="projectheading2">
                 <h1>{percentage || "40%"}</h1>
               </div>
               <div className=" projectPercendetail">

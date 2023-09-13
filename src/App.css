@@ -42,6 +42,15 @@ body {
   position: relative;
 }
 
+.section3 {
+  width: 100%;
+  max-width: 1150px;
+  height: auto;
+  margin: 0 auto 50px auto;
+  padding: 96px 0px 96px 0px;
+  z-index: 10;
+  position: relative;
+}
 .section1 {
   width: 100%;
   max-width: 1200px;

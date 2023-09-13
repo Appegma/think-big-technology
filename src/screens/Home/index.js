@@ -357,7 +357,7 @@ const Home = () => {
           </div>
 
           {project.map((value) => (
-            <div className={`scroll-div section`} id={value.id}>
+            <div className={`scroll-div section3`} id={value.id}>
               <ProjectCard {...value} />
             </div>
           ))}
