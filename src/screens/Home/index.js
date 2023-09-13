@@ -26,6 +26,7 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import ProjectCard from "../../components/ProjectCard";
 import Iframe from "../../components/Iframe";
+import ZoomableVideo from "../../components/ZoomableVideo";
 
 const Home = () => {
   useEffect(() => {
@@ -187,32 +188,7 @@ const Home = () => {
     },
   ];
 
-  const [scrollCount, setScrollCount] = useState(0);
   const [activeDiv, setActiveDiv] = useState(0);
-
-  const [zoomLevel, setZoomLevel] = useState(0.5);
-  useEffect(() => {
-    const handleScroll = (e) => {
-      const div = document.getElementById("iframes");
-      const rect = div.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= window.innerHeight) {
-        if (e.deltaY > 0) {
-          console.log("zoon in");
-          // Scrolling up, zoom in
-          setZoomLevel((prevZoom) => Math.min(1.3, prevZoom + 0.1));
-        } else {
-          console.log("zoom out");
-          // Scrolling down, zoom out
-          setZoomLevel((prevZoom) => Math.max(0.5, prevZoom - 0.1));
-        }
-      }
-    };
-    window.addEventListener("wheel", handleScroll);
-
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, []);
 
   const handleScroll = () => {
     // Calculate the index of the active div based on scroll position
@@ -260,15 +236,7 @@ const Home = () => {
             <Banner bannarHeadingG1="color1" BtnValue="Contact Us" />
           </div>
 
-          <div
-            style={{
-              transition: `all 0.40s ease-in`,
-              transform: `scale(${zoomLevel})`,
-            }}
-            id="iframes"
-          >
-            <Iframe zoomLevel={zoomLevel} />
-          </div>
+          <ZoomableVideo src="https://player.vimeo.com/video/829920535?controls=0&autoplay=1&loop=1&muted=1&title=0&autopause=0&background=1" />
 
           <div className={`scroll-div section`} id="about">
             <Status1
