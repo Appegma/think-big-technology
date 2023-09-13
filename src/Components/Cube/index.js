@@ -30,7 +30,7 @@ const Cube = ({ items, active }) => {
             style={{
               transform: `rotateY(${
                 (index - activeIndex) * (360 / items.length)
-              }deg) translateZ(25px)`,
+              }deg) translateZ(35px)`,
             }}
           >
             {item.logo}
