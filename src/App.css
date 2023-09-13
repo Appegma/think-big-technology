@@ -28,7 +28,7 @@ body {
   max-width: 1150px;
   height: auto;
   margin: 0 auto 50px auto;
-  padding: 96px;
+  padding: 96px  96px  0px  96px ;
   z-index: 10;
   position: relative;
 }
@@ -38,7 +38,7 @@ body {
   max-width: 1200px;
   height: auto;
   margin: 20px auto;
-  padding: 50px 60px;
+  padding: 50px 64px;
   z-index: 10;
   position: relative;
 }
@@ -138,19 +138,20 @@ body {
 }
 
 .dotesStyle {
+  height: fit-content;
   position: absolute;
-  top: 12px;
+  top: 16%;
   bottom: 12px;
   right: 3.5rem;
   max-width: 75%;
   display: grid;
-  grid-template-columns: repeat(25, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   z-index: 0;
 }
 
 .dotesGrid {
   height: fit-content;
-  padding: 0.5rem;
+  padding: 0.8rem;
   cursor: crosshair;
   transition: 0.25s;
   border-radius: 8px;
@@ -281,7 +282,6 @@ body {
   font-size: 1.2em;
   font-weight: 200;
 }
-
 
 .fontLight {
   font-weight: 200 !important;
@@ -878,10 +878,29 @@ body {
 .text > p {
   margin: 0;
 }
+.card1Container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+  height: 420px;
+  margin: 20px;
+  background-color: #121e27;
+}
+
+.serviceProvider {
+  margin: 300px auto 50px auto;
+}
 
 /* let make responsive of contact page  */
 
 @media screen and (max-width: 1000px) {
+  .dotesGrid {
+    padding: 0.7rem;
+  }
+
   .contact {
     padding: 50px;
   }
@@ -894,22 +913,84 @@ body {
   }
 
   .contactContainer .contactForm {
-  padding: 50px 30px;
+    padding: 50px 30px;
+  }
+  .status1Text > h3 {
+    font-size: 3rem;
+  }
+  .dividerText1 {
+    font-size: 0.9rem;
+  }
+
+  .footerHeading > h1 {
+    font-size: 5em;
   }
 }
 
-.card1Container{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width:320px;
-  height: 420px;
-  margin: 20px;
-  background-color: #121e27;
+@media screen and (max-width: 800px) {
+  .cardContainer,.cardHead 
+    {
+    max-width: 380px;
+  }
+  .section3 {
+    padding: 30px 0px 30px 0px;
+  }
+  .bannarH1opacity > h1 {
+    font-size: 3.8em;
+  }
+  .bannarH1opacity > h3 {
+    font-size: 2em;
+  }
+  .bannarH1opacity > p {
+    font-size: 1em;
+  }
+
+  .bannarheading1 {
+    max-width: 570px;
+    width: 100%;
+  }
+  .bannarHeading {
+    width: 100%;
+    max-width: 600px;
+  }
+  .dotesGrid {
+    padding: 0.4rem;
+  }
+  .dotesStyle {
+    top: 21%;
+    right: 1.5rem;
+    grid-template-columns: repeat(16, 1fr);
+  }
+
+  .divider {
+    flex-wrap: wrap;
+  }
+  .dividerText {
+    width: 100%;
+  }
+  .dividerStatus {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footerHeading > h1 {
+    font-size: 4em;
+  }
+  .footerHeading > p {
+    font-size: 1.3em;
+  }
+
 }
 
-.serviceProvider {
-  margin: 300px auto 50px auto;
+
+@media screen and (max-width: 600px) {
+  .cardContainer,.cardHead 
+  {
+  max-width: 280px;
+}
+.footerHeading > p {
+font-size: 1em;}
+.cardDetail{
+  font-size:1em ;
+}
 }

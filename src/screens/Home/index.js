@@ -238,7 +238,7 @@ const Home = () => {
 
           <ZoomableVideo src="https://player.vimeo.com/video/829920535?controls=0&autoplay=1&loop=1&muted=1&title=0&autopause=0&background=1" />
 
-          <div className={`scroll-div section`} id="about">
+          <div className={`scroll-div section1`} id="about">
             <Status1
               value="About"
               statusDotsG="color1"
@@ -300,7 +300,11 @@ const Home = () => {
                 </Reveal>
 
                 <Reveal>
-                  <div className="mylink">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                    className="mylink"
+                  >
                     <span className="color1 font_s">My Link </span>
                     <button className="SideBarBtn">
                       <FontAwesomeIcon icon={faGithub} />
@@ -316,7 +320,11 @@ const Home = () => {
               </div>
 
               <div className="dividerStatus">
-                <div className="dividerStatusContaioner">
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom"
+                  className="dividerStatusContaioner"
+                >
                   <Reveal>
                     <div className="dividerHeadingMain">
                       <FontAwesomeIcon icon={faBuilding} />
@@ -333,7 +341,11 @@ const Home = () => {
                   </Reveal>
                 </div>
 
-                <div className="dividerStatusContaioner">
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom"
+                  className="dividerStatusContaioner"
+                >
                   <Reveal>
                     <div className="dividerHeadingMain">
                       <FontAwesomeIcon icon={faHeart} />

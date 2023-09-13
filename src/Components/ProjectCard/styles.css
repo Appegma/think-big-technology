@@ -3,6 +3,7 @@
   max-width: 1360px;
   height: auto;
   /* background-color: #e7ecf2; */
+  transition: all 0.2s ease-in-out !important;
 }
 
 .divider1 {
@@ -162,13 +163,33 @@
   .projectContainerLive {
     max-width: 900px;
     margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 10px;
   }
   .projectHeadingArea {
     flex-wrap: wrap;
-    row-gap: 25px;
+    row-gap: 11px;
+    margin-bottom: 30px;
   }
 
   .projectHeadingArea h1 {
     width: 100%;
+    padding-bottom:20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .projectHeadingdeatial {
+    width: 100%;
+    max-width: 900px !important;
+  }
+
+  .projectheading1 > h1 {
+    min-width: 10px;
+  }
+
+  .projectHeadingdeatial > p {
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 }

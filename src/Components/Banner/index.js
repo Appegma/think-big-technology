@@ -3,7 +3,7 @@ import { Button1 } from "../Button";
 
 const Dots = () => {
   const dotes = [];
-  for (let i = 0; i < 500; i++) {
+  for (let i = 0; i < 400; i++) {
     dotes.push(
       <div className="dotesGrid">
         <div className="bannerDotes" />
