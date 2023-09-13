@@ -39,21 +39,21 @@ const Services = () => {
     //   logo: <FontAwesomeIcon icon={faCircleInfo} />,
     //   title: "About",
     // },
-    {
-      id: "projects",
-      logo: <FontAwesomeIcon icon={faBarsProgress} />,
-      title: "Projects",
-    },
+    // {
+    //   id: "projects",
+    //   logo: <FontAwesomeIcon icon={faBarsProgress} />,
+    //   title: "Projects",
+    // },
     // {
     //   id: "experience",
     //   logo: <FontAwesomeIcon icon={faListCheck} />,
     //   title: "Experience",
     // },
-    // {
-    //   id: "contact",
-    //   logo: <FontAwesomeIcon icon={faAddressBook} />,
-    //   title: "Contact",
-    // },
+    {
+      id: "contact",
+      logo: <FontAwesomeIcon icon={faAddressBook} />,
+      title: "Contact",
+    },
   ];
 
   const status = [
@@ -178,8 +178,7 @@ const Services = () => {
           handleActiveMenu={scrollToDiv}
         >
           <div className={`scroll-div section2`} id="about">
-      <ContactForm />
-          
+            <ContactForm />
           </div>
         </SideBar>
       </div>

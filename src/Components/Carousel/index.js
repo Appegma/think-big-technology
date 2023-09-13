@@ -3,22 +3,76 @@ const Carousel = () => {
     <>
       <div className="imgScroll">
         <div>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
+          <img
+            className="clientLogo"
+            alt="google"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png"
+          />
+          <img
+            className="clientLogo"
+            alt="facebook"
+            src="https://www.freepnglogos.com/uploads/logo-facebook-png/logo-facebook-facebook-logo-transparent-png-pictures-icons-and-0.png"
+          />
+          <img
+            className="clientLogo"
+            alt="instagram"
+            src="https://www.transparentpng.com/thumb/logo-instagram/YfpFOL-logo-instagram-free-transparent.png"
+          />
+          <img
+            alt="twitter"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png"
+          />
+          <img
+            className="clientLogo"
+            alt="snapchat"
+            src="https://static.vecteezy.com/system/resources/previews/023/741/177/original/snapchat-logo-icon-social-media-icon-free-png.png"
+          />
+          <img
+            className="clientLogo"
+            alt="linkedin"
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+          />
+          <img
+            className="clientLogo"
+            alt="slack"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png"
+          />
         </div>
         <div>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
-          <img src="https://wallpaperaccess.com/full/7445.jpg"/>
+          <img
+            className="clientLogo"
+            alt="google"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png"
+          />
+          <img
+            className="clientLogo"
+            alt="facebook"
+            src="https://www.freepnglogos.com/uploads/logo-facebook-png/logo-facebook-facebook-logo-transparent-png-pictures-icons-and-0.png"
+          />
+          <img
+            className="clientLogo"
+            alt="instagram"
+            src="https://www.transparentpng.com/thumb/logo-instagram/YfpFOL-logo-instagram-free-transparent.png"
+          />
+          <img
+            alt="twitter"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png"
+          />
+          <img
+            className="clientLogo"
+            alt="snapchat"
+            src="https://static.vecteezy.com/system/resources/previews/023/741/177/original/snapchat-logo-icon-social-media-icon-free-png.png"
+          />
+          <img
+            className="clientLogo"
+            alt="linkedin"
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+          />
+          <img
+            className="clientLogo"
+            alt="slack"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png"
+          />
         </div>
       </div>
     </>

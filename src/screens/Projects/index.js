@@ -1,21 +1,12 @@
 import "../../App.css";
 
-import { Card1 } from "../../components/Cards";
+import { Card } from "../../components/Cards";
 import { SideBar } from "../../components/Navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAddressBook,
-  faBarsProgress,
-  faBuilding,
-  faCircleInfo,
-  faHeart,
-  faListCheck,
-  faMailForward,
-} from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import { Status1 } from "../../components/Status";
 
 const Projects = () => {
   useEffect(() => {
@@ -31,56 +22,6 @@ const Projects = () => {
         </p>
       ),
       title: "Projects",
-    },
-
-    {
-      id: "contact",
-      logo: <FontAwesomeIcon icon={faAddressBook} />,
-      title: "Contact",
-    },
-  ];
-
-  const status = [
-    "JavaScript",
-    "React",
-    "HTML",
-    "Css",
-    "Angular",
-    "Vue JS",
-    "TypeScript",
-    "Node",
-    "Express",
-    "Github",
-    "Redux",
-  ];
-
-  const status2 = [
-    {
-      heading: "Google",
-      city: "Atlanta",
-      date: "2022 - Present",
-      title: "Software Engineer",
-      detail:
-        "I help build and scale Google Photos. Increased throughput of our primary services by 70%. Migrated backend service from Java to Go. Also helped make it look prettier.",
-      status: status.splice(0, 5),
-    },
-    {
-      heading: "Facebook",
-      city: "San Francisco",
-      date: "2020 - 2022",
-      title: "Software Engineer",
-      detail:
-        "Senior Full Stack Engineer for Facebook Marketplace. Created a service from scratch to handle new listings. Also played some ping pong. It was fun.",
-      status: status.splice(3, 8),
-    },
-    {
-      heading: "Amazon",
-      city: "Seattle",
-      date: "2016 - 2020",
-      title: "Software Engineer",
-      detail:
-        "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
-      status: status.splice(1, 6),
     },
   ];
 
@@ -163,8 +104,45 @@ const Projects = () => {
           activeMenu={activeDiv}
           handleActiveMenu={scrollToDiv}
         >
-          <div className={`scroll-div`} id="main">
-          
+          {/* <StarsBackground title="Projects" /> */}
+          <div className={`scroll-div section`} id="contact">
+            <div className="sectionA">
+              <div className="footerHeading1">
+                <Reveal>
+                  <div className="footerHeading">
+                    <h1>
+                      Project<span className="color1">.</span>
+                    </h1>
+                  </div>
+                </Reveal>
+              </div>
+              <Reveal>
+                <div className="footerHeading">
+                  <p>
+                    Consequat irure aliquip esse aute minim sit ipsum sint
+                    deserunt reprehenderit officia dolor aute. Occaecat deserunt
+                    minim aute duis proident dolor officia in. Culpa deserunt
+                    tempor nulla qui qui eu est anim ullamco elit. Deserunt
+                    proident in cillum amet Lorem esse voluptate commodo duis
+                    proident. Exercitation sunt eiusmod sunt cupidatat veniam
+                    ipsum cupidatat eu ea. Sunt veniam ea et occaecat dolor et
+                    non in magna duis occaecat reprehenderit sint.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+          <div className={`scroll-div section1`} id="projects">
+            <Status1
+              value="Our Project Porfolio"
+              statusDotsG="color1"
+              status1Main="left status1Main"
+            />
+            <div className="projectContainer">
+              {card.map((value) => (
+                <Card {...value} />
+              ))}
+            </div>
           </div>
         </SideBar>
       </div>

@@ -50,7 +50,7 @@ const ContactForm = () => {
               </div>
               <div className="text">
                 <h3>Email</h3>
-                <p>name@gmail.com</p>
+                <p>info@thinkbigtechnology.com</p>
               </div>
             </div>
             <h2 className="txt">Contact With us</h2>
@@ -84,7 +84,7 @@ const ContactForm = () => {
               <span>Type Your Message...</span>
             </div>
             <div className="inputBox">
-              <input type="submit" value="send"/>
+              <input type="submit" value="send" />
             </div>
           </div>
         </div>

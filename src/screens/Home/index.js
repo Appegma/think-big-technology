@@ -61,9 +61,9 @@ const Home = () => {
       title: "Facebook",
     },
     {
-      id: "amazone",
+      id: "amazon",
       logo: <FontAwesomeIcon icon={faAmazon} />,
-      title: "Amazone",
+      title: "Amazon",
     },
     {
       id: "contact",
@@ -169,8 +169,8 @@ const Home = () => {
         "Of sales attributed to digital alone, in 2023 (Q1).",
     },
     {
-      id: "amazone",
-      title: "Amazone",
+      id: "amazon",
+      title: "Amazon",
       img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
       detail:
         "A social community for painters to connect with others in their community. We handle everything backend (50K monthly active users).",

@@ -679,13 +679,18 @@ body {
 }
 .imgScroll div img {
   margin: 0 25px;
-  max-width: 400px;
+  max-width: 200px;
+  max-height: 200px;
   border: 10px solid transparent;
   transform: 0.25s;
+  filter: grayscale(100%);
+  opacity: 0.8;
 }
 
 .imgScroll div img:hover {
-  border: 10px solid #fff;
+  border: 5px solid #0fa0ff;
+  padding: 20px;
+  border-radius: 5px;
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -912,3 +917,6 @@ body {
   background-color: #121e27;
 }
 
+.serviceProvider {
+  margin: 300px auto 50px auto;
+}

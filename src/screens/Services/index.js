@@ -1,23 +1,10 @@
 import "../../App.css";
-import Banner from "../../components/Banner";
-import { Status, Status1, Status2 } from "../../components/Status";
+import { Status1, Status2 } from "../../components/Status";
 import { SideBar } from "../../components/Navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAddressBook,
-  faBarsProgress,
-  faBuilding,
-  faCircleInfo,
-  faHeart,
-  faListCheck,
-  faMailForward,
-} from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import Carousel from "../../components/Carousel";
-import { Form } from "react-router-dom";
 
 const Services = () => {
   useEffect(() => {
@@ -32,28 +19,7 @@ const Services = () => {
           T<span className="color1">.</span>
         </p>
       ),
-      title: "Services",
     },
-    // {
-    //   id: "about",
-    //   logo: <FontAwesomeIcon icon={faCircleInfo} />,
-    //   title: "About",
-    // },
-    {
-      id: "projects",
-      logo: <FontAwesomeIcon icon={faBarsProgress} />,
-      title: "Projects",
-    },
-    // {
-    //   id: "experience",
-    //   logo: <FontAwesomeIcon icon={faListCheck} />,
-    //   title: "Experience",
-    // },
-    // {
-    //   id: "contact",
-    //   logo: <FontAwesomeIcon icon={faAddressBook} />,
-    //   title: "Contact",
-    // },
   ];
 
   const status = [
@@ -97,37 +63,6 @@ const Services = () => {
       detail:
         "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
       status: status.splice(1, 6),
-    },
-  ];
-
-  const card = [
-    {
-      title: "Project 1",
-      img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-      link: "https://think-big-technology.web.app/",
-    },
-    {
-      title: "Project 2",
-      img: "https://codequotient.com/blog/wp-content/uploads/2023/04/Showcasing-Your-Web-Developer-Skills-Crafting-a-Portfolio-That-Packs-a-Punch.jpg",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-      link: "https://think-big-technology.web.app/",
-    },
-    {
-      title: "Project 3",
-      img: "https://5.imimg.com/data5/MH/FQ/OV/SELLER-52007146/personal-portfolio-website-500x500.jpg",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-      link: "https://think-big-technology.web.app/",
-    },
-    {
-      title: "Project 4",
-      img: "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/292121659/original/c8d7a4162986e94e44e348f85b2ffeb77feb0a8d/develop-personal-portfolio-website-blog-or-business-website.jpg",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-      link: "https://think-big-technology.web.app/",
     },
   ];
 
@@ -175,8 +110,52 @@ const Services = () => {
           activeMenu={activeDiv}
           handleActiveMenu={scrollToDiv}
         >
+          {/* <StarsBackground title="Services" /> */}
+          <div className={`scroll-div section`} id="contact">
+            <div className="sectionA">
+              <div className="footerHeading1">
+                <Reveal>
+                  <div className="footerHeading">
+                    <h1>
+                      Services<span className="color1">.</span>
+                    </h1>
+                  </div>
+                </Reveal>
+              </div>
+              <Reveal>
+                <div className="footerHeading">
+                  <p>
+                    Consequat irure aliquip esse aute minim sit ipsum sint
+                    deserunt reprehenderit officia dolor aute. Occaecat deserunt
+                    minim aute duis proident dolor officia in. Culpa deserunt
+                    tempor nulla qui qui eu est anim ullamco elit. Deserunt
+                    proident in cillum amet Lorem esse voluptate commodo duis
+                    proident. Exercitation sunt eiusmod sunt cupidatat veniam
+                    ipsum cupidatat eu ea. Sunt veniam ea et occaecat dolor et
+                    non in magna duis occaecat reprehenderit sint.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
+          </div>
           <div className={`scroll-div section2`} id="about">
+            <Status1
+              value="Partners"
+              statusDotsG="color1"
+              status1Main="right status1Main"
+            />
             <Carousel />
+          </div>
+
+          <div className={`serviceProvider`} id="experience">
+            <Status1
+              value="Satisfied Clients"
+              statusDotsG="color1"
+              status1Main="left status1Main"
+            />
+            {status2.map((value) => (
+              <Status2 {...value} />
+            ))}
           </div>
         </SideBar>
       </div>
