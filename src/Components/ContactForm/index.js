@@ -7,85 +7,98 @@ import {
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Reveal from "../Animation/Reveal";
 
+import "./styles.css";
+import { Input1, TextArea1 } from "../Input";
 const ContactForm = () => {
   return (
     <>
-      <div className="contact">
-        <div className="contect">
-          <h2>Contact Us</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s,
-          </p>
+      <div className="contactContainer">
+        <div className="contactHeading">
+          <div className="contactHeadingW">
+            <h1>
+              Let’s blow (speech) bubbles<span className="color1">.</span>
+            </h1>
+          </div>
         </div>
-        <div className="contactContainer">
-          <div className="contactInfo">
-            <div className="Contactbox">
-              <div className="icon">
-                <FontAwesomeIcon icon={faLocationDot} />
+
+        <div className="contactDetailContainer">
+          <div className="contactTextArea">
+            <div className="contactDetail">
+              <p>
+                We're just one click away to help you take your brand or product
+                from great to incredible. Fill in the form to share more details
+                about your project. Or your favorite gum flavor. Either way,
+                we’d love to talk.
+              </p>
+            </div>
+            <div className="contactDetail">
+              <div className="contactPImg">
+                <div className="imgRound">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                </div>
               </div>
-              <div className="text">
-                <h3>Address</h3>
+              <div className="contactPersonInfo">
+                <h3>
+                  Hi, I’m Vince! Let’s chat about your amazing ideas and
+                  projects.
+                </h3>
+              </div>
+              <div className="contactPersonP">
                 <p>
-                  502671 Surge Camp Road, <br /> Owatonne,Minnesota,
-                  <br />
-                  5502560
+                  "I enjoy translating your thoughts to our diversely skilled
+                  team for the best results"
                 </p>
               </div>
-            </div>
-            <div className="Contactbox">
-              <div className="icon">
-                <FontAwesomeIcon icon={faPhone} />
-              </div>
-              <div className="text">
-                <h3>Phone</h3>
-                <p>000-000-000-000</p>
-              </div>
-            </div>
-            <div className="Contactbox">
-              <div className="icon">
-                <FontAwesomeIcon icon={faEnvelope} />
-              </div>
-              <div className="text">
-                <h3>Email</h3>
-                <p>info@thinkbigtechnology.com</p>
+
+              <div className="contactPersonMail">
+                <div className="contactIcon">
+                  <FontAwesomeIcon className="hoverIcon" icon={faEnvelope} />
+                </div>
+                <div className="contactEmail">
+                  <h5>Email Vince directly</h5>
+                </div>
               </div>
             </div>
-            <h2 className="txt">Contact With us</h2>
-            <ul className="sci">
-              <li>
-                <FontAwesomeIcon icon={faFacebook} />
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faTwitter} />
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faLinkedin} />
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faInstagram} />
-              </li>
-            </ul>
           </div>
+
           <div className="contactForm">
-            <h2>Send Massage</h2>
-            <div className="inputBox">
-              <input type="text" name="" required="required" />
-              <span>Full Name</span>
+            <div className="NameArea">
+              <div className="firstname">
+                <Input1
+                  type="text"
+                  placeholder="Full Name"
+                  label="First Name"
+                />
+              </div>
+              <div className="firstname">
+                <Input1 type="text" placeholder="Last Name" label="Last Name" />
+              </div>
             </div>
-            <div className="inputBox">
-              <input type="text" name="" required="required" />
-              <span>Email</span>
+
+            <div className="NameArea">
+              <Input1
+                type="email"
+                placeholder="Your Email Address"
+                label="Your Email"
+              />
             </div>
-            <div className="inputBox">
-              <textarea required="reaquired"></textarea>
-              <span>Type Your Message...</span>
+
+            <div className="NameArea">
+              <TextArea1
+                label="Tell us more about your project goals:"
+                placeholder="e.g. We'd like to rebrand & improve our marketing website and platform."
+              />
             </div>
-            <div className="inputBox">
-              <input type="submit" value="send" />
+
+            <div className="ContactSubmit">
+              <button className="contantBtn ">submit</button>
             </div>
+
+
+
+
           </div>
         </div>
       </div>

@@ -48,11 +48,6 @@ const Home = () => {
       logo: <FontAwesomeIcon icon={faCircleInfo} />,
       title: "About",
     },
-    // {
-    //   id: "iframes",
-    //   logo: <FontAwesomeIcon icon={faVideo} />,
-    //   title: "video",
-    // },
     {
       id: "projects",
       logo: <FontAwesomeIcon icon={faBarsProgress} />,

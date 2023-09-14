@@ -28,7 +28,7 @@ body {
   max-width: 1150px;
   height: auto;
   margin: 0 auto 50px auto;
-  padding: 96px  96px  0px  96px ;
+  padding: 96px 96px 0px 96px;
   z-index: 10;
   position: relative;
 }
@@ -57,6 +57,15 @@ body {
   height: auto;
   margin: 0 auto 50px auto;
   padding: 96px 0px 96px 0px;
+  z-index: 10;
+  position: relative;
+}
+.section4{
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  margin: 0 auto 50px auto;
+  padding: 96px 0px 96px 70px;
   z-index: 10;
   position: relative;
 }
@@ -261,8 +270,6 @@ body {
 }
 
 .cardBtn {
-  /* width: 28px;
-    height: 28px; */
   font-size: 30px;
   background-color: transparent;
   border: none;
@@ -285,6 +292,16 @@ body {
 
 .fontLight {
   font-weight: 200 !important;
+}
+.testContainer {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
 }
 
 .screen {
@@ -697,187 +714,6 @@ body {
   filter: blur(0px);
 }
 
-.contact {
-  position: relative;
-  min-height: 100vh;
-  padding: 50px 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #111;
-}
-
-.contact .contect {
-  max-width: 880px;
-  text-align: center;
-}
-
-.contact .contect h2 {
-  font-size: 3em;
-  color: #fff;
-  font-weight: 500;
-  margin: 0;
-}
-
-.contact .contect p {
-  font-size: 1.1em;
-  color: #fff;
-  font-weight: 300;
-  margin: 0;
-}
-
-.contactContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  margin-top: 30px;
-}
-
-.contactContainer .contactInfo {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-.contactContainer .contactInfo .Contactbox {
-  position: relative;
-  padding: 20px 0;
-  display: flex;
-  cursor: pointer;
-}
-
-.contactContainer .contactInfo .Contactbox .icon {
-  min-width: 60px;
-  height: 60px;
-  background: #a1a1a1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.75em;
-}
-
-.contactContainer .contactInfo .Contactbox:hover .icon {
-  background: #0fa0ff;
-  color: #fff;
-}
-
-.contactContainer .contactInfo .Contactbox .text {
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
-  font-size: 1.1em;
-  color: #fff;
-  font-weight: 300;
-}
-
-.contactContainer .contactInfo .Contactbox .text h3 {
-  font-weight: 500;
-  color: #0fa0ff;
-}
-
-.contactContainer .contactInfo .txt {
-  color: #fff;
-  margin: 50px 0 0 0;
-  font-weight: 500;
-  padding-left: 10px;
-  border-left: 50px solid #0fa0ff;
-  line-height: 1em;
-}
-
-.sci {
-  position: relative;
-  display: flex;
-  gap: 30px;
-  margin: 20px 0;
-}
-
-.sci li {
-  list-style-type: none;
-  font-size: 2em;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.1s !important;
-}
-.sci li:hover {
-  color: #0fa0ff;
-}
-/****** not style apply in anchor tag in contact foam *********/
-
-.contactContainer .contactForm {
-  position: relative;
-  width: 40%;
-  background: #fff;
-  min-height: 100px;
-  padding: 60px;
-}
-.contactContainer .contactForm h2 {
-  font-size: 2em;
-  color: #333;
-  font-weight: 500;
-}
-
-.contactContainer .contactForm .inputBox {
-  position: relative;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.contactContainer .contactForm .inputBox input,
-.contactContainer .contactForm .inputBox textarea {
-  width: 100%;
-  padding: 5px 0;
-  font-size: 1.1em;
-  margin: 10px 0;
-  border: none;
-  color: #333;
-  border-bottom: 2px solid #333;
-  outline: none;
-  resize: none;
-}
-
-.contactContainer .contactForm .inputBox span {
-  position: absolute;
-  left: 0;
-  pointer-events: none;
-  padding: 5px 0;
-  margin: 10px 0;
-  font-size: 1.1em;
-  color: #666;
-  transition: 0.5s !important;
-}
-
-.contactContainer .contactForm .inputBox input:focus ~ span,
-.contactContainer .contactForm .inputBox textarea:focus ~ span,
-.contactContainer .contactForm .inputBox input:valid ~ span,
-.contactContainer .contactForm .inputBox textarea:valid ~ span {
-  color: #0fa0ff;
-  font-size: 0.9em;
-  transform: translateY(-20px);
-}
-
-.contactContainer .contactForm .inputBox input[type="submit"] {
-  width: 200px;
-  background-color: transparent;
-  color: #0fa0ff;
-  border: 2px solid #0fa0ff;
-  border-radius: 10px;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 1.1em;
-  font-weight: 500;
-}
-
-.contactContainer .contactForm .inputBox input[type="submit"]:hover {
-  background-color: #0fa0ff;
-  color: #fff;
-}
-
-.text > h3,
-.text > p {
-  margin: 0;
-}
 .card1Container {
   position: relative;
   display: flex;
@@ -885,15 +721,55 @@ body {
   align-items: center;
   width: 100%;
   max-width: 320px;
-  height: 420px;
+  min-width: 250px;
   margin: 20px;
+  height: auto;
   background-color: #121e27;
+  z-index: 5;
+}
+
+.Card1Content {
+  width: 100%;
+  height: auto;
+  padding: 0px 15px 0px 15px;
+  text-align: center;
+}
+
+.card1logo {
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+}
+.card1logo > img {
+  width: 100%;
+  height: 100%;
 }
 
 .serviceProvider {
   margin: 300px auto 50px auto;
 }
 
+.card1personImg {
+  width: 130px;
+  height: 130px;
+  margin: 10px auto;
+}
+
+.card1personImg > img {
+  width: 100%;
+  height: 100%;
+  background-color: #0fa0ff;
+  border-radius: 9999px;
+}
+
+.card1text {
+  width: 100%;
+  height: auto;
+}
+
+.card1text > p {
+  line-height: 1.2;
+}
 /* let make responsive of contact page  */
 
 @media screen and (max-width: 1000px) {
@@ -928,8 +804,8 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .cardContainer,.cardHead 
-    {
+  .cardContainer,
+  .cardHead {
     max-width: 380px;
   }
   .section3 {
@@ -979,18 +855,28 @@ body {
   .footerHeading > p {
     font-size: 1.3em;
   }
-
+  .card1Container{
+    max-width: 70%;
+  }
 }
-
 
 @media screen and (max-width: 600px) {
-  .cardContainer,.cardHead 
-  {
-  max-width: 280px;
+  .cardContainer,
+  .cardHead {
+    max-width: 280px;
+  }
+  .footerHeading > p {
+    font-size: 1em;
+  }
+  .cardDetail {
+    font-size: 1em;
+  }
 }
-.footerHeading > p {
-font-size: 1em;}
-.cardDetail{
-  font-size:1em ;
-}
+
+
+
+.container11{
+width: 100%;
+min-height: 100vh;
+
 }

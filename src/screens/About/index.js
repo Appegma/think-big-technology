@@ -19,8 +19,11 @@ import AOS from "aos";
 import { Form } from "react-router-dom";
 import ContactForm from "../../components/ContactForm";
 import Iframe from "../../components/Iframe";
+import { Card1 } from "../../components/Cards";
+import CardQuotationImage from "../../asset/quataions.png";
 
-const Services = () => {
+
+const About = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -33,7 +36,7 @@ const Services = () => {
           T<span className="color1">.</span>
         </p>
       ),
-      title: "Services",
+      title: "Home",
     },
     // {
     //   id: "about",
@@ -71,65 +74,39 @@ const Services = () => {
     "Redux",
   ];
 
-  const status2 = [
+  const card1 = [
     {
-      heading: "Google",
-      city: "Atlanta",
-      date: "2022 - Present",
-      title: "Software Engineer",
-      detail:
-        "I help build and scale Google Photos. Increased throughput of our primary services by 70%. Migrated backend service from Java to Go. Also helped make it look prettier.",
-      status: status.splice(0, 5),
-    },
-    {
-      heading: "Facebook",
-      city: "San Francisco",
-      date: "2020 - 2022",
-      title: "Software Engineer",
-      detail:
-        "Senior Full Stack Engineer for Facebook Marketplace. Created a service from scratch to handle new listings. Also played some ping pong. It was fun.",
-      status: status.splice(3, 8),
-    },
-    {
-      heading: "Amazon",
-      city: "Seattle",
-      date: "2016 - 2020",
-      title: "Software Engineer",
-      detail:
-        "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
-      status: status.splice(1, 6),
-    },
-  ];
-
-  const card = [
-    {
-      title: "Project 1",
-      img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
+      name: "mona lisa",
+      logo: CardQuotationImage ,
+      personImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
       detail:
         "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-      link: "https://think-big-technology.web.app/",
     },
     {
-      title: "Project 2",
-      img: "https://codequotient.com/blog/wp-content/uploads/2023/04/Showcasing-Your-Web-Developer-Skills-Crafting-a-Portfolio-That-Packs-a-Punch.jpg",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-      link: "https://think-big-technology.web.app/",
-    },
-    {
-      title: "Project 3",
-      img: "https://5.imimg.com/data5/MH/FQ/OV/SELLER-52007146/personal-portfolio-website-500x500.jpg",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-      link: "https://think-big-technology.web.app/",
-    },
-    {
-      title: "Project 4",
-      img: "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/292121659/original/c8d7a4162986e94e44e348f85b2ffeb77feb0a8d/develop-personal-portfolio-website-blog-or-business-website.jpg",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-      link: "https://think-big-technology.web.app/",
-    },
+        name: "mona lisa",
+        logo: CardQuotationImage ,
+        personImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        detail:
+          "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      },  {
+        name: "mona lisa",
+        logo: CardQuotationImage ,
+        personImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        detail:
+          "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      },  {
+        name: "mona lisa",
+        logo: CardQuotationImage ,
+        personImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        detail:
+          "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      },  {
+        name: "mona lisa",
+        logo: CardQuotationImage ,
+        personImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        detail:
+          "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      },
   ];
 
   const [activeDiv, setActiveDiv] = useState(0);
@@ -170,19 +147,28 @@ const Services = () => {
 
   return (
     <>
-      {/* <div className="container11"></div> */}
       <div className="container1">
         <SideBar
           menuItems={menuItems}
           activeMenu={activeDiv}
           handleActiveMenu={scrollToDiv}
         >
-          <div className={`scroll-div section4`} id="about">
-            <ContactForm />
+          <div className="section">
+            <Status1
+              value="Testimonial"
+              statusDotsG="color1"
+              status1Main="status1Main"
+            />
+          </div>
+
+          <div className="testContainer">
+            {card1.map((value) => (
+              <Card1 {...value} />
+            ))}
           </div>
         </SideBar>
       </div>
     </>
   );
 };
-export default Services;
+export default About;

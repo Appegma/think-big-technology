@@ -64,10 +64,10 @@ function ProjectCard({
       </div>
       <div
         className="projectImage"
-        data-aos="fade-left"
-        data-aos-easing="ease-in"
-        data-aos-offset="500"
-        data-aos-anchor="#example-anchor"
+          data-aos="fade-left"
+          data-aos-easing="ease-in"
+          data-aos-offset="500"
+          data-aos-anchor="#example-anchor"
       >
         <img
           alt={title || "McDonald’s"}

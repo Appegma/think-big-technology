@@ -68,6 +68,7 @@ const SideBar = ({
         </div>
         <div className="topLinks">
           <ul className="topName">
+          
             <li>
               <NavLink
                 className={`topNameStyle ${
@@ -79,6 +80,18 @@ const SideBar = ({
                 Home
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                className={`topNameStyle ${
+                  activeRoute === "about" && "active"
+                } `}
+                onClick={() => topActive("about")}
+                to={"/about"}
+              >
+                About
+              </NavLink>
+            </li>
+            
             <li>
               <NavLink
                 className={`topNameStyle ${

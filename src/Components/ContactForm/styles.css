@@ -1,0 +1,189 @@
+.contactContainer {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.contactHeading {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+}
+
+.contactHeadingW {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+.contactHeadingW > h1 {
+  font-size: 6em;
+  color: #ebecf3;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.contactDetailContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contactTextArea {
+  width: 40%;
+  height: auto;
+}
+
+.contactForm {
+  width: 59%;
+  height: auto;
+  border-left: 1px solid #a2a2a2;
+}
+
+.contactDetail {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.contactDetail > p {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.35;
+  color: #ebecf3;
+}
+
+.contactPImg {
+  widows: 100%;
+  height: auto;
+  padding-top: 90px;
+}
+
+.imgRound {
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px;
+}
+
+.imgRound > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.contactPersonInfo {
+  width: 100%;
+  margin-top: 15px;
+  height: auto;
+}
+.contactPersonInfo > h3 {
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.contactPersonP {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 10px;
+  height: auto;
+}
+
+.contactPersonP > p {
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+  color: #a2a2a2;
+}
+
+.contactPersonMail {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.contactIcon {
+  width: fit-content;
+  height: auto;
+  color: #0fa0ff;
+  margin-left: 10px;
+  font-size: 1.5em;
+}
+
+.contactEmail > h5 {
+  margin: 0px 0px 0px 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  position: relative;
+  color: #0fa0ff;
+}
+
+.contactEmail > h5::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out;
+}
+.contactEmail > h5:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.NameArea {
+  width: 100%;
+  height: auto;
+  padding: 10px 0px 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstname{
+  width: 49.5%;
+  height: auto;
+}
+
+
+.ContactSubmit{
+  width: 100%;
+  height: auto;
+  padding: 5px 0px 5px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contantBtn{
+  max-width: 200px;
+width: 100%;
+color: #0fa0ff;
+border: 1px solid #0fa0ff;
+outline: none;
+font-size:1.2em ;
+background: transparent;
+margin-left: 10px;
+border-radius: 5px;
+letter-spacing: -0.025em;
+padding: 6px 10px;
+cursor: pointer;
+}
+.contantBtn:hover{
+  background-color: #0fa0ff;
+  color: #ebecf3;
+}
