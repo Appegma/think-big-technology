@@ -87,7 +87,7 @@ const ContactForm = () => {
 
             <div className="NameArea">
               <TextArea1
-                label="Tell us more about your project goals:"
+                label="Tell us more about your project goals"
                 placeholder="e.g. We'd like to rebrand & improve our marketing website and platform."
               />
             </div>
@@ -95,10 +95,6 @@ const ContactForm = () => {
             <div className="ContactSubmit">
               <button className="contantBtn ">submit</button>
             </div>
-
-
-
-
           </div>
         </div>
       </div>
