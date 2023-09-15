@@ -29,7 +29,7 @@ const Banner = ({ bannarHeadingG1, BtnValue }) => {
               </div>
             </Reveal>
           </div>
-          <div className="bannarheading1">
+          {/* <div className="bannarheading1">
             <Reveal>
               <div className="bannarH1opacity">
                 <h3>
@@ -55,9 +55,9 @@ const Banner = ({ bannarHeadingG1, BtnValue }) => {
                 <Button1 value={BtnValue} />
               </div>
             </Reveal>
-          </div>
+          </div> */}
         </div>
-        <Dots />
+        {/* <Dots /> */}
       </div>
     </>
   );

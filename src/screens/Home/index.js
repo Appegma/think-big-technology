@@ -27,6 +27,7 @@ import AOS from "aos";
 import ProjectCard from "../../components/ProjectCard";
 import Iframe from "../../components/Iframe";
 import ZoomableVideo from "../../components/ZoomableVideo";
+import { AiFillFacebook } from 'react-icons/ai';
 
 const Home = () => {
   useEffect(() => {
@@ -39,6 +40,7 @@ const Home = () => {
       logo: (
         <p>
           T<span className="color1">.</span>
+          <AiFillFacebook />
         </p>
       ),
       title: "Home",

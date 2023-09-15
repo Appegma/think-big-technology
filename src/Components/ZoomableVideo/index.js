@@ -22,7 +22,7 @@ const ZoomableVideo = ({ src }) => {
 
         // Limit the zoom range to prevent the video from becoming too small or too large
         const minScale = 3;
-        const maxScale = 5.5; // Adjust this value as needed
+        const maxScale = 6.5; // Adjust this value as needed
         const clampedScale = Math.min(maxScale, Math.max(minScale, newScale));
 
         setScale(clampedScale);
