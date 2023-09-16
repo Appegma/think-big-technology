@@ -5,20 +5,27 @@ import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import Carousel from "../../components/Carousel";
-
+import { GrServices } from "react-icons/gr";
+import SliderAS from "../../components/AwsomeSlider";
 const Services = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
   const menuItems = [
+    // {
+    //   id: "contact",
+    //   logo: (
+    //     <p>
+    //       T<span className="color1">.</span>
+    //     </p>
+    //   ),
+    //   title:"Services"
+    // },
     {
-      id: "main",
-      logo: (
-        <p>
-          T<span className="color1">.</span>
-        </p>
-      ),
+      id: "contact",
+      logo: <GrServices className="svgColors" />,
+      title: "Services",
     },
   ];
 
@@ -111,34 +118,37 @@ const Services = () => {
           handleActiveMenu={scrollToDiv}
         >
           {/* <StarsBackground title="Services" /> */}
-          <div className={`scroll-div section`} id="contact">
-            <div className="sectionA">
-              <div className="footerHeading1">
-                <Reveal>
-                  <div className="footerHeading">
-                    <h1>
-                      Services<span className="color1">.</span>
-                    </h1>
-                  </div>
-                </Reveal>
-              </div>
+
+          <div className={`scroll-div relative section2`} id="about">
+            <SliderAS />
+          </div>
+          <div className="textAbsolute">
+            <div className="footerHeading1 ">
               <Reveal>
                 <div className="footerHeading">
-                  <p>
-                    Consequat irure aliquip esse aute minim sit ipsum sint
-                    deserunt reprehenderit officia dolor aute. Occaecat deserunt
-                    minim aute duis proident dolor officia in. Culpa deserunt
-                    tempor nulla qui qui eu est anim ullamco elit. Deserunt
-                    proident in cillum amet Lorem esse voluptate commodo duis
-                    proident. Exercitation sunt eiusmod sunt cupidatat veniam
-                    ipsum cupidatat eu ea. Sunt veniam ea et occaecat dolor et
-                    non in magna duis occaecat reprehenderit sint.
-                  </p>
+                  <h1>
+                    Services<span className="color1">.</span>
+                  </h1>
                 </div>
               </Reveal>
             </div>
+            <Reveal>
+              <div className="footerHeading">
+                <p>
+                  Consequat irure aliquip esse aute minim sit ipsum sint
+                  deserunt reprehenderit officia dolor aute. Occaecat deserunt
+                  minim aute duis proident dolor officia in.
+                
+                </p>
+              </div>
+            </Reveal>
           </div>
-          <div className={`scroll-div section2`} id="about">
+
+          {/* <div className="sectionA">
+             
+            </div> */}
+
+          <div className={`scroll-div section2`} id="contact">
             <Status1
               value="Partners"
               statusDotsG="color1"
@@ -147,7 +157,7 @@ const Services = () => {
             <Carousel />
           </div>
 
-          <div className={`serviceProvider`} id="experience">
+          <div className={`serviceProvider`} id="contact">
             <Status1
               value="Satisfied Clients"
               statusDotsG="color1"

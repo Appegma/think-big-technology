@@ -3,32 +3,16 @@ import Banner from "../../components/Banner";
 import { Status, Status1, Status2 } from "../../components/Status";
 import { Card } from "../../components/Cards";
 import { SideBar } from "../../components/Navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAddressBook,
-  faBarsProgress,
-  faBuilding,
-  faCircleInfo,
-  faHeart,
-  faListCheck,
-  faMailForward,
-  faVideo,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faAmazon,
-  faFacebook,
-  faGithub,
-  faGoogle,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import ProjectCard from "../../components/ProjectCard";
-import Iframe from "../../components/Iframe";
 import ZoomableVideo from "../../components/ZoomableVideo";
-import { AiFillFacebook } from 'react-icons/ai';
-
+import { AiFillFacebook ,AiOutlineAmazon } from 'react-icons/ai';
+import {FaGoogle , FaAddressBook} from "react-icons/fa"
+import {PiProjectorScreenChartBold} from "react-icons/pi"
+import{CgMailForward} from "react-icons/cg"
+import{BiLogoAngular, BiLogoCss3, BiLogoGithub, BiLogoHtml5, BiLogoJavascript ,BiLogoNodejs,BiLogoReact, BiLogoRedux, BiLogoTypescript, BiLogoVuejs} from "react-icons/bi"
 const Home = () => {
   useEffect(() => {
     AOS.init();
@@ -40,55 +24,49 @@ const Home = () => {
       logo: (
         <p>
           T<span className="color1">.</span>
-          <AiFillFacebook />
+          
         </p>
       ),
       title: "Home",
     },
     {
-      id: "about",
-      logo: <FontAwesomeIcon icon={faCircleInfo} />,
-      title: "About",
-    },
-    {
       id: "projects",
-      logo: <FontAwesomeIcon icon={faBarsProgress} />,
+      logo: <PiProjectorScreenChartBold/>,
       title: "Projects",
     },
     {
       id: "google",
-      logo: <FontAwesomeIcon icon={faGoogle} />,
+      logo: <FaGoogle/>,
       title: "Google",
     },
     {
       id: "facebook",
-      logo: <FontAwesomeIcon icon={faFacebook} />,
+      logo:<AiFillFacebook />,
       title: "Facebook",
     },
     {
       id: "amazon",
-      logo: <FontAwesomeIcon icon={faAmazon} />,
+      logo: <AiOutlineAmazon />,
       title: "Amazon",
     },
     {
       id: "contact",
-      logo: <FontAwesomeIcon icon={faAddressBook} />,
+      logo: <FaAddressBook />,
       title: "Contact",
     },
   ];
 
   const status = [
-    "JavaScript",
-    "React",
-    "HTML",
-    "Css",
-    "Angular",
-    "Vue JS",
-    "TypeScript",
-    "Node",
-    "Express",
-    "Github",
-    "Redux",
+    <BiLogoJavascript/>,
+    <BiLogoReact/>,
+    <BiLogoHtml5/>,
+    <BiLogoCss3/>,
+    <BiLogoAngular/>,
+    <BiLogoVuejs/>,
+    <BiLogoTypescript/>,
+    <BiLogoNodejs/>,
+    <BiLogoGithub/>,
+    <BiLogoRedux/>,
   ];
 
   const status2 = [
@@ -222,7 +200,6 @@ const Home = () => {
   };
 
   return (
-    <>
       <div className="container1">
         <SideBar
           menuItems={menuItems}
@@ -233,136 +210,136 @@ const Home = () => {
             <Banner bannarHeadingG1="color1" BtnValue="Contact Us" />
           </div>
 
-          <ZoomableVideo src="https://player.vimeo.com/video/829920535?controls=0&autoplay=1&loop=1&muted=1&title=0&autopause=0&background=1" />
+          <ZoomableVideo />
 
-          <div className={`scroll-div section1`} id="about">
-            <Status1
-              value="About"
-              statusDotsG="color1"
-              status1Main="status1Main"
-            />
-            <div className="divider">
-              <div className="dividerText">
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Excepteur cillum ut qui anim id. Cillum ex laboris Lorem
-                    deserunt anim exercitation laboris minim duis velit nulla eu
-                    aute ex. Id id exercitation exercitation proident dolor.
-                  </div>
-                </Reveal>
-
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Nulla eiusmod aute ea nulla. Eiusmod eiusmod cillum ullamco
-                    excepteur non. Labore sint est duis do cupidatat ipsum do
-                    quis eiusmod non anim est. Fugiat ad consequat nostrud est
-                    officia et nulla consequat esse enim consequat aliquip.
-                    Veniam Lorem nostrud sunt aliqua.
-                  </div>
-                </Reveal>
-
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Aliqua nostrud aute amet sint velit occaecat laborum fugiat
-                    adipisicing sunt dolore et elit. Eu do reprehenderit amet
-                    officia magna dolor exercitation adipisicing laboris ea id
-                    deserunt. Excepteur amet nisi id dolore dolor veniam
-                    occaecat sunt cillum incididunt nulla officia ea cupidatat.
-                  </div>
-                </Reveal>
-
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Eu exercitation ex ex et. Ea magna ut aute et officia
-                    excepteur nisi anim excepteur. Adipisicing incididunt
-                    cupidatat occaecat ex eu veniam velit proident est irure
-                    voluptate officia minim do.
-                  </div>
-                </Reveal>
-
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="mylink"
-                  >
-                    <span className="color1 font_s">My Link </span>
-                    <button className="SideBarBtn">
-                      <FontAwesomeIcon icon={faGithub} />
-                    </button>
-                    <button className="SideBarBtn">
-                      <FontAwesomeIcon icon={faLinkedin} />
-                    </button>
-                    <button className="SideBarBtn">
-                      <FontAwesomeIcon icon={faGithub} />
-                    </button>
-                  </div>
-                </Reveal>
-              </div>
-
-              <div className="dividerStatus">
-                <div
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="bottom-bottom"
-                  className="dividerStatusContaioner"
-                >
+            {/* <div className={`scroll-div section1`} id="about">
+              <Status1
+                value="About"
+                statusDotsG="color1"
+                status1Main="status1Main"
+              />
+              <div className="divider">
+                <div className="dividerText">
                   <Reveal>
-                    <div className="dividerHeadingMain">
-                      <FontAwesomeIcon icon={faBuilding} />
-                      <h1>Use at work</h1>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="dividerText1"
+                    >
+                      Excepteur cillum ut qui anim id. Cillum ex laboris Lorem
+                      deserunt anim exercitation laboris minim duis velit nulla eu
+                      aute ex. Id id exercitation exercitation proident dolor.
                     </div>
                   </Reveal>
 
                   <Reveal>
-                    <div className="statusContainer">
-                      {status.map((value) => (
-                        <Status value={value} />
-                      ))}
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="dividerText1"
+                    >
+                      Nulla eiusmod aute ea nulla. Eiusmod eiusmod cillum ullamco
+                      excepteur non. Labore sint est duis do cupidatat ipsum do
+                      quis eiusmod non anim est. Fugiat ad consequat nostrud est
+                      officia et nulla consequat esse enim consequat aliquip.
+                      Veniam Lorem nostrud sunt aliqua.
+                    </div>
+                  </Reveal>
+
+                  <Reveal>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="dividerText1"
+                    >
+                      Aliqua nostrud aute amet sint velit occaecat laborum fugiat
+                      adipisicing sunt dolore et elit. Eu do reprehenderit amet
+                      officia magna dolor exercitation adipisicing laboris ea id
+                      deserunt. Excepteur amet nisi id dolore dolor veniam
+                      occaecat sunt cillum incididunt nulla officia ea cupidatat.
+                    </div>
+                  </Reveal>
+
+                  <Reveal>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="dividerText1"
+                    >
+                      Eu exercitation ex ex et. Ea magna ut aute et officia
+                      excepteur nisi anim excepteur. Adipisicing incididunt
+                      cupidatat occaecat ex eu veniam velit proident est irure
+                      voluptate officia minim do.
+                    </div>
+                  </Reveal>
+
+                  <Reveal>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="mylink"
+                    >
+                      <span className="color1 font_s">My Link </span>
+                      <button className="SideBarBtn">
+                        <BsGithub/>
+                      </button>
+                      <button className="SideBarBtn">
+                        <AiFillLinkedin />
+                      </button>
+                      <button className="SideBarBtn">
+                        <BsTwitter />
+                      </button>
                     </div>
                   </Reveal>
                 </div>
 
-                <div
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="bottom-bottom"
-                  className="dividerStatusContaioner"
-                >
-                  <Reveal>
-                    <div className="dividerHeadingMain">
-                      <FontAwesomeIcon icon={faHeart} />
-                      <h1>Love to Work with</h1>
-                    </div>
-                  </Reveal>
+                <div className="dividerStatus">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                    className="dividerStatusContaioner"
+                  >
+                    <Reveal>
+                      <div className="dividerHeadingMain">
+                        <FaBuilding />
+                        <h1>Use at work</h1>
+                      </div>
+                    </Reveal>
 
-                  <Reveal>
-                    <div className="statusContainer">
-                      {status.map((value) => (
-                        <Status value={value} />
-                      ))}
-                    </div>
-                  </Reveal>
+                    <Reveal>
+                      <div className="statusContainer">
+                        {status.map((value) => (
+                          <Status value={value} />
+                        ))}
+                      </div>
+                    </Reveal>
+                  </div>
+
+                  <div
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                    className="dividerStatusContaioner"
+                  >
+                    <Reveal>
+                      <div className="dividerHeadingMain">
+                        <FaHeart />
+                        <h1>Love to Work with</h1>
+                      </div>
+                    </Reveal>
+
+                    <Reveal>
+                      <div className="statusContainer">
+                        {status.map((value) => (
+                          <Status value={value} />
+                        ))}
+                      </div>
+                    </Reveal>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div> */}
 
-          <div className={`scroll-div section1`} id="projects">
+          <div className={`scroll-div section1 m-top-full`} id="projects">
             <Status1
               value="Projects"
               statusDotsG="color1"
@@ -410,7 +387,7 @@ const Home = () => {
                 <Reveal>
                   <div className="footerHeading">
                     <h3>
-                      <FontAwesomeIcon icon={faMailForward} />
+                      <CgMailForward/>
                       <span className="footerEmail">
                         info@thinkbigtechnology.com
                       </span>
@@ -422,7 +399,6 @@ const Home = () => {
           </div>
         </SideBar>
       </div>
-    </>
   );
 };
 export default Home;

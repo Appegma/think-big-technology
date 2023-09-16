@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { FaChevronRight } from "react-icons/fa";
+// import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Reveal from "../Animation/Reveal";
-
-
 
 const Card = ({ title, detail, img, link }) => {
   return (
@@ -20,10 +20,10 @@ const Card = ({ title, detail, img, link }) => {
                 <h4>{title}</h4>
                 <div className="status1Line" />
                 <button className="cardBtn">
-                  <FontAwesomeIcon icon={faGithub} />
+                  <BsGithub />
                 </button>
                 <button className="cardBtn">
-                  <FontAwesomeIcon icon={faLinkedin} />
+                  <BsLinkedin />
                 </button>
               </div>
             </Reveal>
@@ -38,12 +38,8 @@ const Card = ({ title, detail, img, link }) => {
                 <p>
                   {detail}{" "}
                   <span className="color1">
-                    Learn more{" "}
-                    <FontAwesomeIcon
-                      color="#0FA0FF"
-                      fontSize={"12px"}
-                      icon={faChevronRight}
-                    />
+                    Learn more
+                    <FaChevronRight color="#0FA0FF" fontSize={"12px"} />
                   </span>
                 </p>
               </div>
@@ -56,7 +52,7 @@ const Card = ({ title, detail, img, link }) => {
 };
 
 const Card1 = ({ name, detail, logo, personImage }) => {
-  console.log(name)
+  console.log(name);
   return (
     <>
       <div className="card1Container">

@@ -5,6 +5,9 @@
 /*Poppins*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+.svgColors > path {
+  stroke: #fff !important;
+}
 * {
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
@@ -46,7 +49,7 @@ body {
   width: 100%;
   height: auto;
   margin: 0 auto 50px auto;
-  padding: 96px;
+  padding: 96px 4px 0 63px;
   z-index: 10;
   position: relative;
 }
@@ -60,7 +63,7 @@ body {
   z-index: 10;
   position: relative;
 }
-.section4{
+.section4 {
   width: 100%;
   max-width: 1600px;
   height: auto;
@@ -68,6 +71,10 @@ body {
   padding: 96px 0px 96px 70px;
   z-index: 10;
   position: relative;
+}
+
+.m-top-full {
+  margin-top: 150px;
 }
 
 .bannarHeading {
@@ -144,6 +151,7 @@ body {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
+  display: flex;
 }
 
 .dotesStyle {
@@ -309,8 +317,21 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: 0px auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
+.textAbsolute {
+  width: 70%;
+  height: auto;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+}
+
+.relative {
+  position: relative;
+}
 .sideBarMain {
   position: fixed;
   width: 60px;
@@ -560,11 +581,13 @@ body {
   font-size: 6em;
   font-weight: 900;
   margin: 0;
+  z-index: 10;
 }
 
 .footerHeading > p {
   font-size: 1.5em;
   font-weight: 200;
+  z-index: 10;
 }
 
 .footerEmail {
@@ -772,7 +795,50 @@ body {
 }
 /* let make responsive of contact page  */
 
+@media screen and (max-width: 1500px) {
+  .textAbsolute {
+    top: 35%;
+  }
+  .footerHeading {
+    margin: 5px;
+  }
+  .footerHeading > h1 {
+    font-size: 4em;
+  }
+  .footerHeading > p {
+    font-size: 1.3em;
+    margin: 0;
+  }
+  .footerHeading > h3 {
+    font-size: 1.3em!important;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .textAbsolute {
+    top: 29%;
+  }
+  .footerHeading {
+    margin: 5px;
+  }
+  .footerHeading > h1 {
+    font-size: 3.5em;
+  }
+  .footerHeading > p {
+    font-size: 1.1em;
+    margin: 0;
+  }
+  .footerHeading > h3 {
+    font-size: 1.1em!important;
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 1000px) {
+  .textAbsolute {
+    top: 25%;
+  }
   .dotesGrid {
     padding: 0.7rem;
   }
@@ -801,9 +867,41 @@ body {
   .footerHeading > h1 {
     font-size: 5em;
   }
+  .footerHeading {
+    margin: 3px;
+  }
+  .footerHeading > h1 {
+    font-size: 3em;
+  }
+  .footerHeading > p {
+    font-size: 0.9em;
+    margin: 0;
+  }
+  .footerHeading > h3 {
+    font-size: 0.9em!important;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  .textAbsolute {
+    width: 49%;
+    height: auto;
+    position: absolute;
+    top: 17%;
+    left: 28%;
+  }
+  .footerHeading > h1 {
+    font-size: 5em;
+  }
+  .footerHeading {
+    margin: 3px;
+  }
+  .footerHeading > h1 {
+    font-size: 3em;
+  }
+ 
+
   .cardContainer,
   .cardHead {
     max-width: 380px;
@@ -848,35 +946,44 @@ body {
     width: 100%;
     text-align: center;
   }
-
-  .footerHeading > h1 {
-    font-size: 4em;
-  }
-  .footerHeading > p {
-    font-size: 1.3em;
-  }
-  .card1Container{
-    max-width: 70%;
-  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 610px) {
+  .textAbsolute {
+    width: 49%;
+    height: auto;
+    position: absolute;
+    top: 17%;
+    left: 28%;
+  }
+  .footerHeading > h1 {
+    font-size: 5em;
+  }
+  .footerHeading {
+    margin: 3px;
+  }
+  .footerHeading > h1 {
+    font-size: 2.5em;
+  }
+  .footerHeading > p {
+    font-size: 0.5em;
+    margin: 0;
+  }
+  .footerHeading > h3 {
+    font-size: 0.5em!important;
+    margin: 0;
+  }
+
   .cardContainer,
   .cardHead {
     max-width: 280px;
-  }
-  .footerHeading > p {
-    font-size: 1em;
   }
   .cardDetail {
     font-size: 1em;
   }
 }
 
-
-
-.container11{
-width: 100%;
-min-height: 100vh;
-
+.container11 {
+  width: 100%;
+  min-height: 100vh;
 }

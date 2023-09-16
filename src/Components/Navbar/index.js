@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faGithub,
-  faLinkedin,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import{BsGithub,BsTwitter ,BsLinkedin, BsFacebook} from "react-icons/bs"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faFacebook,
+//   faGithub,
+//   faLinkedin,
+//   faTwitter,
+// } from "@fortawesome/free-brands-svg-icons";
 import Cube from "../Cube";
 import { NavLink } from "react-router-dom";
-
 const SideBar = ({
   children,
   menuItems,
@@ -54,16 +54,16 @@ const SideBar = ({
       <div className="sideBarTop">
         <div className="NavbarBtn margin-l">
           <button className="SideBarBtn">
-            <FontAwesomeIcon icon={faGithub} />
+            <BsGithub />
           </button>
           <button className="SideBarBtn">
-            <FontAwesomeIcon icon={faLinkedin} />
+            <BsTwitter/>
           </button>
           <button className="SideBarBtn">
-            <FontAwesomeIcon icon={faTwitter} />
+            <BsLinkedin />
           </button>
           <button className="SideBarBtn">
-            <FontAwesomeIcon icon={faFacebook} />
+            <BsFacebook />
           </button>
         </div>
         <div className="topLinks">

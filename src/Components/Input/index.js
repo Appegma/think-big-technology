@@ -1,12 +1,15 @@
+import Reveal from "../Animation/Reveal";
 import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Input1 = ({ type, placeholder, label }) => {
   return (
     <>
       <div className="mainInput">
-        <div className="Input1Holder">
-          <p>{label}:</p>
-        </div>
+        <Reveal>
+          <div className="Input1Holder">
+            <p>{label}:</p>
+          </div>
+        </Reveal>
         <div className="input1Border">
           <input
             type={type}
@@ -20,18 +23,18 @@ const Input1 = ({ type, placeholder, label }) => {
   );
 };
 
-const TextArea1 = ({ label,placeholder }) => {
+const TextArea1 = ({ label, placeholder }) => {
   return (
     <>
       <div className="mainInput">
-        <div className="Input1Holder">
-          <p>{label}:</p>
-        </div>
+        <Reveal>
+          <div className="Input1Holder">
+            <p>{label}:</p>
+          </div>
+        </Reveal>
+
         <div className="textAreastar">
-          <textarea
-            className="textArea1"
-            placeholder={placeholder}
-          ></textarea>
+          <textarea className="textArea1" placeholder={placeholder}></textarea>
         </div>
       </div>
     </>

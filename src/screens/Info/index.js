@@ -1,7 +1,8 @@
 import "../../App.css";
 import { SideBar } from "../../components/Navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
+import { FaAddressBook } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import ContactForm from "../../components/ContactForm";
@@ -12,19 +13,19 @@ const Services = () => {
   }, []);
 
   const menuItems = [
-    {
-      id: "main",
-      logo: (
-        <p>
-          T<span className="color1">.</span>
-        </p>
-      ),
-      title: "Home",
-    },
+    // {
+    //   id: "info",
+    //   logo: (
+    //     <p>
+    //       T<span className="color1">.</span>
+    //     </p>
+    //   ),
+    //   title: "Contact",
+    // },
 
     {
-      id: "contact",
-      logo: <FontAwesomeIcon icon={faAddressBook} />,
+      id: "info",
+      logo: <FaAddressBook />,
       title: "Contact",
     },
   ];
@@ -74,7 +75,7 @@ const Services = () => {
           activeMenu={activeDiv}
           handleActiveMenu={scrollToDiv}
         >
-          <div className={`scroll-div section4`} id="about">
+          <div className={`scroll-div section4`} id="info">
             <ContactForm />
           </div>
         </SideBar>

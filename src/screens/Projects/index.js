@@ -1,12 +1,12 @@
 import "../../App.css";
-
 import { Card } from "../../components/Cards";
 import { SideBar } from "../../components/Navbar";
-
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import { Status1 } from "../../components/Status";
+import {PiProjectorScreenChartBold} from "react-icons/pi"
+
 
 const Projects = () => {
   useEffect(() => {
@@ -14,13 +14,18 @@ const Projects = () => {
   }, []);
 
   const menuItems = [
+    // {
+    //   id: "project",
+    //   logo: (
+    //     <p>
+    //       T<span className="color1">.</span>
+    //     </p>
+    //   ),
+    //   title: "Projects",
+    // },
     {
-      id: "main",
-      logo: (
-        <p>
-          T<span className="color1">.</span>
-        </p>
-      ),
+      id: "project",
+      logo: <PiProjectorScreenChartBold/>,
       title: "Projects",
     },
   ];
@@ -105,7 +110,7 @@ const Projects = () => {
           handleActiveMenu={scrollToDiv}
         >
           {/* <StarsBackground title="Projects" /> */}
-          <div className={`scroll-div section`} id="contact">
+          <div className={`scroll-div section`} id="project">
             <div className="sectionA">
               <div className="footerHeading1">
                 <Reveal>
@@ -132,7 +137,7 @@ const Projects = () => {
               </Reveal>
             </div>
           </div>
-          <div className={`scroll-div section1`} id="projects">
+          <div className={`scroll-div section1`} id="project">
             <Status1
               value="Our Project Porfolio"
               statusDotsG="color1"
