@@ -7,6 +7,8 @@ import AOS from "aos";
 import Carousel from "../../components/Carousel";
 import { GrServices } from "react-icons/gr";
 import SliderAS from "../../components/AwsomeSlider";
+import{BiLogoAngular, BiLogoCss3, BiLogoGithub, BiLogoHtml5, BiLogoJavascript ,BiLogoNodejs,BiLogoReact, BiLogoRedux, BiLogoTypescript, BiLogoVuejs} from "react-icons/bi"
+
 const Services = () => {
   useEffect(() => {
     AOS.init();
@@ -30,17 +32,16 @@ const Services = () => {
   ];
 
   const status = [
-    "JavaScript",
-    "React",
-    "HTML",
-    "Css",
-    "Angular",
-    "Vue JS",
-    "TypeScript",
-    "Node",
-    "Express",
-    "Github",
-    "Redux",
+    <BiLogoJavascript fontSize={30}/>,
+    <BiLogoReact   fontSize={30}/>,
+    <BiLogoHtml5 fontSize={30}/>,
+    <BiLogoCss3 fontSize={30}/>,
+    <BiLogoAngular fontSize={30}/>,
+    <BiLogoVuejs fontSize={30}/>,
+    <BiLogoTypescript fontSize={30}/>,
+    <BiLogoNodejs fontSize={30}/>,
+    <BiLogoGithub fontSize={30}/>,
+    <BiLogoRedux fontSize={30}/>,
   ];
 
   const status2 = [
