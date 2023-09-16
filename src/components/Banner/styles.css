@@ -1,0 +1,44 @@
+.bannerContainer {
+  position: relative;
+  width: 700px;
+  margin: 4.5rem 0;
+  height: auto;
+  z-index: 10;
+}
+
+.bannerSection {
+  width: fit-content;
+  height: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.bannerImage {
+  width: 1200px;
+  margin: 10.5rem auto 4.5rem 10.5rem;
+}
+
+.bannerText {
+  transform: none;
+  opacity: 1;
+}
+
+.bannerText > h1 {
+  font-weight: 900;
+  font-size: 5.8rem;
+  margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .bannerContainer {
+    width: 100%;
+    max-width: 600px;
+  }
+  .bannerSection {
+    max-width: 570px;
+    width: 100%;
+  }
+  .bannerText > h1 {
+    font-size: 3.8em;
+  }
+}

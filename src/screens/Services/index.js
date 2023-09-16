@@ -1,76 +1,27 @@
 import "../../App.css";
-import { Status1, Status2 } from "../../components/Status";
 import { SideBar } from "../../components/Navbar";
-import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
-import AOS from "aos";
 import Carousel from "../../components/Carousel";
 import { GrServices } from "react-icons/gr";
-import SliderAS from "../../components/AwsomeSlider";
-import{BiLogoAngular, BiLogoCss3, BiLogoGithub, BiLogoHtml5, BiLogoJavascript ,BiLogoNodejs,BiLogoReact, BiLogoRedux, BiLogoTypescript, BiLogoVuejs} from "react-icons/bi"
+import Slider from "../../components/Slider";
+
+import Heading from "../../components/Heading";
+import Title from "../../components/Title";
+import {
+  carouselItems,
+  clientExperience,
+  sliderItems,
+  techStack,
+} from "../../data";
+import Experience from "../../components/Experience";
+import Reveal from "../../components/Animation/Reveal";
 
 const Services = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   const menuItems = [
-    // {
-    //   id: "contact",
-    //   logo: (
-    //     <p>
-    //       T<span className="color1">.</span>
-    //     </p>
-    //   ),
-    //   title:"Services"
-    // },
     {
-      id: "contact",
+      id: "services",
       logo: <GrServices className="svgColors" />,
       title: "Services",
-    },
-  ];
-
-  const status = [
-    <BiLogoJavascript fontSize={30}/>,
-    <BiLogoReact   fontSize={30}/>,
-    <BiLogoHtml5 fontSize={30}/>,
-    <BiLogoCss3 fontSize={30}/>,
-    <BiLogoAngular fontSize={30}/>,
-    <BiLogoVuejs fontSize={30}/>,
-    <BiLogoTypescript fontSize={30}/>,
-    <BiLogoNodejs fontSize={30}/>,
-    <BiLogoGithub fontSize={30}/>,
-    <BiLogoRedux fontSize={30}/>,
-  ];
-
-  const status2 = [
-    {
-      heading: "Google",
-      city: "Atlanta",
-      date: "2022 - Present",
-      title: "Software Engineer",
-      detail:
-        "I help build and scale Google Photos. Increased throughput of our primary services by 70%. Migrated backend service from Java to Go. Also helped make it look prettier.",
-      status: status.splice(0, 5),
-    },
-    {
-      heading: "Facebook",
-      city: "San Francisco",
-      date: "2020 - 2022",
-      title: "Software Engineer",
-      detail:
-        "Senior Full Stack Engineer for Facebook Marketplace. Created a service from scratch to handle new listings. Also played some ping pong. It was fun.",
-      status: status.splice(3, 8),
-    },
-    {
-      heading: "Amazon",
-      city: "Seattle",
-      date: "2016 - 2020",
-      title: "Software Engineer",
-      detail:
-        "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
-      status: status.splice(1, 6),
     },
   ];
 
@@ -111,66 +62,53 @@ const Services = () => {
   };
 
   return (
-    <>
-      <div className="container1">
-        <SideBar
-          menuItems={menuItems}
-          activeMenu={activeDiv}
-          handleActiveMenu={scrollToDiv}
-        >
-          {/* <StarsBackground title="Services" /> */}
+    <div className={`scroll-div container1`} id="services">
+      <SideBar
+        menuItems={menuItems}
+        activeMenu={activeDiv || "services"}
+        handleActiveMenu={scrollToDiv}
+      >
+        <div className={`relative section2`}>
+          <Slider items={sliderItems} />
+        </div>
 
-          <div className={`scroll-div relative section2`} id="about">
-            <SliderAS />
-          </div>
-          <div className="textAbsolute">
-            <div className="footerHeading1 ">
+        <div className="absoluteContainer">
+          <Title
+            title="Services"
+            paragraph={`Consequat irure aliquip esse aute minim sit ipsum sint
+                deserunt reprehenderit officia dolor aute. Occaecat deserunt
+                minim aute duis proident dolor officia in. Culpa deserunt
+                tempor nulla qui qui eu est anim ullamco elit.`}
+          />
+        </div>
+
+        <div className={`section3`}>
+          <Heading text="Tech Stack" />
+          <div className="techStack">
+            {techStack.map((value, index) => (
               <Reveal>
-                <div className="footerHeading">
-                  <h1>
-                    Services<span className="color1">.</span>
-                  </h1>
+                <div className="techStackItem" key={`techStack-${index}`}>
+                  <span>{value.logo}</span>
+                  <p>{value.title}</p>
                 </div>
               </Reveal>
-            </div>
-            <Reveal>
-              <div className="footerHeading">
-                <p>
-                  Consequat irure aliquip esse aute minim sit ipsum sint
-                  deserunt reprehenderit officia dolor aute. Occaecat deserunt
-                  minim aute duis proident dolor officia in.
-                
-                </p>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* <div className="sectionA">
-             
-            </div> */}
-
-          <div className={`scroll-div section2`} id="contact">
-            <Status1
-              value="Partners"
-              statusDotsG="color1"
-              status1Main="right status1Main"
-            />
-            <Carousel />
-          </div>
-
-          <div className={`serviceProvider`} id="contact">
-            <Status1
-              value="Satisfied Clients"
-              statusDotsG="color1"
-              status1Main="left status1Main"
-            />
-            {status2.map((value) => (
-              <Status2 {...value} />
             ))}
           </div>
-        </SideBar>
-      </div>
-    </>
+        </div>
+
+        <div className={`section2`}>
+          <Heading text="Satisfied Clients" />
+          <Carousel items={carouselItems} />
+        </div>
+
+        <div className={`section3 serviceProvider`}>
+          <Heading text="Clients and Experience" reverse />
+          {clientExperience.map((value, index) => (
+            <Experience {...value} key={`experience-${index}`} />
+          ))}
+        </div>
+      </SideBar>
+    </div>
   );
 };
 export default Services;

@@ -1,0 +1,122 @@
+.titleContainer {
+  width: 100%;
+  max-width: 954px;
+  margin: 0 auto;
+}
+
+.titleSection {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titleText {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #080808;
+}
+
+.titleText > h1 {
+  font-size: 6em;
+  font-weight: 900;
+  margin: 0;
+  z-index: 10;
+}
+
+.titleText > p {
+  font-size: 1.5em;
+  font-weight: 200;
+  z-index: 10;
+}
+
+.titleText > h3 {
+  font-size: 1.5em !important;
+  font-weight: 400;
+}
+
+
+@media screen and (max-width: 1500px) {
+  .titleText {
+    margin: 5px;
+  }
+  .titleText > h1 {
+    font-size: 4em;
+  }
+  .titleText > p {
+    font-size: 1.3em;
+    margin: 0;
+  }
+  .titleText > h3 {
+    font-size: 1.3em!important;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .titleText {
+    margin: 5px;
+  }
+  .titleText > h1 {
+    font-size: 3.5em;
+  }
+  .titleText > p {
+    font-size: 1.1em;
+    margin: 0;
+  }
+  .titleText > h3 {
+    font-size: 1.1em!important;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .titleText {
+    margin: 3px;
+  }
+  .titleText > h1 {
+    font-size: 3em;
+  }
+  .titleText > p {
+    font-size: 0.9em;
+    margin: 0;
+  }
+  .titleText > h3 {
+    font-size: 0.9em!important;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .titleText {
+    margin: 3px;
+  }
+  .titleText > h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .titleText {
+    margin: 3px;
+  }
+  .titleText > h1 {
+    font-size: 2.5em;
+  }
+  .titleText > p {
+    font-size: 0.5em;
+    margin: 0;
+  }
+  .titleText > h3 {
+    font-size: 0.5em!important;
+    margin: 0;
+  }
+
+}
+
+

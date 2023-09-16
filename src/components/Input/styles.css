@@ -1,0 +1,74 @@
+.mainInput {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.Input1Holder {
+  width: 100%;
+  height: auto;
+  padding-left: 30px;
+  margin: 5px auto;
+}
+
+.Input1Holder > P {
+  margin: 0;
+  font-size: 1.2em;
+  color: #0fa0ff;
+}
+
+.input1Border {
+  width: 100%;
+  height: auto;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid #a2a2a2;
+  border-radius: 20px;
+  display: flex;
+  /* background-color: #fff; */
+  justify-content: center;
+  align-items: center;
+}
+.input1Style {
+  width: 99%;
+  /* color: #000; */
+  color: #ebecf3;
+  padding: 0;
+  height: auto;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.input1Style::placeholder {
+  color: #a2a2a2;
+}
+
+.inputStar {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a2a2a2;
+  font-size: 2em;
+  padding-top: 10px;
+}
+.textAreastar{
+  display: flex;
+  position: relative;
+}
+
+.textArea1 {
+  width: 100%;
+  min-height: 160px;
+  height: 160px;
+  border: 1px solid #a2a2a2;
+  border-radius: 30px;
+  padding: 20px 50px 20px 20px;
+  color: #ebecf3;
+  /* color: #000; */
+  font-size: 1.5em;
+  outline: none;
+  background:transparent ;
+}

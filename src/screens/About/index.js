@@ -1,133 +1,23 @@
 import "../../App.css";
-import Banner from "../../components/Banner";
-import { Status, Status1, Status2 } from "../../components/Status";
+import Status from "../../components/Status";
 import { SideBar } from "../../components/Navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faAddressBook,
-//   faBarsProgress,
-//   faBuilding,
-//   faCircleInfo,
-//   faHeart,
-//   faListCheck,
-//   faMailForward,
-// } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
-import AOS from "aos";
-import { Form } from "react-router-dom";
-import ContactForm from "../../components/ContactForm";
-import Iframe from "../../components/Iframe";
-import { Card1 } from "../../components/Cards";
-import CardQuotationImage from "../../asset/quataions.png";
-
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaBuilding, FaHeart } from "react-icons/fa";
 import { BsGithub, BsTwitter } from "react-icons/bs";
-import { RiFeedbackFill } from "react-icons/ri";
-import { CiCircleInfo } from "react-icons/ci";
 import { GrCircleInformation } from "react-icons/gr";
-import{BiLogoAngular, BiLogoCss3, BiLogoGithub, BiLogoHtml5, BiLogoJavascript ,BiLogoNodejs,BiLogoReact, BiLogoRedux, BiLogoTypescript, BiLogoVuejs} from "react-icons/bi"
-
-import AWSSilder from "../../components/AwsomeSlider";
-import Slider from "../../components/AwsomeSlider";
+import Heading from "../../components/Heading";
+import { techStack, testimonial } from "../../data";
+import Testimonial from "../../components/Testimonial";
 
 const About = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   const menuItems = [
-    // {
-    //   id: "about",
-    //   logo: (
-    //     <p>
-    //       T<span className="color1">.</span>
-    //     </p>
-    //   ),
-    //   title: "About",
-    // },
     {
       id: "about",
       logo: <GrCircleInformation className="svgColors" />,
       title: "About",
-    },
-    // {
-    //   id: "projects",
-    //   logo: <FontAwesomeIcon icon={faBarsProgress} />,
-    //   title: "Projects",
-    // },
-    // {
-    //   id: "experience",
-    //   logo: <FontAwesomeIcon icon={faListCheck} />,
-    //   title: "Experience",
-    // },
-    // {
-    //   id: "contact",
-    //   logo: <FontAwesomeIcon icon={faAddressBook} />,
-    //   title: "Contact",
-    // },
-    // {
-    //   id: "testimonial",
-    //   logo: <RiFeedbackFill />,
-    //   title: "Testimonial",
-    // },
-  ];
-
-  const status = [
-    <BiLogoJavascript fontSize={30}/>,
-    <BiLogoReact   fontSize={30}/>,
-    <BiLogoHtml5 fontSize={30}/>,
-    <BiLogoCss3 fontSize={30}/>,
-    <BiLogoAngular fontSize={30}/>,
-    <BiLogoVuejs fontSize={30}/>,
-    <BiLogoTypescript fontSize={30}/>,
-    <BiLogoNodejs fontSize={30}/>,
-    <BiLogoGithub fontSize={30}/>,
-    <BiLogoRedux fontSize={30}/>,
-  ];
-
-  const card1 = [
-    {
-      name: "mona lisa",
-      logo: CardQuotationImage,
-      personImage:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-    },
-    {
-      name: "mona lisa",
-      logo: CardQuotationImage,
-      personImage:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-    },
-    {
-      name: "mona lisa",
-      logo: CardQuotationImage,
-      personImage:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-    },
-    {
-      name: "mona lisa",
-      logo: CardQuotationImage,
-      personImage:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-    },
-    {
-      name: "mona lisa",
-      logo: CardQuotationImage,
-      personImage:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      detail:
-        "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
     },
   ];
 
@@ -169,19 +59,14 @@ const About = () => {
 
   return (
     <>
-      <div className="container1">
+      <div className={`scroll-div container1`} id="about">
         <SideBar
           menuItems={menuItems}
           activeMenu={activeDiv}
           handleActiveMenu={scrollToDiv}
         >
-                            
-          <div className={`scroll-div section`} id="about">
-            <Status1
-              value="About"
-              statusDotsG="color1"
-              status1Main="status1Main"
-            />
+          <div className="section">
+            <Heading text="About" />
             <div className="divider">
               <div className="dividerText">
                 <Reveal>
@@ -243,7 +128,7 @@ const About = () => {
                     data-aos-anchor-placement="bottom-bottom"
                     className="mylink"
                   >
-                    <span className="color1 font_s">My Link </span>
+                    <span className="boldBlueText font_s">My Link </span>
                     <button className="SideBarBtn">
                       <BsGithub />
                     </button>
@@ -271,10 +156,11 @@ const About = () => {
                   </Reveal>
 
                   <Reveal>
-                    <div className="statusContainer">
-                      {status.map((value) => (
-                        <Status value={value} />
-                      ))}
+                    <div className="techContainer">
+                      {techStack?.length > 0 &&
+                        techStack.map((data) => (
+                          <Status key={data.id} {...data} />
+                        ))}
                     </div>
                   </Reveal>
                 </div>
@@ -286,16 +172,17 @@ const About = () => {
                 >
                   <Reveal>
                     <div className="dividerHeadingMain">
-                      <FaHeart />
+                      <FaHeart color="#0fa0ff !important" />
                       <h1>Love to Work with</h1>
                     </div>
                   </Reveal>
 
                   <Reveal>
-                    <div className="statusContainer">
-                      {status.map((value) => (
-                        <Status value={value} />
-                      ))}
+                    <div className="techContainer">
+                      {techStack?.length > 0 &&
+                        techStack.map((data) => (
+                          <Status key={data.id} {...data} />
+                        ))}
                     </div>
                   </Reveal>
                 </div>
@@ -303,18 +190,15 @@ const About = () => {
             </div>
           </div>
 
-          <div className={`scroll-div section`} id="about">
-            <Status1
-              value="Testimonial"
-              statusDotsG="color1"
-              status1Main="status1Main"
-            />
+          <div className="section">
+            <Heading text="Testimonial" reverse />
           </div>
 
-          <div className="testContainer" id="about">
-            {card1.map((value) => (
-              <Card1 {...value} />
-            ))}
+          <div className="testimonialContainer">
+            {testimonial?.length > 0 &&
+              testimonial.map((value, index) => (
+                <Testimonial key={`testimonial-${index}`} {...value} />
+              ))}
           </div>
         </SideBar>
       </div>

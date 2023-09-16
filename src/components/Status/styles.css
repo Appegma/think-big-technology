@@ -1,0 +1,38 @@
+.statusContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 5px;
+  width: fit-content;
+  height: auto;
+  background-color: #232323;
+  color: #ebecf3;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+.space {
+  width: 10px;
+}
+
+.statusTitle {
+  cursor: text;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+
+.statusLogo {
+  font-size: 1.25rem;
+  display: flex;
+  align-self: center;
+}
+
+.padded {
+  padding: 5px 20px;
+}
+
+.logoPadded {
+  padding: 10px;
+}

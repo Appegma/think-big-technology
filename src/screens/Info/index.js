@@ -1,28 +1,11 @@
 import "../../App.css";
 import { SideBar } from "../../components/Navbar";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
 import { FaAddressBook } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import AOS from "aos";
 import ContactForm from "../../components/ContactForm";
 
-const Services = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
+function Info() {
   const menuItems = [
-    // {
-    //   id: "info",
-    //   logo: (
-    //     <p>
-    //       T<span className="color1">.</span>
-    //     </p>
-    //   ),
-    //   title: "Contact",
-    // },
-
     {
       id: "info",
       logo: <FaAddressBook />,
@@ -67,20 +50,17 @@ const Services = () => {
   };
 
   return (
-    <>
-      {/* <div className="container11"></div> */}
-      <div className="container1">
-        <SideBar
-          menuItems={menuItems}
-          activeMenu={activeDiv}
-          handleActiveMenu={scrollToDiv}
-        >
-          <div className={`scroll-div section4`} id="info">
-            <ContactForm />
-          </div>
-        </SideBar>
-      </div>
-    </>
+    <div className={`scroll-div container1`} id="info">
+      <SideBar
+        menuItems={menuItems}
+        activeMenu={activeDiv}
+        handleActiveMenu={scrollToDiv}
+      >
+        <div className="section4">
+          <ContactForm />
+        </div>
+      </SideBar>
+    </div>
   );
-};
-export default Services;
+}
+export default Info;

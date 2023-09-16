@@ -1,0 +1,33 @@
+[debug] [2023-09-16T04:01:51.926Z] ----------------------------------------------------------------------
+[debug] [2023-09-16T04:01:51.926Z] Command:       /Users/daniyalmalikc/.nvm/versions/node/v18.16.0/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2023-09-16T04:01:51.927Z] CLI Version:   12.0.0
+[debug] [2023-09-16T04:01:51.927Z] Platform:      darwin
+[debug] [2023-09-16T04:01:51.927Z] Node Version:  v18.16.0
+[debug] [2023-09-16T04:01:51.927Z] Time:          Sat Sep 16 2023 09:01:51 GMT+0500 (Pakistan Standard Time)
+[debug] [2023-09-16T04:01:51.927Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-16T04:01:51.929Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-09-16T04:01:51.977Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-16T04:01:51.977Z] > authorizing via signed-in user (daniyalmalikc@gmail.com)
+[debug] [2023-09-16T04:01:51.977Z] [iam] checking project think-big-technology for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-09-16T04:01:51.978Z] > refreshing access token with scopes: []
+[debug] [2023-09-16T04:01:51.978Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-09-16T04:01:51.978Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-16T04:01:52.345Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-09-16T04:01:52.345Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-16T04:01:52.359Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/think-big-technology:testIamPermissions [none]
+[debug] [2023-09-16T04:01:52.359Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/think-big-technology:testIamPermissions x-goog-quota-user=projects/think-big-technology
+[debug] [2023-09-16T04:01:52.359Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/think-big-technology:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-16T04:01:52.992Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-09-16T04:01:52.992Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-09-16T04:01:53.962Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/think-big-technology:testIamPermissions 200
+[debug] [2023-09-16T04:01:53.962Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/think-big-technology:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-16T04:01:53.965Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/think-big-technology [none]
+[debug] [2023-09-16T04:01:54.554Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/think-big-technology 200
+[debug] [2023-09-16T04:01:54.555Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/think-big-technology {"projectId":"think-big-technology","projectNumber":"530125210721","displayName":"Think Big Technology","name":"projects/think-big-technology","resources":{"hostingSite":"think-big-technology"},"state":"ACTIVE","etag":"1_46eb322b-a119-4f8b-8493-e6b990b6cfab"}
+[info] 
+[info] === Deploying to 'think-big-technology'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-09-16T04:01:54.557Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/think-big-technology/versions [none]
+[debug] [2023-09-16T04:01:54.557Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/think-big-technology/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}

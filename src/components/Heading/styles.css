@@ -1,0 +1,32 @@
+.headingContainer {
+  height: auto;
+  margin: 0px 25px 24px 25px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.headingText {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+.headingText > h3 {
+  font-size: 4.5rem;
+  color: #ebecf3;
+  margin: 0;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1000px) {
+  .headingText > h3 {
+    font-size: 3rem;
+  }
+}
