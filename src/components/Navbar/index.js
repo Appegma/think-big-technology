@@ -1,12 +1,5 @@
 import { useState } from "react";
 import { BsGithub, BsTwitter, BsLinkedin, BsFacebook } from "react-icons/bs";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faFacebook,
-//   faGithub,
-//   faLinkedin,
-//   faTwitter,
-// } from "@fortawesome/free-brands-svg-icons";
 import Cube from "../Cube";
 import { NavLink } from "react-router-dom";
 const SideBar = ({

@@ -1,6 +1,6 @@
 import Reveal from "../Animation/Reveal";
 import "./styles.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Input1 = ({ type, placeholder, label }) => {
   return (
     <>
