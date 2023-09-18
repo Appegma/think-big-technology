@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 
@@ -30,7 +31,7 @@ const Cube = ({ items, active }) => {
             style={{
               transform: `rotateY(${
                 (index - activeIndex) * (360 / items.length)
-              }deg) translateZ(30px)`,
+              }deg) translateZ(35px)`,
             }}
           >
             {item.logo}

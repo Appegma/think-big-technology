@@ -10,6 +10,9 @@ import {
   BiLogoTypescript,
   BiLogoVuejs,
 } from "react-icons/bi";
+import { AiFillFacebook, AiOutlineAmazon } from "react-icons/ai";
+import { FaGoogle, FaAddressBook } from "react-icons/fa";
+import { PiProjectorScreenChartBold } from "react-icons/pi";
 import javascriptlogo from "../assets/languagesLogo/JavaScript.png";
 import reactlogo from "../assets/languagesLogo/react.png";
 import htmllogo from "../assets/languagesLogo/html.png";
@@ -24,7 +27,44 @@ import background1 from "../assets/backgroundImage/background1.jpg";
 import background2 from "../assets/backgroundImage/background2.jpg";
 import background3 from "../assets/backgroundImage/background3.jpg";
 
-export const techStack = [
+export const menuItems = [
+  {
+    id: "main",
+    logo: (
+      <p>
+        T<span className="boldBlueText">.</span>
+      </p>
+    ),
+    title: "Home",
+  },
+  {
+    id: "projects",
+    logo: <PiProjectorScreenChartBold />,
+    title: "Projects",
+  },
+  {
+    id: "google",
+    logo: <FaGoogle />,
+    title: "Google",
+  },
+  {
+    id: "facebook",
+    logo: <AiFillFacebook />,
+    title: "Facebook",
+  },
+  {
+    id: "amazon",
+    logo: <AiOutlineAmazon />,
+    title: "Amazon",
+  },
+  {
+    id: "contact",
+    logo: <FaAddressBook />,
+    title: "Contact",
+  },
+];
+
+export const techStackLogo = [
   {
     id: "javascript",
     image: javascriptlogo,
@@ -77,58 +117,58 @@ export const techStack = [
   },
 ];
 
-// export const techStack = [
-//   {
-//     id: "javascript",
-//     logo: <BiLogoJavascript />,
-//     title: "Javascript",
-//   },
-//   {
-//     id: "react",
-//     logo: <BiLogoReact />,
-//     title: "React",
-//   },
-//   {
-//     id: "html",
-//     logo: <BiLogoHtml5 />,
-//     title: "HTML",
-//   },
-//   {
-//     id: "css",
-//     logo: <BiLogoCss3 />,
-//     title: "CSS",
-//   },
-//   {
-//     id: "angular",
-//     logo: <BiLogoAngular />,
-//     title: "Angular",
-//   },
-//   {
-//     id: "vue",
-//     logo: <BiLogoVuejs />,
-//     title: "Vue",
-//   },
-//   {
-//     id: "typescript",
-//     logo: <BiLogoTypescript />,
-//     title: "Typescript",
-//   },
-//   {
-//     id: "node",
-//     logo: <BiLogoNodejs />,
-//     title: "Node",
-//   },
-//   {
-//     id: "github",
-//     logo: <BiLogoGithub />,
-//     title: "Github",
-//   },
-//   {
-//     id: "redux",
-//     logo: <BiLogoRedux />,
-//     title: "Redux",
-//   },
-// ];
+export const techStack = [
+  {
+    id: "javascript",
+    logo: <BiLogoJavascript />,
+    title: "Javascript",
+  },
+  {
+    id: "react",
+    logo: <BiLogoReact />,
+    title: "React",
+  },
+  {
+    id: "html",
+    logo: <BiLogoHtml5 />,
+    title: "HTML",
+  },
+  {
+    id: "css",
+    logo: <BiLogoCss3 />,
+    title: "CSS",
+  },
+  {
+    id: "angular",
+    logo: <BiLogoAngular />,
+    title: "Angular",
+  },
+  {
+    id: "vue",
+    logo: <BiLogoVuejs />,
+    title: "Vue",
+  },
+  {
+    id: "typescript",
+    logo: <BiLogoTypescript />,
+    title: "Typescript",
+  },
+  {
+    id: "node",
+    logo: <BiLogoNodejs />,
+    title: "Node",
+  },
+  {
+    id: "github",
+    logo: <BiLogoGithub />,
+    title: "Github",
+  },
+  {
+    id: "redux",
+    logo: <BiLogoRedux />,
+    title: "Redux",
+  },
+];
 
 export const clientExperience = [
   {
@@ -241,6 +281,26 @@ export const testimonial = [
 ];
 
 export const sliderItems = [background1, background2, background3];
+export const projectSliderItems = [
+  {
+    image: background1,
+    title: "Project 1",
+    description:
+      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+  },
+  {
+    image: background2,
+    title: "Project 2",
+    description:
+      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+  },
+  {
+    image: background3,
+    title: "Project 3",
+    description:
+      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+  },
+];
 
 export const projectCard = [
   {

@@ -1,25 +1,49 @@
 import "../../App.css";
-import Status from "../../components/Status";
 import { SideBar } from "../../components/Navbar";
 import Experience from "../../components/Experience";
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import { AiFillLinkedin } from "react-icons/ai";
-import { FaBuilding, FaHeart } from "react-icons/fa";
 import { BsGithub, BsTwitter } from "react-icons/bs";
-import { GrCircleInformation } from "react-icons/gr";
+import { GrCircleInformation, GrServices } from "react-icons/gr";
 import Heading from "../../components/Heading";
-import { techStack, testimonial,carouselItems,clientExperience,sliderItems } from "../../data";
+import { testimonial, carouselItems, clientExperience } from "../../data";
 import Testimonial from "../../components/Testimonial";
 import Carousel from "../../components/Carousel";
-
+import { PiProjectorScreenChartBold } from "react-icons/pi";
+import { FaAddressBook } from "react-icons/fa";
+import Title from "../../components/Title";
 
 const About = () => {
   const menuItems = [
     {
+      id: "main",
+      logo: (
+        <p>
+          T<span className="boldBlueText">.</span>
+        </p>
+      ),
+      title: "Home",
+    },
+    {
       id: "about",
       logo: <GrCircleInformation className="svgColors" />,
       title: "About",
+    },
+    {
+      id: "services",
+      logo: <GrServices className="svgColors" />,
+      title: "Services",
+    },
+    {
+      id: "projects",
+      logo: <PiProjectorScreenChartBold />,
+      title: "Projects",
+    },
+    {
+      id: "info",
+      logo: <FaAddressBook />,
+      title: "Contact",
     },
   ];
 
@@ -95,8 +119,17 @@ const About = () => {
           activeMenu={activeDiv}
           handleActiveMenu={scrollToDiv}
         >
+          <div className={`section3 m-top-full`}>
+            <Title
+              title="About Us"
+              paragraph={`Consequat irure aliquip esse aute minim sit ipsum sint
+                deserunt reprehenderit officia dolor aute. Occaecat deserunt
+                minim aute duis proident dolor officia in. Culpa deserunt
+                tempor nulla qui qui eu est anim ullamco elit.`}
+            />
+          </div>
           <div className="section">
-            <Heading text="About" />
+            <Heading text="Who we are?" />
             <div className="divider">
               <div className="dividerText">
                 {aboutDetail.map((value, index) => (
@@ -110,7 +143,7 @@ const About = () => {
                     </div>
                   </Reveal>
                 ))}
-        
+
                 {/* <div>
                   <Reveal>
                     <div
@@ -167,7 +200,7 @@ const About = () => {
                     </div>
                   </Reveal>
                 </div> */}
-                
+
                 <Reveal>
                   <div
                     data-aos="fade-up"
@@ -248,15 +281,15 @@ const About = () => {
           </div>
 
           <div className={`section3`}>
-          <Heading text="Our Team"/>
-          {clientExperience.map((value, index) => (
-            <Experience {...value} key={`experience-${index}`} />
-          ))}
-        </div>
-        <div className={`section2`}>
-          <Heading text="Satisfied Clients" />
-          <Carousel items={carouselItems} />
-        </div>
+            <Heading text="Our Team" />
+            {clientExperience.map((value, index) => (
+              <Experience {...value} key={`experience-${index}`} />
+            ))}
+          </div>
+          <div className={`section2`}>
+            <Heading text="Satisfied Clients" />
+            <Carousel items={carouselItems} />
+          </div>
         </SideBar>
       </div>
     </>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 import React from "react";
 import Reveal from "../Animation/Reveal";
 import Status from "../Status";

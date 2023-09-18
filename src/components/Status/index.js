@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 import Reveal from "../Animation/Reveal";
 import "./styles.css";
 

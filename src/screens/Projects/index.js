@@ -1,19 +1,47 @@
 import "../../App.css";
-import Card from "../../components/Cards";
+// import Card from "../../components/Cards";
 import { SideBar } from "../../components/Navbar";
 import { useEffect, useState } from "react";
 import { PiProjectorScreenChartBold } from "react-icons/pi";
-import Heading from "../../components/Heading";
-import { projectCard, sliderItems } from "../../data";
-import Slider from "../../components/Slider";
-import Title from "../../components/Title";
+// import Heading from "../../components/Heading";
+// import Slider from "../../components/Slider";
+// import Title from "../../components/Title";
+// import { projectCard, sliderItems } from "../../data";
+import ScrollSlider from "../../components/ScrollSlider";
+import { GrCircleInformation, GrServices } from "react-icons/gr";
+import { FaAddressBook } from "react-icons/fa";
+import { projectSliderItems } from "../../data";
 
 const Projects = () => {
   const menuItems = [
     {
+      id: "main",
+      logo: (
+        <p>
+          T<span className="boldBlueText">.</span>
+        </p>
+      ),
+      title: "Home",
+    },
+    {
+      id: "about",
+      logo: <GrCircleInformation className="svgColors" />,
+      title: "About",
+    },
+    {
+      id: "services",
+      logo: <GrServices className="svgColors" />,
+      title: "Services",
+    },
+    {
       id: "projects",
       logo: <PiProjectorScreenChartBold />,
       title: "Projects",
+    },
+    {
+      id: "info",
+      logo: <FaAddressBook />,
+      title: "Contact",
     },
   ];
 
@@ -60,7 +88,8 @@ const Projects = () => {
         activeMenu={activeDiv}
         handleActiveMenu={scrollToDiv}
       >
-        <div className={`relative section2`}>
+        <ScrollSlider items={projectSliderItems} />
+        {/* <div className={`relative section2`}>
           <Slider items={sliderItems} />
         </div>
 
@@ -81,7 +110,7 @@ const Projects = () => {
               <Card {...value} key={`portfolio-${index}`} />
             ))}
           </div>
-        </div>
+        </div> */}
       </SideBar>
     </div>
   );

@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import thinkBigVideo from "../../assets/video/aboutVideo.mp4";
 import "./styles.css";
 
 const ZoomableVideo = ({ src }) => {
@@ -48,11 +47,7 @@ const ZoomableVideo = ({ src }) => {
   return (
     <div className="zoomable-video-container" ref={containerRef}>
       <video id="video" style={videoStyle} width={300} autoPlay muted>
-        <source
-          src={thinkBigVideo}
-          className="zoomable-video"
-          type="video/mp4"
-        />
+        <source src={src} className="zoomable-video" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       {/* <iframe

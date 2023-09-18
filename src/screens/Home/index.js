@@ -1,6 +1,5 @@
 import "../../App.css";
 import Banner from "../../components/Banner";
-import Card from "../../components/Cards";
 import { SideBar } from "../../components/Navbar";
 import { useEffect, useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
@@ -17,8 +16,10 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import Title from "../../components/Title";
 import Heading from "../../components/Heading";
-import { project, projectCard } from "../../data";
+import { project } from "../../data";
 import Reveal from "../../components/Animation/Reveal";
+import { GrCircleInformation } from "react-icons/gr";
+import thinkBigVideo from "../../assets/video/homeVideo.mp4";
 
 const Home = () => {
   const menuItems = [
@@ -30,6 +31,11 @@ const Home = () => {
         </p>
       ),
       title: "Home",
+    },
+    {
+      id: "about",
+      logo: <GrCircleInformation className="svgColors" />,
+      title: "About",
     },
     {
       id: "projects",
@@ -135,7 +141,7 @@ const Home = () => {
           <Banner image={logo} />
         </div>
 
-        <ZoomableVideo />
+        <ZoomableVideo src={thinkBigVideo} />
 
         <div className={`scroll-div section1 m-top-full`} id="projects">
           <div className="section">

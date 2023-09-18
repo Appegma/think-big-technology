@@ -7,9 +7,21 @@ const Banner = ({ title, image }) => {
     <div data-aos="fade-left">
       <div className="bannerContainer">
         <div className="bannerSection">
+          {image && (
+            <div className="bannerImageContainer">
+              <Reveal>
+                <img src={image} alt="logo" className="bannerImage" />
+                <h1 className="slogan">
+                  Innnovate
+                  <BlueFullStop /> Redefine
+                  <BlueFullStop /> Prosper
+                  <BlueFullStop />
+                </h1>
+              </Reveal>
+            </div>
+          )}
           <Reveal>
             <div className="bannerText">
-              {image && <img src={image} alt="logo" className="bannerImage" />}
               {!image && (
                 <h1>
                   {title || "Think Big Technology"}

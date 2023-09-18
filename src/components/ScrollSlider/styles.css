@@ -1,0 +1,23 @@
+.carousel-slider {
+  display: flex;
+  flex-direction: column; /* Make it a vertical column */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  scroll-snap-type: y mandatory; /* Enable snapping for vertical scrolling */
+}
+
+.carousel-item {
+  flex: 0 0 auto; /* Ensure items don't stretch vertically */
+  height: 100vh; /* Full viewport height for each item */
+  scroll-snap-align: start; /* Snap each item to the top */
+  transition: transform 0.3s ease-in;
+  scroll-behavior: smooth;
+}
+
+.carousel-item img {
+  max-width: 100%; /* Ensure images fit within the item container */
+  height: 100vh; /* Full viewport height */
+  /* margin-top: 50px; */
+  /* margin-left: 50px; */
+}

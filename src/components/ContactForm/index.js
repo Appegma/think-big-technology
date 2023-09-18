@@ -1,6 +1,6 @@
 import { TiMessages } from "react-icons/ti";
 import Reveal from "../Animation/Reveal";
-import thinkBigVideo from "../../assets/video/aboutVideo.mp4"
+import thinkBigVideo from "../../assets/video/aboutVideo.mp4";
 import "./styles.css";
 import { Input1, TextArea1 } from "../Input";
 import Banner from "../Banner";
@@ -8,31 +8,25 @@ import Banner from "../Banner";
 const email = "info@thinkbigtechnology.com";
 
 const ContactForm = () => {
- 
-  const videoStyle = {
-    transform: `scale(${.4})`,
-    transformOrigin: "center center",
-    transition: "transform 0.4s ease-in", // You can adjust the transition duration here
-  };
- 
   return (
     <>
       <div className="contactContainer">
+        <div className="contactVideoSection">
+          <Banner title="Let’s blow (speech) bubbles" />
+
+          <video autoPlay muted>
+            <source
+              src={thinkBigVideo}
+              className="zoomable-video"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <div className="contactVideoDivider">
-          <div className="contactVideoArea Contact-side1">
-            <Banner title="Let’s blow (speech) bubbles" />
-          </div>
+          <div className="contactVideoArea Contact-side1"></div>
           <div className="contactVideoArea Contact-side2">
-            <div className="ContactVideoArea">
-              <video style={videoStyle} autoPlay muted>
-                <source
-                  src={thinkBigVideo}
-                  className="zoomable-video"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
-            </div>
+            <div className="ContactVideoArea"></div>
           </div>
         </div>
 

@@ -13,9 +13,19 @@
   padding: 10px;
 }
 
-.bannerImage {
-  width: 1200px;
+.bannerImageContainer {
   margin: 10.5rem auto 4.5rem 10.5rem;
+}
+
+.bannerImageContainer .slogan {
+  font-weight: 900;
+  /* font-size: 5.8rem; */
+  margin: 0;
+  margin-left: 10px;
+}
+
+.bannerImage {
+  max-width: 800px;
 }
 
 .bannerText {
@@ -40,5 +50,8 @@
   }
   .bannerText > h1 {
     font-size: 3.8em;
+  }
+  .bannerImageContainer {
+    margin: 6.5rem auto 4.5rem 6.5rem;
   }
 }
