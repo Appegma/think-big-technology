@@ -1,6 +1,7 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaChevronRight } from "react-icons/fa";
 import Reveal from "../Animation/Reveal";
+
 import "./styles.css";
 
 const Card = ({ title, detail, img, link }) => {

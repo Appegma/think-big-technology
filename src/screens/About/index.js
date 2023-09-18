@@ -1,7 +1,7 @@
 import "../../App.css";
 import Status from "../../components/Status";
 import { SideBar } from "../../components/Navbar";
-
+import Experience from "../../components/Experience";
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -9,8 +9,10 @@ import { FaBuilding, FaHeart } from "react-icons/fa";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { GrCircleInformation } from "react-icons/gr";
 import Heading from "../../components/Heading";
-import { techStack, testimonial } from "../../data";
+import { techStack, testimonial,carouselItems,clientExperience,sliderItems } from "../../data";
 import Testimonial from "../../components/Testimonial";
+import Carousel from "../../components/Carousel";
+
 
 const About = () => {
   const menuItems = [
@@ -18,6 +20,34 @@ const About = () => {
       id: "about",
       logo: <GrCircleInformation className="svgColors" />,
       title: "About",
+    },
+  ];
+
+  const aboutDetail = [
+    {
+      value: `Excepteur cillum ut qui anim id. Cillum ex laboris Lorem
+    deserunt anim exercitation laboris minim duis velit nulla eu
+    aute ex. Id id exercitation exercitation proident dolor.`,
+    },
+    {
+      value: ` Nulla eiusmod aute ea nulla. Eiusmod eiusmod cillum ullamco
+      excepteur non. Labore sint est duis do cupidatat ipsum do
+      quis eiusmod non anim est. Fugiat ad consequat nostrud est
+      officia et nulla consequat esse enim consequat aliquip.
+      Veniam Lorem nostrud sunt aliqua.`,
+    },
+    {
+      value: `Aliqua nostrud aute amet sint velit occaecat laborum fugiat
+      adipisicing sunt dolore et elit. Eu do reprehenderit amet
+      officia magna dolor exercitation adipisicing laboris ea id
+      deserunt. Excepteur amet nisi id dolore dolor veniam
+      occaecat sunt cillum incididunt nulla officia ea cupidatat.`,
+    },
+    {
+      value: `  Eu exercitation ex ex et. Ea magna ut aute et officia
+      excepteur nisi anim excepteur. Adipisicing incididunt
+      cupidatat occaecat ex eu veniam velit proident est irure
+      voluptate officia minim do.`,
     },
   ];
 
@@ -69,59 +99,75 @@ const About = () => {
             <Heading text="About" />
             <div className="divider">
               <div className="dividerText">
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Excepteur cillum ut qui anim id. Cillum ex laboris Lorem
-                    deserunt anim exercitation laboris minim duis velit nulla eu
-                    aute ex. Id id exercitation exercitation proident dolor.
-                  </div>
-                </Reveal>
+                {aboutDetail.map((value, index) => (
+                  <Reveal key={index}>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="dividerText1"
+                    >
+                      {value.value}
+                    </div>
+                  </Reveal>
+                ))}
+        
+                {/* <div>
+                  <Reveal>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="dividerText1"
+                    >
+                      Excepteur cillum ut qui anim id. Cillum ex laboris Lorem
+                      deserunt anim exercitation laboris minim duis velit nulla
+                      eu aute ex. Id id exercitation exercitation proident
+                      dolor.
+                    </div>
+                  </Reveal>
 
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Nulla eiusmod aute ea nulla. Eiusmod eiusmod cillum ullamco
-                    excepteur non. Labore sint est duis do cupidatat ipsum do
-                    quis eiusmod non anim est. Fugiat ad consequat nostrud est
-                    officia et nulla consequat esse enim consequat aliquip.
-                    Veniam Lorem nostrud sunt aliqua.
-                  </div>
-                </Reveal>
+                  <Reveal>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="dividerText1"
+                    >
+                      Nulla eiusmod aute ea nulla. Eiusmod eiusmod cillum
+                      ullamco excepteur non. Labore sint est duis do cupidatat
+                      ipsum do quis eiusmod non anim est. Fugiat ad consequat
+                      nostrud est officia et nulla consequat esse enim consequat
+                      aliquip. Veniam Lorem nostrud sunt aliqua.
+                    </div>
+                  </Reveal>
 
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Aliqua nostrud aute amet sint velit occaecat laborum fugiat
-                    adipisicing sunt dolore et elit. Eu do reprehenderit amet
-                    officia magna dolor exercitation adipisicing laboris ea id
-                    deserunt. Excepteur amet nisi id dolore dolor veniam
-                    occaecat sunt cillum incididunt nulla officia ea cupidatat.
-                  </div>
-                </Reveal>
+                  <Reveal>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="dividerText1"
+                    >
+                      Aliqua nostrud aute amet sint velit occaecat laborum
+                      fugiat adipisicing sunt dolore et elit. Eu do
+                      reprehenderit amet officia magna dolor exercitation
+                      adipisicing laboris ea id deserunt. Excepteur amet nisi id
+                      dolore dolor veniam occaecat sunt cillum incididunt nulla
+                      officia ea cupidatat.
+                    </div>
+                  </Reveal>
 
-                <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="dividerText1"
-                  >
-                    Eu exercitation ex ex et. Ea magna ut aute et officia
-                    excepteur nisi anim excepteur. Adipisicing incididunt
-                    cupidatat occaecat ex eu veniam velit proident est irure
-                    voluptate officia minim do.
-                  </div>
-                </Reveal>
-
+                  <Reveal>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="dividerText1"
+                    >
+                      Eu exercitation ex ex et. Ea magna ut aute et officia
+                      excepteur nisi anim excepteur. Adipisicing incididunt
+                      cupidatat occaecat ex eu veniam velit proident est irure
+                      voluptate officia minim do.
+                    </div>
+                  </Reveal>
+                </div> */}
+                
                 <Reveal>
                   <div
                     data-aos="fade-up"
@@ -142,7 +188,7 @@ const About = () => {
                 </Reveal>
               </div>
 
-              <div className="dividerStatus">
+              {/* <div className="dividerStatus">
                 <div
                   data-aos="fade-up"
                   data-aos-anchor-placement="bottom-bottom"
@@ -186,7 +232,7 @@ const About = () => {
                     </div>
                   </Reveal>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -200,6 +246,17 @@ const About = () => {
                 <Testimonial key={`testimonial-${index}`} {...value} />
               ))}
           </div>
+
+          <div className={`section3`}>
+          <Heading text="Our Team"/>
+          {clientExperience.map((value, index) => (
+            <Experience {...value} key={`experience-${index}`} />
+          ))}
+        </div>
+        <div className={`section2`}>
+          <Heading text="Satisfied Clients" />
+          <Carousel items={carouselItems} />
+        </div>
         </SideBar>
       </div>
     </>

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Carousel from "../../components/Carousel";
 import { GrServices } from "react-icons/gr";
 import Slider from "../../components/Slider";
-
 import Heading from "../../components/Heading";
 import Title from "../../components/Title";
 import {
@@ -87,26 +86,34 @@ const Services = () => {
           <div className="techStack">
             {techStack.map((value, index) => (
               <Reveal>
-                <div className="techStackItem" key={`techStack-${index}`}>
-                  <span>{value.logo}</span>
+                <div className="techStackItem " key={`techStack-${index}`}>
+                  {/* <span>{value.logo}</span> */}
+                  <div className="tectCardImg">
+                    <img
+                      style={{ marginTop: "10px", marginBottom: "20px" }}
+                      src={value.image}
+                      width={50}
+                    />
+                  </div>
                   <p>{value.title}</p>
+                  <div className="myDes">this is the description</div>
                 </div>
               </Reveal>
             ))}
           </div>
         </div>
 
-        <div className={`section2`}>
+        {/* <div className={`section2`}>
           <Heading text="Satisfied Clients" />
           <Carousel items={carouselItems} />
-        </div>
+        </div> */}
 
-        <div className={`section3 serviceProvider`}>
+        {/* <div className={`section3 serviceProvider`}>
           <Heading text="Clients and Experience" reverse />
           {clientExperience.map((value, index) => (
             <Experience {...value} key={`experience-${index}`} />
           ))}
-        </div>
+        </div> */}
       </SideBar>
     </div>
   );

@@ -10,7 +10,16 @@ import {
   BiLogoTypescript,
   BiLogoVuejs,
 } from "react-icons/bi";
-
+import javascriptlogo from "../assets/languagesLogo/JavaScript.png";
+import reactlogo from "../assets/languagesLogo/react.png";
+import htmllogo from "../assets/languagesLogo/html.png";
+import csslogo from "../assets/languagesLogo/css.png";
+import angularlogo from "../assets/languagesLogo/angular.png";
+import vuelogo from "../assets/languagesLogo/vue.png";
+import typescriptlogo from "../assets/languagesLogo/typescript.png";
+import nodelogo from "../assets/languagesLogo/node.png";
+import githublogo from "../assets/languagesLogo/github.png";
+import reduxlogo from "../assets/languagesLogo/redux.png";
 import background1 from "../assets/backgroundImage/background1.jpg";
 import background2 from "../assets/backgroundImage/background2.jpg";
 import background3 from "../assets/backgroundImage/background3.jpg";
@@ -18,55 +27,108 @@ import background3 from "../assets/backgroundImage/background3.jpg";
 export const techStack = [
   {
     id: "javascript",
-    logo: <BiLogoJavascript />,
+    image: javascriptlogo,
     title: "Javascript",
   },
   {
     id: "react",
-    logo: <BiLogoReact />,
+    image: reactlogo,
     title: "React",
   },
   {
     id: "html",
-    logo: <BiLogoHtml5 />,
+    image: htmllogo,
     title: "HTML",
   },
   {
     id: "css",
-    logo: <BiLogoCss3 />,
+    image: csslogo,
     title: "CSS",
   },
   {
     id: "angular",
-    logo: <BiLogoAngular />,
+    image: angularlogo,
     title: "Angular",
   },
   {
     id: "vue",
-    logo: <BiLogoVuejs />,
+    image: vuelogo,
     title: "Vue",
   },
   {
     id: "typescript",
-    logo: <BiLogoTypescript />,
+    image: typescriptlogo,
     title: "Typescript",
   },
   {
     id: "node",
-    logo: <BiLogoNodejs />,
+    image: nodelogo,
     title: "Node",
   },
   {
     id: "github",
-    logo: <BiLogoGithub />,
+    image: githublogo,
     title: "Github",
   },
   {
     id: "redux",
-    logo: <BiLogoRedux />,
+    image: reduxlogo,
     title: "Redux",
   },
 ];
+
+// export const techStack = [
+//   {
+//     id: "javascript",
+//     logo: <BiLogoJavascript />,
+//     title: "Javascript",
+//   },
+//   {
+//     id: "react",
+//     logo: <BiLogoReact />,
+//     title: "React",
+//   },
+//   {
+//     id: "html",
+//     logo: <BiLogoHtml5 />,
+//     title: "HTML",
+//   },
+//   {
+//     id: "css",
+//     logo: <BiLogoCss3 />,
+//     title: "CSS",
+//   },
+//   {
+//     id: "angular",
+//     logo: <BiLogoAngular />,
+//     title: "Angular",
+//   },
+//   {
+//     id: "vue",
+//     logo: <BiLogoVuejs />,
+//     title: "Vue",
+//   },
+//   {
+//     id: "typescript",
+//     logo: <BiLogoTypescript />,
+//     title: "Typescript",
+//   },
+//   {
+//     id: "node",
+//     logo: <BiLogoNodejs />,
+//     title: "Node",
+//   },
+//   {
+//     id: "github",
+//     logo: <BiLogoGithub />,
+//     title: "Github",
+//   },
+//   {
+//     id: "redux",
+//     logo: <BiLogoRedux />,
+//     title: "Redux",
+//   },
+// ];
 
 export const clientExperience = [
   {

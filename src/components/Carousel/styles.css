@@ -1,6 +1,6 @@
 .carouselContainer {
-  position: absolute;
-  left: 0;
+  /* position: absolute;      /**************commit this point because set tghe height********** */
+    left: 0;
   padding: 60px 0;
   width: 100%;
   display: flex;

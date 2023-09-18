@@ -187,3 +187,35 @@
   background-color: #0fa0ff;
   color: #ebecf3;
 }
+
+.contactVideoDivider {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+align-items: center;
+}
+
+.contactVideoArea {
+  height: auto;
+  margin: 10px;
+}
+.Contact-side1 {
+  width: 40%;
+  display: flex;
+}
+
+.Contact-side2 {
+  width: 55%;
+}
+
+.ContactVideoArea{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
