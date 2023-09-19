@@ -1,16 +1,17 @@
 import "../../App.css";
-// import Card from "../../components/Cards";
+import Card from "../../components/Cards";
 import { SideBar } from "../../components/Navbar";
 import { useEffect, useState } from "react";
 import { PiProjectorScreenChartBold } from "react-icons/pi";
-// import Heading from "../../components/Heading";
+import Heading from "../../components/Heading";
 // import Slider from "../../components/Slider";
 // import Title from "../../components/Title";
-// import { projectCard, sliderItems } from "../../data";
+import { projectCard } from "../../data";
 import ScrollSlider from "../../components/ScrollSlider";
 import { GrCircleInformation, GrServices } from "react-icons/gr";
 import { FaAddressBook } from "react-icons/fa";
 import { projectSliderItems } from "../../data";
+import Title from "../../components/Title";
 
 const Projects = () => {
   const menuItems = [
@@ -85,10 +86,21 @@ const Projects = () => {
     <div className={`scroll-div container1`} id="projects">
       <SideBar
         menuItems={menuItems}
-        activeMenu={activeDiv}
+        activeMenu={activeDiv === 0 ? "projects" : activeDiv}
         handleActiveMenu={scrollToDiv}
       >
+        {/* <div className={`section3 m-top-full`}>
+          <Title
+            title="Projects"
+            paragraph={`Consequat irure aliquip esse aute minim sit ipsum sint
+                deserunt reprehenderit officia dolor aute. Occaecat deserunt
+                minim aute duis proident dolor officia in. Culpa deserunt
+                tempor nulla qui qui eu est anim ullamco elit.`}
+          />
+        </div> */}
+
         <ScrollSlider items={projectSliderItems} />
+
         {/* <div className={`relative section2`}>
           <Slider items={sliderItems} />
         </div>
@@ -101,7 +113,7 @@ const Projects = () => {
                 minim aute duis proident dolor officia in. Culpa deserunt
                 tempor nulla qui qui eu est anim ullamco elit.`}
           />
-        </div>
+        </div> */}
 
         <div className={`section1`}>
           <Heading text="Our Project Porfolio" reverse />
@@ -110,7 +122,7 @@ const Projects = () => {
               <Card {...value} key={`portfolio-${index}`} />
             ))}
           </div>
-        </div> */}
+        </div>
       </SideBar>
     </div>
   );

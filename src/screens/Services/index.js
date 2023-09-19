@@ -83,7 +83,7 @@ const Services = () => {
     <div className={`scroll-div container1`} id="services">
       <SideBar
         menuItems={menuItems}
-        activeMenu={activeDiv || "services"}
+        activeMenu={activeDiv === 0 ? "services" : activeDiv}
         handleActiveMenu={scrollToDiv}
       >
         <div className={`section3 m-top-full`}>

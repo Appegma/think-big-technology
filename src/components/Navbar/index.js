@@ -21,6 +21,10 @@ const SideBar = ({
   };
 
   const activeIndex = menuItems.findIndex((data) => data.id === activeMenu);
+
+  console.log("activeMenu => ", activeMenu);
+  console.log("activeIndex => ", activeIndex);
+
   return (
     <>
       <div className="sideBarMain">

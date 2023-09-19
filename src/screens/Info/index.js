@@ -79,7 +79,7 @@ function Info() {
     <div className={`scroll-div container1`} id="info">
       <SideBar
         menuItems={menuItems}
-        activeMenu={activeDiv}
+        activeMenu={activeDiv === 0 ? "info" : activeDiv}
         handleActiveMenu={scrollToDiv}
       >
         <div className="section4">

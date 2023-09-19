@@ -116,7 +116,7 @@ const About = () => {
       <div className={`scroll-div container1`} id="about">
         <SideBar
           menuItems={menuItems}
-          activeMenu={activeDiv}
+          activeMenu={activeDiv === 0 ? "about" : activeDiv}
           handleActiveMenu={scrollToDiv}
         >
           <div className={`section3 m-top-full`}>

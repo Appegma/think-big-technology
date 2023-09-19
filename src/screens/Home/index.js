@@ -134,7 +134,7 @@ const Home = () => {
     <div className="container1">
       <SideBar
         menuItems={menuItems}
-        activeMenu={activeDiv || "main"}
+        activeMenu={activeDiv === 0 ? "main" : activeDiv}
         handleActiveMenu={scrollToDiv}
       >
         <div className={`scroll-div`} id="main">

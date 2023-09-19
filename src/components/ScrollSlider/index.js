@@ -8,17 +8,31 @@ function ScrollSlider({ items }) {
 
   const handleScroll = () => {
     if (sliderRef.current) {
-      const scrollPosition = sliderRef.current.scrollTop;
-      const itemHeight = sliderRef.current.clientHeight;
+      const scrollPosition = sliderRef.current.scrollLeft;
+      const itemWidth = sliderRef.current.clientWidth;
 
       // Calculate the current index based on scroll position
-      const newIndex = Math.round(scrollPosition / itemHeight);
+      const newIndex = Math.round(scrollPosition / itemWidth);
 
       if (newIndex !== currentIndex) {
         setCurrentIndex(newIndex);
       }
     }
   };
+
+  // const handleScroll = () => {
+  //   if (sliderRef.current) {
+  //     const scrollPosition = sliderRef.current.scrollTop;
+  //     const itemHeight = sliderRef.current.clientHeight;
+
+  //     // Calculate the current index based on scroll position
+  //     const newIndex = Math.round(scrollPosition / itemHeight);
+
+  //     if (newIndex !== currentIndex) {
+  //       setCurrentIndex(newIndex);
+  //     }
+  //   }
+  // };
 
   return (
     <div className="carousel-slider" onScroll={handleScroll} ref={sliderRef}>
