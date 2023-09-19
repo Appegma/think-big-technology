@@ -27,7 +27,7 @@ const Reveal = ({ children, width = "fit-content" }) => {
         ref={ref}
         style={{ position: "relative", width, overflow: "hidden" }}
       >
-        <motion.dev
+        <motion.div
           variants={{
             hidden: { opacity: 0, y: 75 },
             visible: { opacity: 1, y: 0 },
@@ -37,8 +37,8 @@ const Reveal = ({ children, width = "fit-content" }) => {
           transition={{ duration: 0.5, delay: 0.25 }}
         >
           {children}
-        </motion.dev>
-        <motion.dev
+        </motion.div>
+        <motion.div
           variants={{
             hidden: { left: 0 },
             visible: { left: "100%" },

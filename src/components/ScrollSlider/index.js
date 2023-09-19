@@ -10,9 +10,12 @@ function ScrollSlider({ items }) {
     if (sliderRef.current) {
       const scrollPosition = sliderRef.current.scrollLeft;
       const itemWidth = sliderRef.current.clientWidth;
+      const itemHeight = sliderRef.current.clientHeight;
+      console.log(itemHeight)
 
       // Calculate the current index based on scroll position
       const newIndex = Math.round(scrollPosition / itemWidth);
+      console.log(newIndex)
 
       if (newIndex !== currentIndex) {
         setCurrentIndex(newIndex);

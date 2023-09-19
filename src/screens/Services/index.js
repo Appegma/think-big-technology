@@ -99,23 +99,13 @@ const Services = () => {
           <Slider items={sliderItems} />
         </div>
 
-        {/* <div className="absoluteContainer">
-          <Title
-            title="Services"
-            paragraph={`Consequat irure aliquip esse aute minim sit ipsum sint
-                deserunt reprehenderit officia dolor aute. Occaecat deserunt
-                minim aute duis proident dolor officia in. Culpa deserunt
-                tempor nulla qui qui eu est anim ullamco elit.`}
-          />
-        </div> */}
-
+     
         <div className={`section3`}>
           <Heading text="Tech Stack" />
           <div className="techStack">
             {techStackLogo.map((value, index) => (
               <Reveal>
                 <div className="techStackItem " key={`techStack-${index}`}>
-                  {/* <span>{value.logo}</span> */}
                   <div className="tectCardImg">
                     <img
                       alt="logo"
@@ -125,12 +115,13 @@ const Services = () => {
                     />
                   </div>
                   <p>{value.title}</p>
-                  <div className="myDes">this is the description</div>
+                  <div className="myDes">{value.descp}</div>
                 </div>
               </Reveal>
             ))}
           </div>
         </div>
+        </SideBar>
 
         {/* <div className={`section2`}>
           <Heading text="Satisfied Clients" />
@@ -142,8 +133,18 @@ const Services = () => {
           {clientExperience.map((value, index) => (
             <Experience {...value} key={`experience-${index}`} />
           ))}
-        </div> */}
-      </SideBar>
+        </div>  
+           <div className="absoluteContainer">
+          <Title
+            title="Services"
+            paragraph={`Consequat irure aliquip esse aute minim sit ipsum sint
+                deserunt reprehenderit officia dolor aute. Occaecat deserunt
+                minim aute duis proident dolor officia in. Culpa deserunt
+                tempor nulla qui qui eu est anim ullamco elit.`}
+          />
+        </div>
+        
+        */}
     </div>
   );
 };

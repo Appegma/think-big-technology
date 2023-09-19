@@ -69,51 +69,61 @@ export const techStackLogo = [
     id: "javascript",
     image: javascriptlogo,
     title: "Javascript",
+    descp: "this is the description",
   },
   {
     id: "react",
     image: reactlogo,
     title: "React",
+    descp: "this is the description",
   },
   {
     id: "html",
     image: htmllogo,
     title: "HTML",
+    descp: "this is the description",
   },
   {
     id: "css",
     image: csslogo,
     title: "CSS",
+    descp: "this is the description",
   },
   {
     id: "angular",
     image: angularlogo,
     title: "Angular",
+    descp: "this is the description",
   },
   {
     id: "vue",
     image: vuelogo,
     title: "Vue",
+    descp: "this is the description",
   },
   {
     id: "typescript",
     image: typescriptlogo,
     title: "Typescript",
+    descp: "this is the description",
   },
   {
     id: "node",
     image: nodelogo,
     title: "Node",
+    descp: "this is the description",
   },
   {
     id: "github",
     image: githublogo,
     title: "Github",
+    descp: "this is the description",
   },
   {
     id: "redux",
     image: reduxlogo,
     title: "Redux",
+    descp: "this is the description",
   },
 ];
 

@@ -12,6 +12,7 @@ import { GrCircleInformation, GrServices } from "react-icons/gr";
 import { FaAddressBook } from "react-icons/fa";
 import { projectSliderItems } from "../../data";
 import Title from "../../components/Title";
+import SwiperHorizontal from "../../components/Animation/SwiperHorizontal";
 
 const Projects = () => {
   const menuItems = [
@@ -98,8 +99,8 @@ const Projects = () => {
                 tempor nulla qui qui eu est anim ullamco elit.`}
           />
         </div> */}
-
-        <ScrollSlider items={projectSliderItems} />
+<SwiperHorizontal  items={projectSliderItems}/>
+        {/* <ScrollSlider items={projectSliderItems} /> */}
 
         {/* <div className={`relative section2`}>
           <Slider items={sliderItems} />
