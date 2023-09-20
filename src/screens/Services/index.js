@@ -1,14 +1,24 @@
 import "../../App.css";
-import { SideBar } from "../../components/Navbar";
+import Navbar from "../../components/Navbar";
 import { useEffect, useState } from "react";
 import { GrServices } from "react-icons/gr";
-import Slider from "../../components/Slider";
+// import Slider from "../../components/Slider";
 import Heading from "../../components/Heading";
 import Title from "../../components/Title";
-import { sliderItems, techStackLogo } from "../../data";
+import { projectSliderItems, techStackLogo } from "../../data";
 import Reveal from "../../components/Animation/Reveal";
+import SwiperVertical from "../../components/Swiper/SwiperVertical";
+// import ProjectPanel from "../../components/ProjectPanel";
 // import { PiProjectorScreenChartBold } from "react-icons/pi";
 // import { FaAddressBook } from "react-icons/fa";
+
+const ImageCarousel = ({ image }) => {
+  return (
+    <div className="carouselImage">
+      <img src={image} alt="carousel" />
+    </div>
+  );
+};
 
 const Services = () => {
   const menuItems = [
@@ -49,6 +59,8 @@ const Services = () => {
     setActiveDiv(newIndex);
   };
 
+  useEffect(() => window.scrollTo(0, 0), []);
+
   // Attach the scroll event listener when the component mounts
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -67,11 +79,12 @@ const Services = () => {
 
   return (
     <div className={`scroll-div container1`} id="services">
-      <SideBar
+      <Navbar
         menuItems={menuItems}
         activeMenu={activeDiv === 0 ? "services" : activeDiv}
         handleActiveMenu={scrollToDiv}
       >
+        <SwiperVertical items={projectSliderItems} component={ImageCarousel} />
         <div className={`section3 m-top-full`}>
           <Title
             title="Services"
@@ -81,9 +94,10 @@ const Services = () => {
                 tempor nulla qui qui eu est anim ullamco elit.`}
           />
         </div>
-        <div className={`relative section2`}>
+
+        {/* <div className={`relative section2`}>
           <Slider items={sliderItems} />
-        </div>
+        </div> */}
 
         <div className={`section3`}>
           <Heading text="Tech Stack" />
@@ -106,7 +120,7 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </SideBar>
+      </Navbar>
 
       {/* <div className={`section2`}>
           <Heading text="Satisfied Clients" />

@@ -1,6 +1,6 @@
 import "../../App.css";
 import Banner from "../../components/Banner";
-import { SideBar } from "../../components/Navbar";
+import Navbar from "../../components/Navbar";
 import { useEffect, useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
 import ZoomableVideo from "../../components/ZoomableVideo";
@@ -112,6 +112,7 @@ const Home = () => {
     setActiveDiv(newIndex);
   };
 
+  useEffect(() => window.scrollTo(0, 0), []);
   // Attach the scroll event listener when the component mounts
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -132,7 +133,7 @@ const Home = () => {
 
   return (
     <div className="container1">
-      <SideBar
+      <Navbar
         menuItems={menuItems}
         activeMenu={activeDiv === 0 ? "main" : activeDiv}
         handleActiveMenu={scrollToDiv}
@@ -259,7 +260,7 @@ const Home = () => {
             paragraph="Shoot me an email if you want to connect! You can also find me on Linkedin or Twitter if that's more your speed."
           />
         </div>
-      </SideBar>
+      </Navbar>
     </div>
   );
 };

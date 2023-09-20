@@ -1,0 +1,28 @@
+.zoomable-video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* clip-path: polygon(
+    calc(5.9052% + 12rem) 0%,
+    94.0948% 0%,
+    94.0948% calc(94.0948% - 12rem),
+    calc(94.0948% - 12rem) 94.0948%,
+    5.9052% 94.0948%,
+    5.9052% 12rem
+  ); */
+  /* aspect-ratio: 16/9; */
+  /* transition: all 0.25s ease-in!important;
+  transform-origin: 50% 0%;
+  transform: translate3d(0px, 0px, 0px) scale(0.7527, 0.7527); */
+  /* clip-path: polygon(
+    calc(5.9052% + 12rem) 0%,
+    94.0948% 0%,
+    94.0948% calc(94.0948% - 12rem),
+    calc(94.0948% - 12rem) 94.0948%,
+    5.9052% 94.0948%,
+    5.9052% 12rem
+  );
+  aspect-ratio: 16/9; */
+}

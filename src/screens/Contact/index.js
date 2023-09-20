@@ -1,8 +1,10 @@
 import "../../App.css";
-import { SideBar } from "../../components/Navbar";
+import Navbar from "../../components/Navbar";
 import { FaAddressBook } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import ContactForm from "../../components/ContactForm";
+import ZoomoutVideo from "../../components/ZoomoutVideo";
+import thinkBigVideo from "../../assets/video/aboutVideo.mp4";
 
 function Contact() {
   const menuItems = [
@@ -42,6 +44,7 @@ function Contact() {
     setActiveDiv(newIndex);
   };
 
+  useEffect(() => window.scrollTo(0, 0), []);
   // Attach the scroll event listener when the component mounts
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -60,15 +63,16 @@ function Contact() {
 
   return (
     <div className={`scroll-div container1`} id="info">
-      <SideBar
+      <Navbar
         menuItems={menuItems}
         activeMenu={activeDiv === 0 ? "info" : activeDiv}
         handleActiveMenu={scrollToDiv}
       >
+        <ZoomoutVideo src={thinkBigVideo} />
         <div className="section4">
           <ContactForm />
         </div>
-      </SideBar>
+      </Navbar>
     </div>
   );
 }

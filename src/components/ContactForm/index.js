@@ -1,6 +1,6 @@
 import { TiMessages } from "react-icons/ti";
 import Reveal from "../Animation/Reveal";
-import thinkBigVideo from "../../assets/video/aboutVideo.mp4";
+// import thinkBigVideo from "../../assets/video/aboutVideo.mp4";
 import "./styles.css";
 import { Input1, TextArea1 } from "../Input";
 import Banner from "../Banner";
@@ -14,14 +14,14 @@ const ContactForm = () => {
         <div className="contactVideoSection">
           <Banner title="Let’s blow (speech) bubbles" />
 
-          <video autoPlay muted>
+          {/* <video autoPlay muted>
             <source
               src={thinkBigVideo}
               className="zoomable-video"
               type="video/mp4"
             />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
         </div>
         <div className="contactVideoDivider">
           <div className="contactVideoArea Contact-side1"></div>

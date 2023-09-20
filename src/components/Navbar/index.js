@@ -2,12 +2,14 @@ import { useState } from "react";
 import { BsGithub, BsTwitter, BsLinkedin, BsFacebook } from "react-icons/bs";
 import Cube from "../Cube";
 import { NavLink } from "react-router-dom";
-const SideBar = ({
+import logo from "../../assets/logo.png";
+
+function Navbar({
   children,
   menuItems,
   activeMenu = "main",
   handleActiveMenu,
-}) => {
+}) {
   const [rotate, setRotate] = useState(true);
   const [activeRoute, setActiveRoute] = useState("Home");
 
@@ -121,13 +123,14 @@ const SideBar = ({
         </div>
 
         <div className="NavbarBtn margin-r">
-          <button className="SideBarBtn2">Think Big Technology.</button>
+          <img alt="Logo" src={logo} width={230} />
+          {/* <button className="SideBarBtn2">Think Big Technology.</button> */}
         </div>
       </div>
 
       <div className="screen">{children}</div>
     </>
   );
-};
+}
 
-export { SideBar };
+export default Navbar;

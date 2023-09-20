@@ -1,5 +1,5 @@
 import "../../App.css";
-import { SideBar } from "../../components/Navbar";
+import Navbar from "../../components/Navbar";
 import Experience from "../../components/Experience";
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
@@ -79,6 +79,7 @@ const About = () => {
     setActiveDiv(newIndex);
   };
 
+  useEffect(() => window.scrollTo(0, 0), []);
   // Attach the scroll event listener when the component mounts
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -98,7 +99,7 @@ const About = () => {
   return (
     <>
       <div className={`scroll-div container1`} id="about">
-        <SideBar
+        <Navbar
           menuItems={menuItems}
           activeMenu={activeDiv === 0 ? "about" : activeDiv}
           handleActiveMenu={scrollToDiv}
@@ -160,12 +161,6 @@ const About = () => {
                 <Testimonial key={`testimonial-${index}`} {...value} />
               ))}
           </div> */}
-          <SwiperHorizontal
-            items={testimonial}
-            component={Testimonial}
-            title="Testimonial"
-            wheel={false}
-          />
 
           <div className={`section3`}>
             <Heading text="Our Team" />
@@ -173,11 +168,19 @@ const About = () => {
               <Experience {...value} key={`experience-${index}`} />
             ))}
           </div>
+
+          <SwiperHorizontal
+            items={testimonial}
+            component={Testimonial}
+            title="Testimonial"
+            wheel={false}
+          />
+
           <div className={`section2`}>
             <Heading text="Satisfied Clients" />
             <Carousel items={carouselItems} />
           </div>
-        </SideBar>
+        </Navbar>
       </div>
     </>
   );

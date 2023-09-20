@@ -1,10 +1,10 @@
 import "../../App.css";
-import Card from "../../components/Cards";
-import { SideBar } from "../../components/Navbar";
+// import Card from "../../components/Cards";
+import Navbar from "../../components/Navbar";
 import { useEffect, useState } from "react";
 import { PiProjectorScreenChartBold } from "react-icons/pi";
-import Heading from "../../components/Heading";
-import { projectCard, teamDetails } from "../../data";
+// import Heading from "../../components/Heading";
+import { teamDetails } from "../../data";
 import { projectSliderItems } from "../../data";
 import SwiperVertical from "../../components/Swiper/SwiperVertical";
 import SwiperHorizontal from "../../components/Swiper/SwiperHorizontal";
@@ -49,6 +49,7 @@ const Projects = () => {
     setActiveDiv(newIndex);
   };
 
+  useEffect(() => window.scrollTo(0, 0), []);
   // Attach the scroll event listener when the component mounts
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -67,28 +68,28 @@ const Projects = () => {
 
   return (
     <div className={`scroll-div container1`} id="projects">
-      <SideBar
+      <Navbar
         menuItems={menuItems}
         activeMenu={activeDiv === 0 ? "projects" : activeDiv}
         handleActiveMenu={scrollToDiv}
       >
         <SwiperVertical items={projectSliderItems} component={ProjectPanel} />
 
-        <div className={`section1`}>
+        {/* <div className={`section1`}>
           <Heading text="Our Project Porfolio" reverse />
           <div className="projectContainer">
             {projectCard.map((value, index) => (
               <Card {...value} key={`portfolio-${index}`} />
             ))}
           </div>
-        </div>
+        </div> */}
 
         <SwiperHorizontal
           items={teamDetails}
           title="YOU’LL NEVER BELIEVE WHAT YOU CAN CREATE ON YOUR PHONE"
           component={Team}
         />
-      </SideBar>
+      </Navbar>
     </div>
   );
 };
