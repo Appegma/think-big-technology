@@ -1,0 +1,51 @@
+.horizontalSwiper {
+  width: 100%;
+  height: 100vh;
+  background-color: #080808;
+}
+
+.horizontalSlides {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: auto;
+}
+
+.horizontalSlides:nth-child(2n) {
+  margin-top: 300px;
+}
+
+.horizontalSlides:nth-child(3n) {
+  margin-bottom: 300px;
+}
+
+.backgroundTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundTitle > h1 {
+  max-width: 800px;
+  font-size: 4em;
+  font-weight: 900;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.backgroundTitle .stroke {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+  z-index: 1;
+}

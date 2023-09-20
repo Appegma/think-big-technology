@@ -1,0 +1,11 @@
+.teamCard {
+  width: 320px;
+  height: auto;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.teamCard img {
+  width: 350px;
+  height: auto;
+}

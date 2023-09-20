@@ -5,14 +5,13 @@ import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
 import { AiFillLinkedin } from "react-icons/ai";
 import { BsGithub, BsTwitter } from "react-icons/bs";
-import { GrCircleInformation, GrServices } from "react-icons/gr";
+import { GrCircleInformation } from "react-icons/gr";
 import Heading from "../../components/Heading";
 import { testimonial, carouselItems, clientExperience } from "../../data";
 import Testimonial from "../../components/Testimonial";
 import Carousel from "../../components/Carousel";
-import { PiProjectorScreenChartBold } from "react-icons/pi";
-import { FaAddressBook } from "react-icons/fa";
 import Title from "../../components/Title";
+import SwiperHorizontal from "../../components/Swiper/SwiperHorizontal";
 
 const About = () => {
   const menuItems = [
@@ -29,21 +28,6 @@ const About = () => {
       id: "about",
       logo: <GrCircleInformation className="svgColors" />,
       title: "About",
-    },
-    {
-      id: "services",
-      logo: <GrServices className="svgColors" />,
-      title: "Services",
-    },
-    {
-      id: "projects",
-      logo: <PiProjectorScreenChartBold />,
-      title: "Projects",
-    },
-    {
-      id: "info",
-      logo: <FaAddressBook />,
-      title: "Contact",
     },
   ];
 
@@ -144,63 +128,6 @@ const About = () => {
                   </Reveal>
                 ))}
 
-                {/* <div>
-                  <Reveal>
-                    <div
-                      data-aos="fade-up"
-                      data-aos-anchor-placement="bottom-bottom"
-                      className="dividerText1"
-                    >
-                      Excepteur cillum ut qui anim id. Cillum ex laboris Lorem
-                      deserunt anim exercitation laboris minim duis velit nulla
-                      eu aute ex. Id id exercitation exercitation proident
-                      dolor.
-                    </div>
-                  </Reveal>
-
-                  <Reveal>
-                    <div
-                      data-aos="fade-up"
-                      data-aos-anchor-placement="bottom-bottom"
-                      className="dividerText1"
-                    >
-                      Nulla eiusmod aute ea nulla. Eiusmod eiusmod cillum
-                      ullamco excepteur non. Labore sint est duis do cupidatat
-                      ipsum do quis eiusmod non anim est. Fugiat ad consequat
-                      nostrud est officia et nulla consequat esse enim consequat
-                      aliquip. Veniam Lorem nostrud sunt aliqua.
-                    </div>
-                  </Reveal>
-
-                  <Reveal>
-                    <div
-                      data-aos="fade-up"
-                      data-aos-anchor-placement="bottom-bottom"
-                      className="dividerText1"
-                    >
-                      Aliqua nostrud aute amet sint velit occaecat laborum
-                      fugiat adipisicing sunt dolore et elit. Eu do
-                      reprehenderit amet officia magna dolor exercitation
-                      adipisicing laboris ea id deserunt. Excepteur amet nisi id
-                      dolore dolor veniam occaecat sunt cillum incididunt nulla
-                      officia ea cupidatat.
-                    </div>
-                  </Reveal>
-
-                  <Reveal>
-                    <div
-                      data-aos="fade-up"
-                      data-aos-anchor-placement="bottom-bottom"
-                      className="dividerText1"
-                    >
-                      Eu exercitation ex ex et. Ea magna ut aute et officia
-                      excepteur nisi anim excepteur. Adipisicing incididunt
-                      cupidatat occaecat ex eu veniam velit proident est irure
-                      voluptate officia minim do.
-                    </div>
-                  </Reveal>
-                </div> */}
-
                 <Reveal>
                   <div
                     data-aos="fade-up"
@@ -220,56 +147,10 @@ const About = () => {
                   </div>
                 </Reveal>
               </div>
-
-              {/* <div className="dividerStatus">
-                <div
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="bottom-bottom"
-                  className="dividerStatusContaioner"
-                >
-                  <Reveal>
-                    <div className="dividerHeadingMain">
-                      <FaBuilding />
-                      <h1>Use at work</h1>
-                    </div>
-                  </Reveal>
-
-                  <Reveal>
-                    <div className="techContainer">
-                      {techStack?.length > 0 &&
-                        techStack.map((data) => (
-                          <Status key={data.id} {...data} />
-                        ))}
-                    </div>
-                  </Reveal>
-                </div>
-
-                <div
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="bottom-bottom"
-                  className="dividerStatusContaioner"
-                >
-                  <Reveal>
-                    <div className="dividerHeadingMain">
-                      <FaHeart color="#0fa0ff !important" />
-                      <h1>Love to Work with</h1>
-                    </div>
-                  </Reveal>
-
-                  <Reveal>
-                    <div className="techContainer">
-                      {techStack?.length > 0 &&
-                        techStack.map((data) => (
-                          <Status key={data.id} {...data} />
-                        ))}
-                    </div>
-                  </Reveal>
-                </div>
-              </div> */}
             </div>
           </div>
 
-          <div className="section">
+          {/* <div className="section">
             <Heading text="Testimonial" reverse />
           </div>
 
@@ -278,7 +159,13 @@ const About = () => {
               testimonial.map((value, index) => (
                 <Testimonial key={`testimonial-${index}`} {...value} />
               ))}
-          </div>
+          </div> */}
+          <SwiperHorizontal
+            items={testimonial}
+            component={Testimonial}
+            title="Testimonial"
+            wheel={false}
+          />
 
           <div className={`section3`}>
             <Heading text="Our Team" />

@@ -22,9 +22,6 @@ const SideBar = ({
 
   const activeIndex = menuItems.findIndex((data) => data.id === activeMenu);
 
-  console.log("activeMenu => ", activeMenu);
-  console.log("activeIndex => ", activeIndex);
-
   return (
     <>
       <div className="sideBarMain">
@@ -115,9 +112,9 @@ const SideBar = ({
               <NavLink
                 className={`topNameStyle ${activeRoute === "info" && "active"}`}
                 onClick={() => topActive("info")}
-                to={"/Info"}
+                to={"/Contact"}
               >
-                Info
+                Contact
               </NavLink>
             </li>
           </ul>

@@ -26,6 +26,15 @@ import reduxlogo from "../assets/languagesLogo/redux.png";
 import background1 from "../assets/backgroundImage/background1.jpg";
 import background2 from "../assets/backgroundImage/background2.jpg";
 import background3 from "../assets/backgroundImage/background3.jpg";
+import team01 from "../assets/team/img-01.jpeg";
+import team02 from "../assets/team/img-02.jpeg";
+import team03 from "../assets/team/img-03.jpeg";
+import team04 from "../assets/team/img-04.jpeg";
+import team05 from "../assets/team/img-05.jpeg";
+import team06 from "../assets/team/img-06.jpeg";
+import team07 from "../assets/team/img-07.jpeg";
+import team08 from "../assets/team/img-08.jpeg";
+import team09 from "../assets/team/img-09.jpeg";
 
 export const menuItems = [
   {
@@ -69,61 +78,61 @@ export const techStackLogo = [
     id: "javascript",
     image: javascriptlogo,
     title: "Javascript",
-    descp: "this is the description",
+    description: "this is the description",
   },
   {
     id: "react",
     image: reactlogo,
     title: "React",
-    descp: "this is the description",
+    description: "this is the description",
   },
   {
     id: "html",
     image: htmllogo,
     title: "HTML",
-    descp: "this is the description",
+    description: "this is the description",
   },
   {
     id: "css",
     image: csslogo,
     title: "CSS",
-    descp: "this is the description",
+    description: "this is the description",
   },
   {
     id: "angular",
     image: angularlogo,
     title: "Angular",
-    descp: "this is the description",
+    description: "this is the description",
   },
   {
     id: "vue",
     image: vuelogo,
     title: "Vue",
-    descp: "this is the description",
+    description: "this is the description",
   },
   {
     id: "typescript",
     image: typescriptlogo,
     title: "Typescript",
-    descp: "this is the description",
+    description: "this is the description",
   },
   {
     id: "node",
     image: nodelogo,
     title: "Node",
-    descp: "this is the description",
+    description: "this is the description",
   },
   {
     id: "github",
     image: githublogo,
     title: "Github",
-    descp: "this is the description",
+    description: "this is the description",
   },
   {
     id: "redux",
     image: reduxlogo,
     title: "Redux",
-    descp: "this is the description",
+    description: "this is the description",
   },
 ];
 
@@ -373,5 +382,62 @@ export const project = [
     percentage: "40%",
     percentageDescription:
       "Of sales attributed to digital alone, in 2023 (Q1).",
+  },
+];
+
+export const teamDetails = [
+  {
+    id: "1",
+    name: "John Doe",
+    designation: "CEO",
+    image: team01,
+  },
+  {
+    id: "2",
+    name: "John Doe",
+    designation: "CEO",
+    image: team02,
+  },
+  {
+    id: "3",
+    name: "John Doe",
+    designation: "CEO",
+    image: team03,
+  },
+  {
+    id: "4",
+    name: "John Doe",
+    designation: "CEO",
+    image: team04,
+  },
+  {
+    id: "5",
+    name: "John Doe",
+    designation: "CEO",
+    image: team05,
+  },
+  {
+    id: "6",
+    name: "John Doe",
+    designation: "CEO",
+    image: team06,
+  },
+  {
+    id: "7",
+    name: "John Doe",
+    designation: "CEO",
+    image: team07,
+  },
+  {
+    id: "8",
+    name: "John Doe",
+    designation: "CEO",
+    image: team08,
+  },
+  {
+    id: "9",
+    name: "John Doe",
+    designation: "CEO",
+    image: team09,
   },
 ];

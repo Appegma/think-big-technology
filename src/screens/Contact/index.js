@@ -3,10 +3,8 @@ import { SideBar } from "../../components/Navbar";
 import { FaAddressBook } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import ContactForm from "../../components/ContactForm";
-import { GrCircleInformation, GrServices } from "react-icons/gr";
-import { PiProjectorScreenChartBold } from "react-icons/pi";
 
-function Info() {
+function Contact() {
   const menuItems = [
     {
       id: "main",
@@ -16,21 +14,6 @@ function Info() {
         </p>
       ),
       title: "Home",
-    },
-    {
-      id: "about",
-      logo: <GrCircleInformation className="svgColors" />,
-      title: "About",
-    },
-    {
-      id: "services",
-      logo: <GrServices className="svgColors" />,
-      title: "Services",
-    },
-    {
-      id: "projects",
-      logo: <PiProjectorScreenChartBold />,
-      title: "Projects",
     },
     {
       id: "info",
@@ -89,4 +72,4 @@ function Info() {
     </div>
   );
 }
-export default Info;
+export default Contact;

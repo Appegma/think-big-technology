@@ -20,15 +20,14 @@ body {
   background-color: #111;
 }
 
-.container11{
-  width: 100%;height: auto;
+.container11 {
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
-align-items: center;
-flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
-
-
 
 .container1 {
   width: 100%;
@@ -384,7 +383,7 @@ flex-direction: column;
   filter: grayscale(100%);
 }
 
-.myDes{
+.myDes {
   display: none;
 }
 
@@ -394,7 +393,7 @@ flex-direction: column;
 }
 
 .techStackItem:hover .myDes {
- display: block;
+  display: block;
 }
 
 .tectCardImg {
@@ -406,8 +405,8 @@ flex-direction: column;
   align-items: center;
 }
 
-.tectCardImg >img{
-width: 100%;
+.tectCardImg > img {
+  width: 100%;
 }
 
 .techStackItem:hover span > svg {
@@ -417,7 +416,6 @@ width: 100%;
 .techStackItem:hover p {
   color: #0fa0ff;
 }
-
 
 .techStackItem > span {
   font-size: 5.5em;

@@ -1,14 +1,14 @@
 import "../../App.css";
 import { SideBar } from "../../components/Navbar";
 import { useEffect, useState } from "react";
-import { GrCircleInformation, GrServices } from "react-icons/gr";
+import { GrServices } from "react-icons/gr";
 import Slider from "../../components/Slider";
 import Heading from "../../components/Heading";
 import Title from "../../components/Title";
 import { sliderItems, techStackLogo } from "../../data";
 import Reveal from "../../components/Animation/Reveal";
-import { PiProjectorScreenChartBold } from "react-icons/pi";
-import { FaAddressBook } from "react-icons/fa";
+// import { PiProjectorScreenChartBold } from "react-icons/pi";
+// import { FaAddressBook } from "react-icons/fa";
 
 const Services = () => {
   const menuItems = [
@@ -21,25 +21,11 @@ const Services = () => {
       ),
       title: "Home",
     },
-    {
-      id: "about",
-      logo: <GrCircleInformation className="svgColors" />,
-      title: "About",
-    },
+
     {
       id: "services",
       logo: <GrServices className="svgColors" />,
       title: "Services",
-    },
-    {
-      id: "projects",
-      logo: <PiProjectorScreenChartBold />,
-      title: "Projects",
-    },
-    {
-      id: "info",
-      logo: <FaAddressBook />,
-      title: "Contact",
     },
   ];
 
@@ -99,7 +85,6 @@ const Services = () => {
           <Slider items={sliderItems} />
         </div>
 
-     
         <div className={`section3`}>
           <Heading text="Tech Stack" />
           <div className="techStack">
@@ -115,20 +100,20 @@ const Services = () => {
                     />
                   </div>
                   <p>{value.title}</p>
-                  <div className="myDes">{value.descp}</div>
+                  <div className="myDes">{value.description}</div>
                 </div>
               </Reveal>
             ))}
           </div>
         </div>
-        </SideBar>
+      </SideBar>
 
-        {/* <div className={`section2`}>
+      {/* <div className={`section2`}>
           <Heading text="Satisfied Clients" />
           <Carousel items={carouselItems} />
         </div> */}
 
-        {/* <div className={`section3 serviceProvider`}>
+      {/* <div className={`section3 serviceProvider`}>
           <Heading text="Clients and Experience" reverse />
           {clientExperience.map((value, index) => (
             <Experience {...value} key={`experience-${index}`} />

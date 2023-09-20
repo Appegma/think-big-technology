@@ -237,10 +237,13 @@ const Home = () => {
           </div> */}
         </div>
 
+        <div className="section">
+          <Heading text="Cases" reverse />
+        </div>
         {project?.length > 0 &&
-          project.map((value) => (
+          project.map((value, index) => (
             <div className={`scroll-div section3`} key={value.id} id={value.id}>
-              <ProjectCard {...value} />
+              <ProjectCard {...value} number={index + 1} />
             </div>
           ))}
 

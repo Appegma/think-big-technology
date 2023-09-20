@@ -3,6 +3,7 @@ import "./styles.css";
 import Reveal from "../Animation/Reveal";
 
 function ProjectCard({
+  number,
   title,
   detail,
   image,
@@ -11,6 +12,15 @@ function ProjectCard({
 }) {
   return (
     <div className="projectContainerLive">
+      <Reveal>
+        <div
+          className="projectheading1"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h2>{number ? `Case ${number}` : "Cases"}</h2>
+        </div>
+      </Reveal>
       <div
         className="divider1"
         data-aos="fade-left"
