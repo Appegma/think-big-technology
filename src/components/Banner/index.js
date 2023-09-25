@@ -10,12 +10,9 @@ const Banner = ({ title, image }) => {
           {image && (
             <div className="bannerImageContainer">
               <Reveal>
-                <img src={image} alt="logo" className="bannerImage" />
+                {/* <img src={image} alt="logo" className="bannerImage" /> */}
                 <h1 className="slogan">
-                  Innnovate
-                  <BlueFullStop /> Redefine
-                  <BlueFullStop /> Prosper
-                  <BlueFullStop />
+                  Innovate<BlueFullStop/><br></br> Redefine<BlueFullStop/><br></br> Prosper<BlueFullStop/>
                 </h1>
               </Reveal>
             </div>

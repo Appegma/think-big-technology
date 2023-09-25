@@ -2,7 +2,7 @@ import "../../App.css";
 // import Card from "../../components/Cards";
 import Navbar from "../../components/Navbar";
 import { useEffect, useState } from "react";
-import { PiProjectorScreenChartBold } from "react-icons/pi";
+// import { PiProjectorScreenChartBold } from "react-icons/pi";
 // import Heading from "../../components/Heading";
 import { teamDetails } from "../../data";
 import { projectSliderItems } from "../../data";
@@ -10,6 +10,7 @@ import SwiperVertical from "../../components/Swiper/SwiperVertical";
 import SwiperHorizontal from "../../components/Swiper/SwiperHorizontal";
 import ProjectPanel from "../../components/ProjectPanel";
 import Team from "../../components/Team";
+import { FaProjectDiagram } from "react-icons/fa";
 
 const Projects = () => {
   const menuItems = [
@@ -24,7 +25,7 @@ const Projects = () => {
     },
     {
       id: "projects",
-      logo: <PiProjectorScreenChartBold />,
+      logo: <FaProjectDiagram />,
       title: "Projects",
     },
   ];
@@ -86,7 +87,7 @@ const Projects = () => {
 
         <SwiperHorizontal
           items={teamDetails}
-          title="YOU’LL NEVER BELIEVE WHAT YOU CAN CREATE ON YOUR PHONE"
+          title="YOU’LL NEVER BELIEVE WHAT WE CAN CREATE TOGETHER. LET'S BUILD AMAZING."
           component={Team}
         />
       </Navbar>

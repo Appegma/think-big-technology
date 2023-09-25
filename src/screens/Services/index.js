@@ -84,23 +84,21 @@ const Services = () => {
         activeMenu={activeDiv === 0 ? "services" : activeDiv}
         handleActiveMenu={scrollToDiv}
       >
-        <SwiperVertical items={projectSliderItems} component={ImageCarousel} />
         <div className={`section3 m-top-full`}>
           <Title
             title="Services"
-            paragraph={`Consequat irure aliquip esse aute minim sit ipsum sint
-                deserunt reprehenderit officia dolor aute. Occaecat deserunt
-                minim aute duis proident dolor officia in. Culpa deserunt
-                tempor nulla qui qui eu est anim ullamco elit.`}
+            paragraph={`Think of our services as the secret sauce to your tech success - you won't know how you ever lived without them. We're the culinary masterminds behind your digital feast, adding just the right blend of innovation, expertise, and reliability to every tech dish we serve. So, prepare to savor success with a side of innovation, a dash of excellence, and a pinch of 'wow,' all served up by the Think Big Technology team.`}
           />
         </div>
+        {/* <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> */}
+        
 
         {/* <div className={`relative section2`}>
           <Slider items={sliderItems} />
         </div> */}
 
         <div className={`section3`}>
-          <Heading text="Tech Stack" />
+          <Heading text="Tech We Love" />
           <div className="techStack">
             {techStackLogo.map((value, index) => (
               <Reveal>
@@ -121,6 +119,8 @@ const Services = () => {
           </div>
         </div>
       </Navbar>
+      <SwiperVertical items={projectSliderItems} component={ImageCarousel} />
+
 
       {/* <div className={`section2`}>
           <Heading text="Satisfied Clients" />

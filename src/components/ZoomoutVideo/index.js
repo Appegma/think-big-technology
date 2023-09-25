@@ -43,8 +43,15 @@ const ZoomoutVideo = ({ src }) => {
   };
 
   return (
-    <div className="zoomable-video-container" ref={containerRef}>
-      <video id="video" style={videoStyle} autoPlay muted>
+    <div className="zoomout-video-container" ref={containerRef}>
+      <video
+        id="video"
+        className="video-graphics"
+        style={videoStyle}
+        autoPlay
+        muted
+        loop
+      >
         <source src={src} className="zoomable-video" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

@@ -1,10 +1,11 @@
 import "../../App.css";
 import Navbar from "../../components/Navbar";
-import { FaAddressBook } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import ContactForm from "../../components/ContactForm";
 import ZoomoutVideo from "../../components/ZoomoutVideo";
 import thinkBigVideo from "../../assets/video/aboutVideo.mp4";
+import Matrix from "../../components/Matrix";
 
 function Contact() {
   const menuItems = [
@@ -19,7 +20,7 @@ function Contact() {
     },
     {
       id: "info",
-      logo: <FaAddressBook />,
+      logo: <FaPhoneAlt />,
       title: "Contact",
     },
   ];
@@ -63,6 +64,7 @@ function Contact() {
 
   return (
     <div className={`scroll-div container1`} id="info">
+      <Matrix />
       <Navbar
         menuItems={menuItems}
         activeMenu={activeDiv === 0 ? "info" : activeDiv}

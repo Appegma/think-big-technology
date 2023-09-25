@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BsGithub, BsTwitter, BsLinkedin, BsFacebook } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsFacebook, BsInstagram } from "react-icons/bs";
 import Cube from "../Cube";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
@@ -50,26 +50,48 @@ function Navbar({
 
       <div className="sideBarTop">
         <div className="NavbarBtn margin-l">
-          <button className="SideBarBtn">
-            <BsGithub />
-          </button>
-          <button className="SideBarBtn">
-            <BsTwitter />
-          </button>
-          <button className="SideBarBtn">
-            <BsLinkedin />
-          </button>
-          <button className="SideBarBtn">
-            <BsFacebook />
-          </button>
+          <a
+            href="https://github.com/think-big-technology"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="SideBarBtn">
+              <BsGithub />
+            </button>
+          </a>
+          <a
+            href="https://instagram.com/thinkbigtechnology"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="SideBarBtn">
+              <BsInstagram />
+            </button>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/think-big-technology-nj"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="SideBarBtn">
+              <BsLinkedin />
+            </button>
+          </a>
+          <a
+            href="https://www.facebook.com/thinkbigtechnologyusa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="SideBarBtn">
+              <BsFacebook />
+            </button>
+          </a>
         </div>
         <div className="topLinks">
           <ul className="topName">
             <li>
               <NavLink
-                className={`topNameStyle ${
-                  activeRoute === "home" && "active"
-                } `}
+                className={`topNameStyle ${activeRoute === "home" && "active"}`}
                 onClick={() => topActive("home")}
                 to={"/"}
               >

@@ -12,16 +12,7 @@ const ContactForm = () => {
     <>
       <div className="contactContainer">
         <div className="contactVideoSection">
-          <Banner title="Let’s blow (speech) bubbles" />
-
-          {/* <video autoPlay muted>
-            <source
-              src={thinkBigVideo}
-              className="zoomable-video"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video> */}
+          <Banner title="Reach Out, (Geek) Out" />
         </div>
         <div className="contactVideoDivider">
           <div className="contactVideoArea Contact-side1"></div>
@@ -35,10 +26,11 @@ const ContactForm = () => {
             <Reveal>
               <div className="contactDetail">
                 <p>
-                  We're just one click away to help you take your brand or
-                  product from great to incredible. Fill in the form to share
-                  more details about your project. Or your favorite gum flavor.
-                  Either way, we’d love to talk.
+                  We're closer than your Wi-Fi signal! Whether you want to
+                  brainstorm world-changing ideas or simply discuss your
+                  favorite gum flavor, this form is your virtual hotline to us.
+                  Spill the digital beans or just say hi – we're all ears and
+                  pixels!
                 </p>
               </div>
             </Reveal>
@@ -48,31 +40,32 @@ const ContactForm = () => {
                 <div className="imgRound">
                   <img
                     alt="user"
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    src="https://media.licdn.com/dms/image/C4E03AQHUpCDfDVOzjg/profile-displayphoto-shrink_800_800/0/1659488189096?e=1700697600&v=beta&t=QjoMUMrOnZZ0K66F_6IsDy0dqC7ERRw71O5-NUZREJk"
                   />
                 </div>
               </div>
               <Reveal>
                 <div className="contactPersonInfo">
                   <h3>
-                    Hi, I’m Vince! Let’s chat about your amazing ideas and
-                    projects.
+                    Hi, I'm Omar! Got ideas? We've got the digital coffee ready.
+                    Let's brew up some genius together.
                   </h3>
+                  <br></br>
                 </div>
               </Reveal>
-              <div className="contactPersonP">
+              {/* <div className="contactPersonP">
                 <p>
                   "I enjoy translating your thoughts to our diversely skilled
                   team for the best results"
                 </p>
-              </div>
+              </div> */}
               <Reveal>
                 <div className="contactPersonMail">
                   <div className="contactIcon">
                     <TiMessages />
                   </div>
                   <div className="contactEmail">
-                    <a href={`mailto:${email}`}>Email Vince directly</a>
+                    <a href={`mailto:${email}`}>Email Omar directly</a>
                   </div>
                 </div>
               </Reveal>
@@ -104,7 +97,7 @@ const ContactForm = () => {
             <div className="NameArea">
               <TextArea1
                 label="Tell us more about your project goals"
-                placeholder="e.g. We'd like to rebrand & improve our marketing website and platform."
+                placeholder="i.e. We'd like to rebrand & improve our marketing website and platform."
               />
             </div>
             <Reveal>

@@ -5,13 +5,44 @@
   margin: 10px auto;
 }
 
+.experienceInformation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.avatar {
+  opacity: 0.5;
+  filter: blur(5px);
+}
+
+.detail {
+  width: 100%;
+  height: auto;
+  margin: auto 20px;
+  transform: translateX(-70px);
+}
+
+.activeEmp > .avatar {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0px);
+  transition: all 0.5s ease-in-out;
+}
+
+.activeEmp > .detail {
+  transform: translateX(0px);
+  transition: all 0.5s ease-in-out;
+}
+
 .experienceHeading {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2px;
+  /* margin-bottom: 2px; */
 }
 
 .experienceSection {
@@ -21,6 +52,13 @@
   justify-content: center;
   align-items: center;
   margin: 5px 0px 5px 0px;
+}
+
+.experienceSection > img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .experienceSection > h4 {
