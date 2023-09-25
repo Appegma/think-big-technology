@@ -30,3 +30,12 @@
     font-size: 3rem;
   }
 }
+
+@media screen and (max-width:500px) {
+  .headingText > h3 {
+    font-size: 2em;
+  }
+  .headingContainer {
+    margin: 0px 25px 24px 0px;
+  }
+}

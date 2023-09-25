@@ -203,3 +203,14 @@
     font-weight: 400;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .projectContainerLive {
+    padding-left: 8px;
+  }
+
+  .projectHeadingdeatial > p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}

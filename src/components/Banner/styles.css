@@ -1,6 +1,6 @@
 .bannerContainer {
   position: relative;
-  width: 700px;
+  width: 100%;
   margin: 4.5rem 0;
   height: auto;
   z-index: 10;
@@ -25,6 +25,7 @@
 }
 
 .bannerImage {
+  width: 100%;
   max-width: 800px;
 }
 
@@ -39,19 +40,42 @@
   margin: 0;
 }
 
-@media screen and (max-width: 800px) {
-  .bannerContainer {
-    width: 100%;
-    max-width: 600px;
+@media screen and (max-width: 1000px) {
+  .bannerImageContainer {
+    margin: 6.5rem auto 4.5rem 6.5rem;
+  } 
+  .bannerImageContainer .slogan {
+    font-size: 2em;
   }
+}
+
+
+@media screen and (max-width: 800px) {
+  
   .bannerSection {
     max-width: 570px;
     width: 100%;
   }
-  .bannerText > h1 {
-    font-size: 3.8em;
+  .bannerImageContainer .slogan  {
+    font-size: 1.5em;
   }
   .bannerImageContainer {
-    margin: 6.5rem auto 4.5rem 6.5rem;
+    margin: 6.5rem auto 4.5rem 4.5rem;
   }
 }
+
+
+@media screen and (max-width: 450px) {
+  
+  .bannerSection {
+    max-width: 570px;
+    width: 100%;
+  }
+  .bannerImageContainer .slogan  {
+    font-size: 1em;
+  }
+  .bannerImageContainer {
+    margin: 6.5rem auto 4.5rem 0.5rem;
+  }
+}
+

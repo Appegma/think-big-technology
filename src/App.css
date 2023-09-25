@@ -45,6 +45,16 @@ body {
   position: relative;
 }
 
+.section8{
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 20px auto;
+  padding: 0px 45px 0px 64px;
+  z-index: 10;
+  position: relative;
+}
+
 .section1 {
   width: 100%;
   max-width: 1200px;
@@ -432,6 +442,60 @@ body {
 
 /* let make responsive of contact page  */
 
+.container11 {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.Err404 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Err404 > h1 {
+  font-size: 10em;
+  font-weight: 500;
+  margin: 0;
+  color: #0fa0ff;
+}
+
+.Err404 .text404 {
+  position: absolute;
+  font-size: 25em;
+  font-weight: 900;
+  margin: 0;
+  color: #0fa0ff50;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100vh;
+}
+.topToggleBtn {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+.toggle > button {
+  background: transparent;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #717171;
+}
+
+.toggle {
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 1500px) {
   .absoluteContainer {
     top: 35%;
@@ -442,9 +506,29 @@ body {
   .absoluteContainer {
     top: 29%;
   }
+  .margin-r {
+    margin-right: 5px;
+  }
+  .margin-r > img {
+    width: 200px;
+  }
+
+  .NavbarBtn {
+    gap: 0.7rem;
+  }
+  .topName {
+    padding: 0px;
+  }
+
+  .topNameStyle {
+    padding: 20px 10px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
+  .section {
+    padding: 91px 57px 0px 62px;
+  }
   .absoluteContainer {
     top: 25%;
   }
@@ -464,6 +548,37 @@ body {
   }
   .dividerText1 {
     font-size: 0.9rem;
+  }
+
+  .margin-r > img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .toggle {
+    display: flex;
+  }
+
+  .sideBarTop {
+    height: auto;
+    padding-top: 20px;
+  }
+
+  .topToggleBtn {
+    flex-direction: column;
+  }
+  .topName {
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .d-none {
+    display: none;
   }
 }
 
@@ -502,35 +617,46 @@ body {
   }
 }
 
-.container11 {
-  width: 100%;
-  min-height: 100vh;
+@media screen and (max-width: 450px) {
+.section8{
+  padding: 0px 5px 0px 5px;
 }
+  
+  .sideBarMain {
+    display: none;
+  }
 
-.Err404 {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .NavbarBtn {
+    margin-left: 0 !important ;
+  }
 
-.Err404 > h1 {
-  font-size: 10em;
-  font-weight: 500;
-  margin: 0;
-  color: #0fa0ff;
-}
+  .NavbarBtn {
+    gap: 0px;
+  }
 
-.Err404 .text404 {
-  position: absolute;
-  font-size: 25em;
-  font-weight: 900;
-  margin: 0;
-  color: #0fa0ff50;
-}
+  .margin-r > img {
+    width: 100px;
+  }
+  .topLinks {
+    padding: 0px;
+  }
 
-.carouselImage {
-  width: 100%;
-  height: 100vh;
+  .order1 {
+    order: 1;
+  }
+  .order2 {
+    order: 2;
+  }
+  .order3 {
+    order: 3;
+  }
+
+  .SideBarBtn {
+    font-size: 1em;
+    width: fit-content;
+    height: fit-content;
+  }
+  .section1 {
+    padding: 50px px;
+  }
 }

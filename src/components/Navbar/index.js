@@ -3,6 +3,8 @@ import { BsGithub, BsTwitter, BsLinkedin, BsFacebook } from "react-icons/bs";
 import Cube from "../Cube";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
 
 function Navbar({
   children,
@@ -10,6 +12,8 @@ function Navbar({
   activeMenu = "main",
   handleActiveMenu,
 }) {
+  const [toggle, setToggle] = useState(false);
+
   const [rotate, setRotate] = useState(true);
   const [activeRoute, setActiveRoute] = useState("Home");
 
@@ -44,12 +48,13 @@ function Navbar({
                 >
                   {data.title}
                 </div>
-              ),
+              )
           )}
       </div>
 
       <div className="sideBarTop">
-        <div className="NavbarBtn margin-l">
+        <div className="toggleBtn"></div>
+        <div className="NavbarBtn margin-l order3">
           <button className="SideBarBtn">
             <BsGithub />
           </button>
@@ -63,66 +68,72 @@ function Navbar({
             <BsFacebook />
           </button>
         </div>
-        <div className="topLinks">
-          <ul className="topName">
-            <li>
-              <NavLink
-                className={`topNameStyle ${
-                  activeRoute === "home" && "active"
-                } `}
-                onClick={() => topActive("home")}
-                to={"/"}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={`topNameStyle ${
-                  activeRoute === "about" && "active"
-                } `}
-                onClick={() => topActive("about")}
-                to={"/about"}
-              >
-                About
-              </NavLink>
-            </li>
+        <div className="topToggleBtn order2">
+          <div onClick={()=>{setToggle(!toggle)}} className="toggle">
+            <button>{toggle ? <RxCross2 /> : <GiHamburgerMenu />}</button>
+          </div>
+          <div className={`topLinks`}>
+            <ul className={` ${toggle ? "d-flex" : "d-none"}  topName`}>
+              <li>
+                <NavLink
+                  className={`topNameStyle ${
+                    activeRoute === "home" && "active"
+                  } `}
+                  onClick={() => topActive("home")}
+                  to={"/"}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={`topNameStyle ${
+                    activeRoute === "about" && "active"
+                  } `}
+                  onClick={() => topActive("about")}
+                  to={"/about"}
+                >
+                  About
+                </NavLink>
+              </li>
 
-            <li>
-              <NavLink
-                className={`topNameStyle ${
-                  activeRoute === "services" && "active"
-                }`}
-                onClick={() => topActive("services")}
-                to={"/Services"}
-              >
-                Services
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={`topNameStyle ${
-                  activeRoute === "porjects" && "active"
-                }`}
-                onClick={() => topActive("projects")}
-                to={"/Projects"}
-              >
-                Projects
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={`topNameStyle ${activeRoute === "info" && "active"}`}
-                onClick={() => topActive("info")}
-                to={"/Contact"}
-              >
-                Contact
-              </NavLink>
-            </li>
-          </ul>
+              <li>
+                <NavLink
+                  className={`topNameStyle ${
+                    activeRoute === "services" && "active"
+                  }`}
+                  onClick={() => topActive("services")}
+                  to={"/Services"}
+                >
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={`topNameStyle ${
+                    activeRoute === "porjects" && "active"
+                  }`}
+                  onClick={() => topActive("projects")}
+                  to={"/Projects"}
+                >
+                  Projects
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={`topNameStyle ${
+                    activeRoute === "info" && "active"
+                  }`}
+                  onClick={() => topActive("info")}
+                  to={"/Contact"}
+                >
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div className="NavbarBtn margin-r">
+        <div className="NavbarBtn margin-r order1">
           <img alt="Logo" src={logo} width={230} />
           {/* <button className="SideBarBtn2">Think Big Technology.</button> */}
         </div>

@@ -10,6 +10,7 @@ import {
   AiOutlineAmazon,
   AiFillLinkedin,
 } from "react-icons/ai";
+
 import { FaGoogle, FaAddressBook } from "react-icons/fa";
 import { PiProjectorScreenChartBold } from "react-icons/pi";
 import { MdOutlineAlternateEmail } from "react-icons/md";
@@ -145,7 +146,7 @@ const Home = () => {
         <ZoomableVideo src={thinkBigVideo} />
 
         <div className={`scroll-div section1 m-top-full`} id="projects">
-          <div className="section">
+          <div className="">
             <Heading text="About" />
             <div className="divider">
               <div className="dividerText">
@@ -167,7 +168,7 @@ const Home = () => {
                     data-aos-anchor-placement="bottom-bottom"
                     className="mylink"
                   >
-                    <span className="boldBlueText font_s">My Link </span>
+                    <span className="boldBlueText font_s">My Link</span>
                     <button className="SideBarBtn">
                       <BsGithub />
                     </button>
@@ -238,7 +239,7 @@ const Home = () => {
           </div> */}
         </div>
 
-        <div className="section">
+        <div className="section8">
           <Heading text="Cases" reverse />
         </div>
         {project?.length > 0 &&
@@ -253,7 +254,7 @@ const Home = () => {
             title="Contact"
             subtitle={
               <>
-                <MdOutlineAlternateEmail />{" "}
+                <MdOutlineAlternateEmail />
                 <a href={`mailto:${email}`}>{email}</a>
               </>
             }

@@ -73,7 +73,7 @@ const Projects = () => {
         activeMenu={activeDiv === 0 ? "projects" : activeDiv}
         handleActiveMenu={scrollToDiv}
       >
-        <SwiperVertical items={projectSliderItems} component={ProjectPanel} />
+        <SwiperVertical rtical items={projectSliderItems} component={ProjectPanel} />
 
         {/* <div className={`section1`}>
           <Heading text="Our Project Porfolio" reverse />
