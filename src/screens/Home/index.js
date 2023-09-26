@@ -6,20 +6,27 @@ import ProjectCard from "../../components/ProjectCard";
 import ZoomableVideo from "../../components/ZoomableVideo";
 import logo from "../../assets/logo.png";
 import {
-  AiFillFacebook,
-  AiOutlineAmazon,
-  AiFillLinkedin,
+  // AiFillFacebook,
+  // AiOutlineAmazon,
+  // AiFillLinkedin,
+  AiFillCode,
 } from "react-icons/ai";
-
-import { FaGoogle, FaAddressBook } from "react-icons/fa";
-import { PiProjectorScreenChartBold } from "react-icons/pi";
+import {
+  // FaGoogle,
+  // FaAddressBook,
+  FaDatabase,
+  FaCloudsmith,
+  FaPortrait,
+  FaPhoneAlt,
+} from "react-icons/fa";
+// import { PiProjectorScreenChartBold } from "react-icons/pi";
 import { MdOutlineAlternateEmail } from "react-icons/md";
-import { BsGithub, BsTwitter } from "react-icons/bs";
+// import { BsGithub, BsTwitter } from "react-icons/bs";
 import Title from "../../components/Title";
 import Heading from "../../components/Heading";
 import { project } from "../../data";
 import Reveal from "../../components/Animation/Reveal";
-import { GrCircleInformation } from "react-icons/gr";
+// import { GrCircleInformation } from "react-icons/gr";
 import thinkBigVideo from "../../assets/video/homeVideo.mp4";
 
 const Home = () => {
@@ -35,61 +42,48 @@ const Home = () => {
     },
     {
       id: "about",
-      logo: <GrCircleInformation className="svgColors" />,
+      logo: <FaPortrait />,
       title: "About",
     },
+    // {
+    //   id: "projects",
+    //   logo: <PiProjectorScreenChartBold />,
+    //   title: "Projects",
+    // },
     {
-      id: "projects",
-      logo: <PiProjectorScreenChartBold />,
-      title: "Projects",
+      id: "case_01",
+      logo: <AiFillCode />,
+      title: "Case 1",
     },
     {
-      id: "google",
-      logo: <FaGoogle />,
-      title: "Google",
+      id: "case_02",
+      logo: <FaDatabase />,
+      title: "Case 2",
     },
     {
-      id: "facebook",
-      logo: <AiFillFacebook />,
-      title: "Facebook",
-    },
-    {
-      id: "amazon",
-      logo: <AiOutlineAmazon />,
-      title: "Amazon",
+      id: "case_03",
+      logo: <FaCloudsmith />,
+      title: "Case 3",
     },
     {
       id: "contact",
-      logo: <FaAddressBook />,
+      logo: <FaPhoneAlt />,
       title: "Contact",
     },
   ];
 
   const aboutDetail = [
     {
-      value: `Excepteur cillum ut qui anim id. Cillum ex laboris Lorem
-    deserunt anim exercitation laboris minim duis velit nulla eu
-    aute ex. Id id exercitation exercitation proident dolor.`,
+      value: `Welcome to the epicenter of technological innovation, just beyond the bustling landscape of New York City. Founded in 2021, our journey commenced with a vision - to be at the forefront of pioneering technological solutions that reshape industries and empower businesses to thrive in a rapidly evolving digital landscape.`,
     },
     {
-      value: ` Nulla eiusmod aute ea nulla. Eiusmod eiusmod cillum ullamco
-      excepteur non. Labore sint est duis do cupidatat ipsum do
-      quis eiusmod non anim est. Fugiat ad consequat nostrud est
-      officia et nulla consequat esse enim consequat aliquip.
-      Veniam Lorem nostrud sunt aliqua.`,
+      value: `At the heart of our operation resides a team of 15 in-house developers, each a maestro in their respective domains, wielding the power of code to craft solutions that transcend the ordinary. Our assembly of brilliant minds extends beyond developers to encompass a cadre of UI/UX designers, the architects of seamless and intuitive user experiences that define excellence in the digital realm. But we don't stop there. Beyond the realms of software and design, we boast a battalion of network and IT engineers who orchestrate the complex symphony of infrastructure, ensuring uninterrupted connectivity and security in a world where data is paramount.`,
     },
     {
-      value: `Aliqua nostrud aute amet sint velit occaecat laborum fugiat
-      adipisicing sunt dolore et elit. Eu do reprehenderit amet
-      officia magna dolor exercitation adipisicing laboris ea id
-      deserunt. Excepteur amet nisi id dolore dolor veniam
-      occaecat sunt cillum incididunt nulla officia ea cupidatat.`,
+      value: `In a world where information flows ceaselessly, our social media marketing team serves as the gatekeepers of visibility and engagement, strategically deploying campaigns that captivate, engage, and convert. In every line of code, every pixel perfected, every network secured, and every campaign launched, we engineer not just products and services but also futures. Futures where innovation is a given, transformation is the norm, and excellence is the benchmark.`,
     },
     {
-      value: `  Eu exercitation ex ex et. Ea magna ut aute et officia
-      excepteur nisi anim excepteur. Adipisicing incididunt
-      cupidatat occaecat ex eu veniam velit proident est irure
-      voluptate officia minim do.`,
+      value: `Join us as we navigate the frontiers of technology, not just as observers but as pioneers. Welcome to a world where boundaries are not constraints but canvases, waiting to be filled with the brushstrokes of innovation. Explore our technological sanctuary, where ideas evolve into solutions, and aspirations ascend into achievements. This is more than technology; this is the future, and we invite you to be a part of it.`,
     },
   ];
 
@@ -139,7 +133,7 @@ const Home = () => {
         activeMenu={activeDiv === 0 ? "main" : activeDiv}
         handleActiveMenu={scrollToDiv}
       >
-        <div className={`scroll-div`} id="main">
+        <div className={`scroll-div`} style={{ zIndex: 10 }} id="main">
           <Banner image={logo} />
         </div>
 
@@ -162,13 +156,13 @@ const Home = () => {
                   </Reveal>
                 ))}
 
-                <Reveal>
+                {/* <Reveal>
                   <div
                     data-aos="fade-up"
                     data-aos-anchor-placement="bottom-bottom"
                     className="mylink"
                   >
-                    <span className="boldBlueText font_s">My Link</span>
+                   <span className="boldBlueText font_s">Our Links </span>
                     <button className="SideBarBtn">
                       <BsGithub />
                     </button>
@@ -179,7 +173,7 @@ const Home = () => {
                       <BsTwitter />
                     </button>
                   </div>
-                </Reveal>
+                </Reveal> */}
               </div>
 
               {/* <div className="dividerStatus">
@@ -239,8 +233,8 @@ const Home = () => {
           </div> */}
         </div>
 
-        <div className="section8">
-          <Heading text="Cases" reverse />
+        <div className="section">
+          <Heading text="Case Studies" reverse />
         </div>
         {project?.length > 0 &&
           project.map((value, index) => (
@@ -254,11 +248,11 @@ const Home = () => {
             title="Contact"
             subtitle={
               <>
-                <MdOutlineAlternateEmail />
+                <MdOutlineAlternateEmail />{" "}
                 <a href={`mailto:${email}`}>{email}</a>
               </>
             }
-            paragraph="Shoot me an email if you want to connect! You can also find me on Linkedin or Twitter if that's more your speed."
+            paragraph="Hit us up today. We promise our response time is faster than your internet connection."
           />
         </div>
       </Navbar>

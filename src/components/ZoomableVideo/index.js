@@ -24,7 +24,7 @@ const ZoomableVideo = ({ src }) => {
 
         // Limit the zoom range to prevent the video from becoming too small or too large
         const minScale = 3;
-        const maxScale = 6.4; // Adjust this value as needed
+        const maxScale = 6.6; // Adjust this value as needed
         const clampedScale = Math.min(maxScale, Math.max(minScale, newScale));
 
         setScale(clampedScale);
@@ -46,7 +46,15 @@ const ZoomableVideo = ({ src }) => {
 
   return (
     <div className="zoomable-video-container" ref={containerRef}>
-      <video id="video" style={videoStyle} width={300} autoPlay muted>
+      <video
+        id="video"
+        className="graphics"
+        style={videoStyle}
+        width={300}
+        autoPlay
+        muted
+        loop
+      >
         <source src={src} className="zoomable-video" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

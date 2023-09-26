@@ -82,7 +82,7 @@ function ProjectCard({
           alt={title || "McDonald’s"}
           src={
             image ||
-            "https://res.cloudinary.com/hugeinc-web/image/upload/f_auto,c_limit,w_1920,q_auto/f_auto/q_auto/v1687984438/hugeinc-website/production/case-studies/mdonalds/mcdonalds_hero_poster_bukwze.jpg"
+            "https://24-7fireprotection.com/wp-content/uploads/banner-img-15.webp"
           }
         />
       </div>

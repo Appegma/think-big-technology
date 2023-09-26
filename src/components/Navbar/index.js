@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BsGithub, BsTwitter, BsLinkedin, BsFacebook } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsFacebook, BsInstagram } from "react-icons/bs";
 import Cube from "../Cube";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";

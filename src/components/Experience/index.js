@@ -4,33 +4,61 @@ import Reveal from "../Animation/Reveal";
 import Status from "../Status";
 import "./styles.css";
 
-function Experience({ title, subtitle, location, activeYear, detail, techs }) {
+function Experience({
+  image,
+  title,
+  subtitle,
+  location,
+  activeYear,
+  detail,
+  techs,
+  active,
+}) {
   return (
     <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
       <div className="experienceContainer">
-        <div className="experienceHeading">
-          <Reveal>
-            <div className="experienceSection">
-              <h4>{title}</h4>
+        <div className={`experienceInformation ${active && "activeEmp"}`}>
+          <div className="avatar">
+            <Reveal>
+              <div className="experienceSection">
+                <img alt="Employee Avatar" src={image} />
+              </div>
+            </Reveal>
+          </div>
+          <div className="detail">
+            <div className="experienceHeading">
+              {title && (
+                <Reveal>
+                  <div className="experienceSection">
+                    <h4>{title}</h4>
+                  </div>
+                </Reveal>
+              )}
+              {activeYear && (
+                <Reveal>
+                  <div className="experienceSection">
+                    <p>{activeYear}</p>
+                  </div>
+                </Reveal>
+              )}
             </div>
-          </Reveal>
-          <Reveal>
-            <div className="experienceSection">
-              <p>{activeYear}</p>
+            <div className="experienceHeading">
+              {subtitle && (
+                <Reveal>
+                  <div className="experienceSection">
+                    <h5>{subtitle}</h5>
+                  </div>
+                </Reveal>
+              )}
+              {location && (
+                <Reveal>
+                  <div className="experienceSection">
+                    <p>{location}</p>
+                  </div>
+                </Reveal>
+              )}
             </div>
-          </Reveal>
-        </div>
-        <div className="experienceHeading">
-          <Reveal>
-            <div className="experienceSection">
-              <h5>{subtitle}</h5>
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className="experienceSection">
-              <p>{location}</p>
-            </div>
-          </Reveal>
+          </div>
         </div>
         <div className="experienceDetailSection">
           <div className="experienceDetails">

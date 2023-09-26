@@ -9,9 +9,13 @@ import {
   BiLogoRedux,
   BiLogoTypescript,
   BiLogoVuejs,
+  // BiCode,
+  BiLogoTailwindCss,
+  BiLogoPhp,
+  BiLogoPython,
 } from "react-icons/bi";
-import { AiFillFacebook, AiOutlineAmazon } from "react-icons/ai";
-import { FaGoogle, FaAddressBook } from "react-icons/fa";
+import { AiFillFacebook, AiOutlineAmazon, AiFillCode } from "react-icons/ai";
+import { FaAddressBook } from "react-icons/fa";
 import { PiProjectorScreenChartBold } from "react-icons/pi";
 import javascriptlogo from "../assets/languagesLogo/JavaScript.png";
 import reactlogo from "../assets/languagesLogo/react.png";
@@ -52,9 +56,9 @@ export const menuItems = [
     title: "Projects",
   },
   {
-    id: "google",
-    logo: <FaGoogle />,
-    title: "Google",
+    id: "code",
+    logo: <AiFillCode />,
+    title: "Code",
   },
   {
     id: "facebook",
@@ -78,61 +82,68 @@ export const techStackLogo = [
     id: "javascript",
     image: javascriptlogo,
     title: "Javascript",
-    description: "this is the description",
+    description: "Where websites go from 'meh' to 'yeah!'",
   },
   {
     id: "react",
     image: reactlogo,
     title: "React",
-    description: "this is the description",
+    description:
+      " Like a fine-tuned orchestra conductor for your web elements.",
   },
   {
     id: "html",
     image: htmllogo,
     title: "HTML",
-    description: "this is the description",
+    description:
+      "The magical ink that turns your ideas into web pages, one tag at a time.",
   },
   {
     id: "css",
     image: csslogo,
     title: "CSS",
-    description: "this is the description",
+    description:
+      "The stylish wardrobe that makes your website strut its stuff on the digital catwalk",
   },
   {
     id: "angular",
     image: angularlogo,
     title: "Angular",
-    description: "this is the description",
+    description:
+      "Because your web apps deserve more angles than an action movie.",
   },
   {
     id: "vue",
     image: vuelogo,
     title: "Vue",
-    description: "this is the description",
+    description: "Where web design goes from 'good' to 'viewtiful'!",
   },
   {
     id: "typescript",
     image: typescriptlogo,
     title: "Typescript",
-    description: "this is the description",
+    description: "Because real coding is more than just a suggestion.",
   },
   {
     id: "node",
     image: nodelogo,
     title: "Node",
-    description: "this is the description",
+    description:
+      "Where your code finds a home and throws the best JavaScript parties!",
   },
   {
     id: "github",
     image: githublogo,
     title: "Github",
-    description: "this is the description",
+    description:
+      "Where code goes to make friends and impress your digital neighbors.",
   },
   {
     id: "redux",
     image: reduxlogo,
     title: "Redux",
-    description: "this is the description",
+    description:
+      " Because even code sometimes needs a superhero sidekick to manage its state of affairs",
   },
 ];
 
@@ -187,35 +198,20 @@ export const techStack = [
     logo: <BiLogoRedux />,
     title: "Redux",
   },
-];
-
-export const clientExperience = [
   {
-    title: "Google",
-    subtitle: "Software Engineer",
-    location: "Atlanta",
-    activeYear: "2022 - Present",
-    detail:
-      "I help build and scale Google Photos. Increased throughput of our primary services by 70%. Migrated backend service from Java to Go. Also helped make it look prettier.",
-    techs: techStack.slice(0, 5),
+    id: "tailwind",
+    logo: <BiLogoTailwindCss />,
+    title: "Tailwind CSS",
   },
   {
-    title: "Facebook",
-    subtitle: "Software Engineer",
-    location: "San Francisco",
-    activeYear: "2020 - 2022",
-    detail:
-      "Senior Full Stack Engineer for Facebook Marketplace. Created a service from scratch to handle new listings. Also played some ping pong. It was fun.",
-    techs: techStack.slice(5, 8),
+    id: "php",
+    logo: <BiLogoPhp />,
+    title: "PHP",
   },
   {
-    title: "Amazon",
-    subtitle: "Software Engineer",
-    location: "Seattle",
-    activeYear: "2016 - 2020",
-    detail:
-      "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
-    techs: techStack.slice(1, 3),
+    id: "python",
+    logo: <BiLogoPython />,
+    title: "Python",
   },
 ];
 
@@ -258,44 +254,50 @@ export const carouselItems = [
 
 export const testimonial = [
   {
-    name: "mona lisa",
-    logo: null,
-    personImage:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    name: "24/7 Fire Protection Inc.",
+    logo: "https://24-7fireprotection.com/wp-content/uploads/logo.webp",
+    personImage: "https://24-7fireprotection.com/wp-content/uploads/logo.webp",
     detail:
-      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      "At 24/7, our projects are grand in scale and require precise coordination. TBT has been instrumental in not just digitizing our operations but also streamlining them.",
   },
   {
-    name: "mona lisa",
-    logo: null,
-    personImage:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    name: "Underdog Fire & Security Inc.",
+    logo: "https://www.underdogfs.com/wp-content/uploads/logo.webp",
+    personImage: "https://www.underdogfs.com/wp-content/uploads/logo.webp",
     detail:
-      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      "In our line of business at Underdog, security is paramount. Think Big Technology didn't just understand our needs – they anticipated them. ",
   },
   {
-    name: "mona lisa",
-    logo: null,
+    name: "The Halal Guys",
+    logo: "https://thehalalguys.com/wp-content/themes/halal-guys/assets/images/site-logo-2x.png",
     personImage:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
     detail:
-      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      "Think Big understood the essence of our brand and developed a system that manages our daily operations & enhances our customer's experience.",
   },
   {
-    name: "mona lisa",
-    logo: null,
+    name: "The Art of Wings",
+    logo: "https://www.theartofwings.com/wp-content/uploads/logo-footer.png",
     personImage:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
     detail:
-      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      "Wings, flavors, and speed - that’s what we’re about.. Think Big helped us speed up our order processes & introduce an intuitive online ordering platform. ",
   },
   {
-    name: "mona lisa",
-    logo: null,
+    name: "Elan",
+    logo: "http://www.elanpastry.com/wp-content/uploads/logo-light.png",
     personImage:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
     detail:
-      "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
+      "Running a cafe in the heart of a major city is no small feat. Think Big Technology came in and revolutionized our operations.",
+  },
+  {
+    name: "Broadway Supercars",
+    logo: "https://broadwaysupercars.com/storage/u-1/2021/12/23/favicon-1640290355.png",
+    personImage:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    detail:
+      "At BSC, our cars are more than just vehicles; they're an experience. Think Big grasped that concept and delivered a booking platform that is sleek, user-friendly, and mirrors the luxury of our cars.",
   },
 ];
 
@@ -324,10 +326,10 @@ export const projectSliderItems = [
 export const projectCard = [
   {
     title: "Project 1",
-    img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
+    img: "https://24-7fireprotection.com/wp-content/uploads/installation-02.webp",
     detail:
       "A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).",
-    link: "https://think-big-technology.web.app/",
+    link: "https://www.24-7fireprotection.com/",
   },
   {
     title: "Project 2",
@@ -354,61 +356,162 @@ export const projectCard = [
 
 export const project = [
   {
-    id: "google",
-    title: "Google",
-    img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
+    id: "case_01",
+    title: "24/7 Fire Protection Inc.",
+    img: "https://24-7fireprotection.com/wp-content/uploads/installation-02.webp",
     detail:
-      "A social community for painters to connect with others in their community. We handle everything backend (50K monthly active users).",
+      "One of the Top Fire Sprinkler Contractors in the New York / New Jersey metro area. A Think Big Technology customer since 2021.",
     percentage: "40%",
     percentageDescription:
-      "Of sales attributed to digital alone, in 2023 (Q1).",
+      "Year over Year growth since onboarding with Think Big Technology for enterprise IT & Software Development.",
   },
   {
-    id: "facebook",
-    title: "Facebook",
+    id: "case_02",
+    title: "Underdog Fire & Security Inc.",
     img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
     detail:
-      "A social community for painters to connect with others in their community. We handle everything backend (50K monthly active users).",
-    percentage: "40%",
-    percentageDescription:
-      "Of sales attributed to digital alone, in 2023 (Q1).",
+      "An AI Powered Security & Alarm startup in the New York / New Jersey metro area. A Think Big Technology customer since 2022.",
+    percentage: "90%",
+    percentageDescription: "Year over Year growth in their first year with us.",
   },
   {
-    id: "amazon",
-    title: "Amazon",
+    id: "case_03",
+    title: "Broadway Supercars",
     img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
     detail:
-      "A social community for painters to connect with others in their community. We handle everything backend (50K monthly active users).",
-    percentage: "40%",
+      "An Exotic Car Rental Club leading the way with innovation in an industry that desperately needed it. Think Big Technology revamped their business model and provided new strategies to create monetization streams.",
+    percentage: "54%",
     percentageDescription:
-      "Of sales attributed to digital alone, in 2023 (Q1).",
+      "Of sales attributed to digital ads, social media & web, in 2023 (Q1).",
+  },
+];
+
+export const clientExperience = [
+  {
+    id: "emp_01",
+    title: "Omar Hafez",
+    subtitle: "CEO / Lead Software Engineer",
+    // location: "USA",
+    // activeYear: "2022 - Present",
+    detail:
+      "As the founder and Lead Software Engineer at Think Big Technology, Omar brings over a decade of extensive technology expertise to the forefront. Since embarking on his technology journey in 2012, Omar has honed his skills to a razor-sharp edge, boasting a remarkable portfolio of certifications, including ITIL, CompTIA, Linux Professional Institute, Project Management Institute, and AWS. With a master's degree in IT Management under his belt, he leads our team with a visionary perspective, backed by hands-on proficiency in React and a versatile command of backend languages, from Node.js to Python, weaving innovation into the very fabric of our digital solutions.",
+    techs: techStack.slice(0, 13),
+    image: team01,
+  },
+  {
+    id: "emp_02",
+    title: "Nuwan Rathnayake",
+    subtitle: "IT Manager / Senior Systems Engineer",
+    // location: "San Francisco",
+    // activeYear: "2020 - 2022",
+    detail:
+      "Meet Nuwan, our accomplished Software and System Engineer, whose journey began in the vibrant landscape of Sri Lanka. With a demonstrated history of excellence in the information technology and services industry, Nuwan is the driving force behind our technical operations. Nuwan's expertise spans a diverse spectrum of development platforms, from the realms of Microsoft to the open-source frontier. His proficiency is a testament to his adaptability, seamlessly transitioning between technologies to craft solutions that are not only effective but also innovative.",
+    techs: techStack.slice(5, 8),
+    image: team02,
+  },
+  {
+    id: "emp_03",
+    title: "Raman Rana",
+    subtitle: "Mobile Applications Developer",
+    // location: "Seattle",
+    // activeYear: "2016 - 2020",
+    detail:
+      "Meet Raman, our seasoned mobile development virtuoso, a true maven in the realms of iOS, Android, and Flutter, bringing nine years of invaluable expertise to our team. Raman's journey in the mobile technology arena has been marked by a relentless pursuit of excellence. With close to a decade of hands-on experience, he has honed his skills to a razor-sharp edge, becoming a go-to expert in crafting dynamic, user-centric mobile applications. His proficiency extends across the entire mobile ecosystem, from the sleek and intuitive iOS interfaces to the adaptable and versatile Android platforms, not to mention the cross-platform brilliance of Flutter.",
+    techs: techStack.slice(1, 3),
+    image: team03,
+  },
+  {
+    id: "emp_04",
+    title: "Abhinav Vatsal",
+    subtitle: "Software Engineer",
+    // location: "Seattle",
+    // activeYear: "2016 - 2020",
+    detail:
+      "Meet Abhinav, the master of server-side languages and a dynamic force on our team. With a rich tapestry of five years of experience, he is our go-to expert when it comes to harnessing the power of server-side technologies, especially PHP.",
+    techs: techStack.slice(1, 3),
+    image: team04,
+  },
+  {
+    id: "emp_05",
+    title: "Salman Alim",
+    subtitle: "Data Engineer",
+    // location: "Seattle",
+    // activeYear: "2016 - 2020",
+    detail:
+      "Meet Salman, our esteemed Data Engineer, a luminary in the field with extensive experience in the world of Python. With a career steeped in data-driven insights and a wealth of knowledge, Salman is the visionary behind our data-driven strategies. Salman's journey in the realm of data science is marked by his exceptional expertise in Python, the quintessential language for data manipulation and analysis. His work is a symphony of algorithms and insights, meticulously crafted to unlock the hidden patterns within complex datasets. His analytical prowess is the compass guiding our decision-making, turning raw data into actionable intelligence.",
+    techs: techStack.slice(1, 3),
+    image: team05,
+  },
+  {
+    id: "emp_06",
+    title: "Masood Ali",
+    subtitle: "Project Manager / Wordpress Developer",
+    // location: "Seattle",
+    // activeYear: "2016 - 2020",
+    detail:
+      "Meet Masood, our seasoned technology virtuoso hailing originally from Pakistan, bringing nearly two decades of invaluable experience to our team. In his role as one of our esteemed Project Managers and top-notch WordPress Developer, Masood is the driving force behind our successful projects and digital solutions.",
+    techs: techStack.slice(1, 3),
+    image: team06,
+  },
+  {
+    id: "emp_07",
+    title: "Ana Turbino",
+    subtitle: "UI / UX Designer",
+    // location: "Seattle",
+    // activeYear: "2016 - 2020",
+    detail:
+      "In the expansive realm of UI/UX design, Ana emerges as an exemplary talent, specializing in the art of wireframing, prototyping, and branding. With her meticulous approach, every design element takes on a purposeful role, contributing to an elegant synergy of form and function. Ana's expertise goes beyond aesthetics; her creations transform digital interfaces into intuitive landscapes that guide and captivate users. Her designs are not just aesthetically pleasing; they evoke emotions and forge meaningful connections, ensuring that every user experience is a memorable journey. With Ana's exceptional skills at the helm, Think Big Technology sets a standard of excellence in the world of digital design.",
+    techs: techStack.slice(1, 3),
+    image: team07,
+  },
+  {
+    id: "emp_08",
+    title: "Camila Palma",
+    subtitle: "Social Media Manager",
+    // location: "Seattle",
+    // activeYear: "2016 - 2020",
+    detail:
+      "Meet Camila, our resident Social Media Maestro. With a degree from St. John's University in her back pocket, she ventured into the dynamic world of social media management armed with a rare blend of knowledge and creativity. Camila's journey in the digital realm is characterized by her unwavering commitment to staying at the forefront of industry trends, ensuring that every campaign she manages is not just cutting-edge but also strategically sound.",
+    techs: techStack.slice(1, 3),
+    image: team08,
+  },
+  {
+    id: "emp_09",
+    title: "Bryan Palma",
+    subtitle: "Social Media Marketing / Content Generation",
+    // location: "Seattle",
+    // activeYear: "2016 - 2020",
+    detail:
+      "Meet Bryan, the youthful dynamo of our team, responsible for the exciting realms of social media marketing and content creation. While his age might belie his experience, don't be fooled, Bryan is a digital prodigy with a talent for storytelling that's simply unmatched.Bryan's journey into the world of social media and content creation has been nothing short of extraordinary. Armed with an innate flair for cinematography and photography, he transforms ordinary moments into visually stunning narratives. His camera lens is his magic wand, conjuring up visuals that captivate and immerse audiences in brand stories.",
+    techs: techStack.slice(1, 3),
+    image: team09,
   },
 ];
 
 export const teamDetails = [
   {
     id: "1",
-    name: "John Doe",
-    designation: "CEO",
+    name: "Omar Hafez",
+    designation: "Founder / Lead Software Engineer",
     image: team01,
   },
   {
     id: "2",
-    name: "John Doe",
-    designation: "CEO",
+    name: "Nuwan Rathnayake",
+    designation: "Systems Engineer",
     image: team02,
   },
   {
     id: "3",
     name: "John Doe",
     designation: "CEO",
-    image: team03,
+    image: team08,
   },
   {
     id: "4",
     name: "John Doe",
     designation: "CEO",
-    image: team04,
+    image: team09,
   },
   {
     id: "5",
@@ -418,26 +521,26 @@ export const teamDetails = [
   },
   {
     id: "6",
-    name: "John Doe",
-    designation: "CEO",
+    name: "Ana Turbino",
+    designation: "UI / UX Designer",
     image: team06,
   },
   {
     id: "7",
-    name: "John Doe",
-    designation: "CEO",
+    name: "Masood Ali",
+    designation: "Project Manager",
     image: team07,
   },
   {
     id: "8",
-    name: "John Doe",
-    designation: "CEO",
-    image: team08,
+    name: "Camila Palma",
+    designation: "Social Media Manager",
+    image: team03,
   },
   {
     id: "9",
-    name: "John Doe",
-    designation: "CEO",
-    image: team09,
+    name: "Bryan Palma",
+    designation: "Social Media Marketing / Content Generation",
+    image: team04,
   },
 ];
