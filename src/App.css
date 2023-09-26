@@ -73,7 +73,7 @@ body {
   position: relative;
 }
 
-.section8{
+.section8 {
   width: 100%;
   max-width: 1200px;
   height: auto;
@@ -416,7 +416,7 @@ body {
   background-color: #1a1a1a;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 0px #080808;
-  padding: 30px 0px;
+  padding: 30px 10px;
   cursor: pointer;
   filter: grayscale(100%);
 }
@@ -424,6 +424,15 @@ body {
 .myDes {
   display: none;
 }
+
+.myDes{
+  width: fit-content;
+  height: auto;
+  text-align: center;
+  font-size: .9em;
+  margin-top: 10px;
+}
+
 
 .techStackItem:hover {
   transform: scale(1.1);
@@ -518,7 +527,7 @@ body {
 }
 
 .toggle {
-  height: 100%;
+  height: fit-content;
   display: none;
   justify-content: center;
   align-items: center;
@@ -589,8 +598,16 @@ body {
   }
 
   .sideBarTop {
-    height: auto;
     padding-top: 20px;
+    align-items: flex-start;
+    height: auto;
+  }
+  .h-auto {
+    height: auto;
+  }
+
+  .h-full {
+    min-height: 100vh;
   }
 
   .topToggleBtn {
@@ -642,10 +659,10 @@ body {
 }
 
 @media screen and (max-width: 450px) {
-.section8{
-  padding: 0px 5px 0px 5px;
-}
-  
+  .section8 {
+    padding: 0px 5px 0px 5px;
+  }
+
   .sideBarMain {
     display: none;
   }
@@ -680,22 +697,22 @@ body {
     width: fit-content;
     height: fit-content;
   }
-  .section{
+  .section {
     padding: 91px 10px 0px 10px;
   }
   .section1 {
     padding: 50px 40px;
   }
 
-.section3{
-  padding: 96px 10px 96px 10px;
-}
+  .section3 {
+    padding: 96px 20px 96px 20px;
+  }
 
-.section2{
-  padding: 95px 4px 0 0px;
-}
+  .section2 {
+    padding: 95px 4px 0 0px;
+  }
 
-.section4{
-  padding: 0px 0px 96px 0px;
-}
+  .section4 {
+    padding: 0px 0px 96px 0px;
+  }
 }

@@ -36,3 +36,24 @@
 .logoPadded {
   padding: 10px;
 }
+
+@media screen and (max-width:800px) {
+  .logoPadded{
+    padding: 5px;
+  }
+  .statusLogo {
+    font-size: 1em;
+  }
+}
+
+
+@media screen and (max-width:620px) {
+  .logoPadded{
+    padding: 3px;
+    margin: 2px;
+  }
+  .statusLogo {
+    font-size: .7em;
+  }
+}
+
