@@ -11,6 +11,8 @@ import SwiperHorizontal from "../../components/Swiper/SwiperHorizontal";
 import ProjectPanel from "../../components/ProjectPanel";
 import Team from "../../components/Team";
 import { FaProjectDiagram } from "react-icons/fa";
+import EnergyBalls from "../../components/EnergyBalls/index.js"
+import Loader from "../../components/Loader";
 
 const Projects = () => {
   const menuItems = [
@@ -68,30 +70,37 @@ const Projects = () => {
   };
 
   return (
-    <div className={`scroll-div container1`} id="projects">
-      <Navbar
-        menuItems={menuItems}
-        activeMenu={activeDiv === 0 ? "projects" : activeDiv}
-        handleActiveMenu={scrollToDiv}
-      >
-        <SwiperVertical rtical items={projectSliderItems} component={ProjectPanel} />
+    <>
+  
 
-        {/* <div className={`section1`}>
-          <Heading text="Our Project Porfolio" reverse />
-          <div className="projectContainer">
-            {projectCard.map((value, index) => (
-              <Card {...value} key={`portfolio-${index}`} />
-            ))}
-          </div>
-        </div> */}
+      <div className={`scroll-div container1`} id="projects">
+        <Navbar
+          menuItems={menuItems}
+          activeMenu={activeDiv === 0 ? "projects" : activeDiv}
+          handleActiveMenu={scrollToDiv}
+        >
+          <SwiperVertical
+            rtical
+            items={projectSliderItems}
+            component={ProjectPanel}
+          />
 
-        <SwiperHorizontal
-          items={teamDetails}
-          title="YOU’LL NEVER BELIEVE WHAT WE CAN CREATE TOGETHER. LET'S BUILD AMAZING."
-          component={Team}
-        />
-      </Navbar>
-    </div>
+          <SwiperHorizontal
+            items={teamDetails}
+            title="YOU’LL NEVER BELIEVE WHAT WE CAN CREATE TOGETHER. LET'S BUILD AMAZING."
+            component={Team}
+          />
+        </Navbar>
+      </div>
+      {/* <div className={`section1`}>
+        <Heading text="Our Project Porfolio" reverse />
+        <div className="projectContainer">
+          {projectCard.map((value, index) => (
+            <Card {...value} key={`portfolio-${index}`} />
+          ))}
+        </div>
+      </div> */}
+    </>
   );
 };
 export default Projects;
