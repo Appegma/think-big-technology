@@ -91,7 +91,6 @@ const Services = () => {
           />
         </div>
         {/* <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> */}
-        
 
         {/* <div className={`relative section2`}>
           <Slider items={sliderItems} />
@@ -103,16 +102,22 @@ const Services = () => {
             {techStackLogo.map((value, index) => (
               <Reveal>
                 <div className="techStackItem " key={`techStack-${index}`}>
-                  <div className="tectCardImg">
-                    <img
-                      alt="logo"
-                      style={{ marginTop: "10px", marginBottom: "20px" }}
-                      src={value.image}
-                      width={50}
-                    />
+                  <div class="card-inner">
+                    <div className="card-front">
+                      <div className="tectCardImg">
+                        <img
+                          alt="logo"
+                          style={{ marginTop: "10px", marginBottom: "20px" }}
+                          src={value.image}
+                          width={50}
+                        />
+                      </div>
+                      <p>{value.title}</p>
+                    </div>
+                    <div className="card-back">
+                      <div className="myDes">{value.description}</div>
+                    </div>
                   </div>
-                  <p>{value.title}</p>
-                  <div className="myDes">{value.description}</div>
                 </div>
               </Reveal>
             ))}
@@ -120,7 +125,6 @@ const Services = () => {
         </div>
       </Navbar>
       <SwiperVertical items={projectSliderItems} component={ImageCarousel} />
-
 
       {/* <div className={`section2`}>
           <Heading text="Satisfied Clients" />

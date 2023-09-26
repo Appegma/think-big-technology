@@ -118,3 +118,13 @@
     margin: 0;
   }
 } */
+
+@media screen and (max-width: 450px) {
+  .titleText > h1 {
+    font-size: 3em;
+  }
+
+  .titleText > p {
+    font-size: 1em;
+  }
+}
