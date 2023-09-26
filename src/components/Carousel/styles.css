@@ -66,3 +66,27 @@
   opacity: 1;
   filter: blur(0px);
 }
+
+@media screen and (max-width:800px) {
+  .carouselContainer{
+    padding: 30px 0;
+  }
+
+  .carouselContainer div img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .carouselContainer{
+    padding: 30px 0;
+  }
+
+  .carouselContainer div img {
+    max-width: 100px;
+    max-height: 100px;
+ margin: 0 15px;
+  }
+}
+

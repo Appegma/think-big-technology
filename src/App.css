@@ -106,7 +106,7 @@ body {
   max-width: 1150px;
   height: auto;
   margin: 0 auto;
-  padding: 96px 0px 96px 0px;
+  padding: 96px 50px 96px 70px;
   z-index: 10;
   position: relative;
 }
@@ -619,10 +619,6 @@ body {
     left: 28%;
   }
 
-  .section3 {
-    padding: 30px 0px 30px 0px;
-  }
-
   .divider {
     flex-wrap: wrap;
   }
@@ -684,7 +680,22 @@ body {
     width: fit-content;
     height: fit-content;
   }
-  .section1 {
-    padding: 50px px;
+  .section{
+    padding: 91px 10px 0px 10px;
   }
+  .section1 {
+    padding: 50px 40px;
+  }
+
+.section3{
+  padding: 96px 10px 96px 10px;
+}
+
+.section2{
+  padding: 95px 4px 0 0px;
+}
+
+.section4{
+  padding: 0px 0px 96px 0px;
+}
 }

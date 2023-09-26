@@ -45,20 +45,24 @@
 @media screen and (max-width: 1000px) {
   .bannerImageContainer {
     margin: 6.5rem auto 4.5rem 6.5rem;
-  } 
+  }
   .bannerImageContainer .slogan {
     font-size: 2em;
   }
+
+  .bannerText > h1 {
+    font-weight: 900;
+    font-size: 4rem;
+    
+  }
 }
 
-
 @media screen and (max-width: 800px) {
-  
   .bannerSection {
     max-width: 570px;
     width: 100%;
   }
-  .bannerImageContainer .slogan  {
+  .bannerImageContainer .slogan {
     font-size: 1.5em;
   }
   .bannerImageContainer {
@@ -66,18 +70,15 @@
   }
 }
 
-
 @media screen and (max-width: 450px) {
-  
   .bannerSection {
     max-width: 570px;
     width: 100%;
   }
-  .bannerImageContainer .slogan  {
+  .bannerImageContainer .slogan {
     font-size: 1em;
   }
   .bannerImageContainer {
     margin: 6.5rem auto 4.5rem 0.5rem;
   }
 }
-

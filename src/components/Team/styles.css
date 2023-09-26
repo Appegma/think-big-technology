@@ -3,6 +3,7 @@
   height: auto;
   max-height: 400px;
   overflow: hidden;
+  min-width: 250px;
 }
 
 .teamCard img {

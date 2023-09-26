@@ -178,3 +178,32 @@
   background-color: #0fa0ff;
   color: #fff;
 }
+
+
+@media screen and (max-width:900px) {
+
+  .projectPanelSection{
+    width: 100%;
+    height: auto;
+  }
+  .projectPanelArea{
+    padding: 50px 10px;
+  }
+  .projectPanelHeading {
+    text-align: center;
+  }
+.projectPanelHeading > h1 {
+  font-size: 3em;
+}
+.projectPanelpara{
+  text-align: center;
+}
+  
+.projectPanelpara > p {
+  font-size: .8em;
+}
+
+.projectPanelBtn{
+  display: block;
+}
+}
