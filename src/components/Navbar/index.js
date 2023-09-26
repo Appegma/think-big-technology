@@ -48,7 +48,7 @@ function Navbar({
                 >
                   {data.title}
                 </div>
-              )
+              ),
           )}
       </div>
 
@@ -59,7 +59,7 @@ function Navbar({
             <BsGithub />
           </button>
           <button className="SideBarBtn">
-            <BsTwitter />
+            <BsInstagram />
           </button>
           <button className="SideBarBtn">
             <BsLinkedin />
@@ -69,7 +69,12 @@ function Navbar({
           </button>
         </div>
         <div className="topToggleBtn order2">
-          <div onClick={()=>{setToggle(!toggle)}} className="toggle">
+          <div
+            onClick={() => {
+              setToggle(!toggle);
+            }}
+            className="toggle"
+          >
             <button>{toggle ? <RxCross2 /> : <GiHamburgerMenu />}</button>
           </div>
           <div className={`topLinks`}>
