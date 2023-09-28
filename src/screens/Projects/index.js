@@ -72,7 +72,7 @@ const Projects = () => {
 
   return (
     <>
-      {/* <div className={`scroll-div container1`} id="projects">
+      <div className={`scroll-div container1`} id="projects">
    
         <Navbar
           menuItems={menuItems}
@@ -91,9 +91,7 @@ const Projects = () => {
             component={Team}
           />
         </Navbar>
-      </div> */}  <div className="">
-          <ClipEffect />
-        </div>
+      </div>  
       {/* <div className={`section1`}>
         <Heading text="Our Project Porfolio" reverse />
         <div className="projectContainer">

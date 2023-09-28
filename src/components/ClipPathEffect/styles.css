@@ -1,4 +1,4 @@
-h3 {
+/* h3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -18,7 +18,7 @@ section {
   justify-content: center;
   align-items: center;
   clip-path: circle(0px at center center);
-}
+} */
 
 /* section{
     position: sticky;
@@ -34,7 +34,7 @@ section {
     max-width: 100vw;
     background-color: #fff;
 } */
-.containerScroll {
+/* .containerScroll {
   position: relative;
   padding: 100px;
   margin-top: 200vh;
@@ -56,16 +56,28 @@ section {
   color: #000;
   text-align: center;
   width: 100%;
+} */
+.overlay_overlay__Rb7bs2 {
+  position: relative;
+  width: calc(100vw + 4px);
+  min-height: 124vh;
+  top: -2px;
+  left: -2px;
+  z-index: -1;
+  background-color: #cc9292;
+  contain: layout;
+  pointer-events: none;
+  margin-top:150px ;
+  max-width: 100%;
+  clip-path: circle(100px at center center);
 }
-
 .overlay_overlay__Rb7bs {
   position: sticky;
   width: calc(100vw + 4px);
-  height: calc(100vh + 4px);
+  height: 124vh;
   top: -2px;
   left: -2px;
-  z-index: 20;
-  overflow: hidden;
+  z-index: 10;
   contain: layout;
   pointer-events: none;
   margin-top:-1px ;
@@ -73,14 +85,16 @@ section {
 }
 
 
-.overlay_overlay__Rb7bs>svg{
-contain: layout;
+.text-center{
+width: 100%;
+height: auto;
+position: fixed;
+top:0;
+left: 0;
+ z-index: 9999;
+ overflow: hidden;
+}
 
-min-height: 101%;
-min-width: 101%;
-margin: 0 auto;
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%,-50%);
+.text-center>h1{
+  color: #000!important;
 }

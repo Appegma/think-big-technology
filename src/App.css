@@ -185,7 +185,8 @@ body {
   position: fixed;
   width: 60px;
   height: 100vh;
-  background-color: #080808;
+  background-color: #08080850;
+  backdrop-filter: blur(20px);
   top: 0;
   left: 0;
   z-index: 20;

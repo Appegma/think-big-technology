@@ -139,25 +139,25 @@ const Home = () => {
         </div>
 
         <ZoomableVideo src={thinkBigVideo} />
-
-        <div className={`scroll-div section1 m-top-full`} id="projects">
-          <div className="">
-            <Heading text="About" />
-            <div className="divider">
-              <div className="dividerText">
-                {aboutDetail.map((value, index) => (
-                  <Reveal key={index}>
-                    <div
-                      data-aos="fade-up"
-                      data-aos-anchor-placement="bottom-bottom"
-                      className="dividerText1"
-                    >
-                      {value.value}
-                    </div>
-                  </Reveal>
-                ))}
-                <div className="clipPths"></div>
-                {/* <Reveal>
+        <ClipEffect>
+          <div className={`scroll-div section1 m-top-full`} id="projects">
+            <div className="">
+              <Heading text="About" />
+              <div className="divider">
+                <div className="dividerText">
+                  {aboutDetail.map((value, index) => (
+                    <Reveal key={index}>
+                      <div
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom"
+                        className="dividerText1"
+                      >
+                        {value.value}
+                      </div>
+                    </Reveal>
+                  ))}
+                  <div className="clipPths"></div>
+                  {/* <Reveal>
                   <div
                     data-aos="fade-up"
                     data-aos-anchor-placement="bottom-bottom"
@@ -175,9 +175,9 @@ const Home = () => {
                     </button>
                   </div>
                 </Reveal> */}
-              </div>
+                </div>
 
-              {/* <div className="dividerStatus">
+                {/* <div className="dividerStatus">
                 <div
                   data-aos="fade-up"
                   data-aos-anchor-placement="bottom-bottom"
@@ -222,20 +222,20 @@ const Home = () => {
                   </Reveal>
                 </div>
               </div> */}
+              </div>
             </div>
-          </div>
 
-          {/* <Heading text="Projects" reverse />
+            {/* <Heading text="Projects" reverse />
           <div className="projectContainer">
             {projectCard?.length > 0 &&
               projectCard.map((value, index) => (
                 <Card key={`portfolio-${index}`} {...value} />
               ))}
           </div> */}
-        </div>
+          </div>
+        </ClipEffect>
 
         <div className="section">
-          <ClipEffect />
           <Heading text="Case Studies" reverse />
 
           {project?.length > 0 &&
