@@ -8,6 +8,8 @@ import Title from "../../components/Title";
 import { projectSliderItems, techStackLogo } from "../../data";
 import Reveal from "../../components/Animation/Reveal";
 import SwiperVertical from "../../components/Swiper/SwiperVertical";
+import EnergyBalls from "../../components/EnergyBalls";
+import Loader from "../../components/Loader";
 // import ProjectPanel from "../../components/ProjectPanel";
 // import { PiProjectorScreenChartBold } from "react-icons/pi";
 // import { FaAddressBook } from "react-icons/fa";
@@ -95,7 +97,6 @@ const Services = () => {
         {/* <div className={`relative section2`}>
           <Slider items={sliderItems} />
         </div> */}
-
         <div className={`section3`}>
           <Heading text="Tech We Love" />
           <div className="techStack">

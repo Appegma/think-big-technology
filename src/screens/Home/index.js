@@ -28,6 +28,7 @@ import { project } from "../../data";
 import Reveal from "../../components/Animation/Reveal";
 // import { GrCircleInformation } from "react-icons/gr";
 import thinkBigVideo from "../../assets/video/homeVideo.mp4";
+import ClipEffect from "../../components/ClipPathEffect";
 
 const Home = () => {
   const menuItems = [
@@ -155,7 +156,7 @@ const Home = () => {
                     </div>
                   </Reveal>
                 ))}
-
+                <div className="clipPths"></div>
                 {/* <Reveal>
                   <div
                     data-aos="fade-up"
@@ -234,15 +235,20 @@ const Home = () => {
         </div>
 
         <div className="section">
+          <ClipEffect />
           <Heading text="Case Studies" reverse />
-        </div>
-        {project?.length > 0 &&
-          project.map((value, index) => (
-            <div className={`scroll-div section3`} key={value.id} id={value.id}>
-              <ProjectCard {...value} number={index + 1} />
-            </div>
-          ))}
 
+          {project?.length > 0 &&
+            project.map((value, index) => (
+              <div
+                className={`scroll-div section3`}
+                key={value.id}
+                id={value.id}
+              >
+                <ProjectCard {...value} number={index + 1} />
+              </div>
+            ))}
+        </div>
         <div className={`scroll-div section`} id="contact">
           <Title
             title="Contact"

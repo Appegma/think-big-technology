@@ -1,0 +1,86 @@
+h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  color: #fff;
+  font-size: 4em;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: circle(0px at center center);
+}
+
+/* section{
+    position: sticky;
+    width: calc(0vw + 39px);
+    height: calc(0vh + 20px);
+    top: 20px;
+    left: -2px;
+    z-index: 20;
+    overflow: hidden;
+    contain: layout;
+    pointer-events: none;
+    margin-top: -1px;
+    max-width: 100vw;
+    background-color: #fff;
+} */
+.containerScroll {
+  position: relative;
+  padding: 100px;
+  margin-top: 200vh;
+  background: #111;
+}
+
+.containerScroll h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.innerText {
+  position: fixed;
+  top: 35%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 10vw;
+  color: #000;
+  text-align: center;
+  width: 100%;
+}
+
+.overlay_overlay__Rb7bs {
+  position: sticky;
+  width: calc(100vw + 4px);
+  height: calc(100vh + 4px);
+  top: -2px;
+  left: -2px;
+  z-index: 20;
+  overflow: hidden;
+  contain: layout;
+  pointer-events: none;
+  margin-top:-1px ;
+  max-width: 100%;
+}
+
+
+.overlay_overlay__Rb7bs>svg{
+contain: layout;
+
+min-height: 101%;
+min-width: 101%;
+margin: 0 auto;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+}

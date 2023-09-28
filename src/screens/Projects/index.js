@@ -11,8 +11,9 @@ import SwiperHorizontal from "../../components/Swiper/SwiperHorizontal";
 import ProjectPanel from "../../components/ProjectPanel";
 import Team from "../../components/Team";
 import { FaProjectDiagram } from "react-icons/fa";
-import EnergyBalls from "../../components/EnergyBalls/index.js"
+import EnergyBalls from "../../components/EnergyBalls/index.js";
 import Loader from "../../components/Loader";
+import ClipEffect from "../../components/ClipPathEffect";
 
 const Projects = () => {
   const menuItems = [
@@ -71,9 +72,8 @@ const Projects = () => {
 
   return (
     <>
-  
-
-      <div className={`scroll-div container1`} id="projects">
+      {/* <div className={`scroll-div container1`} id="projects">
+   
         <Navbar
           menuItems={menuItems}
           activeMenu={activeDiv === 0 ? "projects" : activeDiv}
@@ -91,7 +91,9 @@ const Projects = () => {
             component={Team}
           />
         </Navbar>
-      </div>
+      </div> */}  <div className="">
+          <ClipEffect />
+        </div>
       {/* <div className={`section1`}>
         <Heading text="Our Project Porfolio" reverse />
         <div className="projectContainer">

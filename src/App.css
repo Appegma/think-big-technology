@@ -20,6 +20,12 @@ body {
   background-color: #111;
 }
 
+/* .clipPathArea{
+  margin-top:10px;
+    contain: layout;
+    padding: 0;
+    position: relative;
+} */
 
 .container11 {
   width: 100%;
@@ -65,6 +71,7 @@ body {
 } */
 
 .section {
+  contain: layout;
   width: 100%;
   max-width: 1150px;
   height: auto;
