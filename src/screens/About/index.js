@@ -3,9 +3,6 @@ import Navbar from "../../components/Navbar";
 import Experience from "../../components/Experience";
 import Reveal from "../../components/Animation/Reveal";
 import { useEffect, useState } from "react";
-// import { AiFillLinkedin } from "react-icons/ai";
-// import { BsGithub, BsTwitter } from "react-icons/bs";
-// import { GrCircleInformation } from "react-icons/gr";
 import Heading from "../../components/Heading";
 import { testimonial, carouselItems, clientExperience } from "../../data";
 import Testimonial from "../../components/Testimonial";
@@ -132,39 +129,9 @@ const About = () => {
                     </div>
                   </Reveal>
                 ))}
-
-                {/* <Reveal>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                    className="mylink"
-                  >
-                    <span className="boldBlueText font_s">My Link </span>
-                    <button className="SideBarBtn">
-                      <BsGithub />
-                    </button>
-                    <button className="SideBarBtn">
-                      <AiFillLinkedin />
-                    </button>
-                    <button className="SideBarBtn">
-                      <BsTwitter />
-                    </button>
-                  </div>
-                </Reveal> */}
               </div>
             </div>
           </div>
-
-          {/* <div className="section">
-            <Heading text="Testimonial" reverse />
-          </div>
-
-          <div className="testimonialContainer">
-            {testimonial?.length > 0 &&
-              testimonial.map((value, index) => (
-                <Testimonial key={`testimonial-${index}`} {...value} />
-              ))}
-          </div> */}
 
           <div className={`section3`}>
             <Heading text="Our Team" />

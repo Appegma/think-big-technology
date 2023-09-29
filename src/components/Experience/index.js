@@ -61,11 +61,11 @@ function Experience({
           </div>
         </div>
         <div className="experienceDetailSection">
-          <div className="experienceDetails">
-            <Reveal>
+          <Reveal>
+            <div className="experienceDetails">
               <p>{detail}</p>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
         </div>
         <div className="experienceDetailSection">
           <marquee behavior="alternate">

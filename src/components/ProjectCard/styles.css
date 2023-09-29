@@ -130,7 +130,8 @@
   position: relative;
 }
 
-.projectImage > img {
+.projectImage > img,
+.projectImage > video {
   position: absolute;
   inset: 0px;
   box-sizing: border-box;

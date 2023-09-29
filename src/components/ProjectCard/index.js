@@ -9,6 +9,7 @@ function ProjectCard({
   image,
   percentage,
   percentageDescription,
+  video,
 }) {
   return (
     <div className="projectContainerLive">
@@ -78,13 +79,20 @@ function ProjectCard({
         data-aos-offset="500"
         data-aos-anchor="#example-anchor"
       >
-        <img
-          alt={title || "McDonald’s"}
-          src={
-            image ||
-            "https://24-7fireprotection.com/wp-content/uploads/banner-img-15.webp"
-          }
-        />
+        {video ? (
+          <video id="video" autoPlay muted loop>
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <img
+            alt={title || "McDonald’s"}
+            src={
+              image ||
+              "https://24-7fireprotection.com/wp-content/uploads/banner-img-15.webp"
+            }
+          />
+        )}
       </div>
     </div>
   );

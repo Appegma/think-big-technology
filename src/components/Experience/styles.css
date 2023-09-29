@@ -21,7 +21,7 @@
   width: 100%;
   height: auto;
   margin: auto 20px;
-  transform: translateX(-70px);
+  transform: translateX(-100px);
 }
 
 .activeEmp > .avatar {
@@ -55,15 +55,16 @@
 }
 
 .experienceSection > img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   overflow: hidden;
   object-fit: cover;
 }
 
 .experienceSection > h4 {
-  font-size: 1.39rem;
-  margin: 2px auto;
+  font-size: 1.8rem;
+  margin: 0px auto;
 }
 .experienceSection > p {
   font-size: 1.2em;
@@ -71,8 +72,8 @@
 }
 
 .experienceSection > h5 {
-  font-size: 1.3rem;
-  margin: 2px auto;
+  font-size: 1.25rem;
+  margin: 0px auto;
   color: #0fa0ff;
 }
 
@@ -86,10 +87,12 @@
   width: 95%;
   height: auto;
 }
+
 .experienceDetails > p {
   margin: 2px 0px 2px 0;
   font-weight: 200;
-  font-size: 1.2em;
+  font-size: 1em;
+  text-align: justify;
 }
 
 .experienceStatus {
@@ -134,7 +137,7 @@
   }
   .experienceSection > h4 {
     font-size: 1.1em;
-  } 
+  }
   .experienceSection > h5 {
     font-size: 1em;
   }

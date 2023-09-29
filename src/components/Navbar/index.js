@@ -52,8 +52,8 @@ function Navbar({
           )}
       </div>
 
-      <div className={`${toggle?"h-full":"h-auto"}    sideBarTop`}>
-        <div className="toggleBtn"></div>
+      <div className={`${toggle ? "h-full" : "h-auto"}    sideBarTop`}>
+        {/* <div className="toggleBtn"></div> */}
         <div className="NavbarBtn margin-l order3">
           <button className="SideBarBtn">
             <BsGithub />
@@ -75,7 +75,9 @@ function Navbar({
             }}
             className="toggle"
           >
-            <button>{toggle ? <RxCross2 /> : <GiHamburgerMenu />}</button>
+            <button className="SideBarBtn">
+              {toggle ? <RxCross2 /> : <GiHamburgerMenu />}
+            </button>
           </div>
           <div className={`topLinks`}>
             <ul className={` ${toggle ? "d-flex" : "d-none"}  topName`}>

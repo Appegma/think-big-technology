@@ -10,23 +10,114 @@
   height: 300px;
   background-color: #fff;
   border-radius: 50%;
-  transform-origin: 100px;
-  animation: animate 5s linear infinite;
+  transform-origin: 120px;
+  animation: rotateAnimate 5s linear infinite;
   mix-blend-mode: plus-lighter;
   filter: blur(30px);
 }
 
-.energy span:nth-child(even){
-    animation-direction: reverse;
+.energy span:nth-child(1) {
+  background-color: #fbab04;
+  width: 318px;
+  animation-direction: 2.5s;
+}
+.energy span:nth-child(2) {
+  background-color: #03a1d9;
+  width: 313px;
+  animation-direction: 5s;
+}
+.energy span:nth-child(3) {
+  background-color: #f7036d;
+  width: 315px;
+  animation-direction: 7.5s;
+}
+.energy span:nth-child(4) {
+  background-color: #fbab04;
+  width: 318px;
+  animation-direction: 10s;
 }
 
-@keyframes animate {
-  0%  
-  {
-    transform: rotate(0deg);
+.energy span:nth-child(even) {
+  animation-direction: reverse;
+}
+
+.shapeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.circleLine {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: blur(1px);
+}
+.circleLine span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  pointer-events: none;
+  animation: rotateAnimate 5s linear infinite;
+}
+.circleLine span:nth-child(1) {
+  border-radius: 38% 62% 64% 36% / 43% 35% 65% 57%;
+}
+.circleLine span:nth-child(2) {
+  animation-direction: reverse;
+  border-radius: 41% 59% 40% 60% / 65% 66% 34% 35%;
+}
+.circleLine span:nth-child(3) {
+  animation-duration: 3s;
+  border-radius: 73% 27% 55% 45% / 57% 73% 27% 43%;
+}
+
+.circleLine h2 {
+  font-weight: 500;
+}
+
+@keyframes rotateAnimate {
+  0% {
+    transform: translateX(0deg);
   }
-  100% 
-  {
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .energy,
+  .energy span {
+    width: 150px;
+    height: 150px;
+  }
+  .energy span {
+    transform-origin: 60px;
+  }
+
+  .energy span:nth-child(1) {
+    width: 118px;
+  }
+  .energy span:nth-child(2) {
+    width: 113px;
+  }
+  .energy span:nth-child(3) {
+    width: 115px;
+  }
+  .energy span:nth-child(4) {
+    width: 118px;
+  }
+
+  .circleLine {
+    width: 200px;
+    height: 200px;
   }
 }

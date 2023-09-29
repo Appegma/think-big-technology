@@ -39,6 +39,11 @@ import team06 from "../assets/team/img-06.jpeg";
 import team07 from "../assets/team/img-07.jpeg";
 import team08 from "../assets/team/img-08.jpeg";
 import team09 from "../assets/team/img-09.jpeg";
+import team10 from "../assets/team/img-10.png";
+import video01 from "../assets/case/video-01.MOV";
+import video02 from "../assets/case/video-02.MOV";
+import video03 from "../assets/case/video-03.MOV";
+import broadwaysupercars from "../assets/testimonials/broadway-supercar.png";
 
 export const menuItems = [
   {
@@ -293,7 +298,7 @@ export const testimonial = [
   },
   {
     name: "Broadway Supercars",
-    logo: "https://broadwaysupercars.com/storage/u-1/2021/12/23/favicon-1640290355.png",
+    logo: broadwaysupercars,
     personImage:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
     detail:
@@ -358,7 +363,9 @@ export const project = [
   {
     id: "case_01",
     title: "24/7 Fire Protection Inc.",
-    img: "https://24-7fireprotection.com/wp-content/uploads/installation-02.webp",
+    video: video01,
+    image:
+      "https://24-7fireprotection.com/wp-content/uploads/installation-02.webp",
     detail:
       "One of the Top Fire Sprinkler Contractors in the New York / New Jersey metro area. A Think Big Technology customer since 2021.",
     percentage: "40%",
@@ -368,7 +375,9 @@ export const project = [
   {
     id: "case_02",
     title: "Underdog Fire & Security Inc.",
-    img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
+    video: video02,
+    image:
+      "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
     detail:
       "An AI Powered Security & Alarm startup in the New York / New Jersey metro area. A Think Big Technology customer since 2022.",
     percentage: "90%",
@@ -377,7 +386,9 @@ export const project = [
   {
     id: "case_03",
     title: "Broadway Supercars",
-    img: "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
+    video: video03,
+    image:
+      "https://static.wixstatic.com/media/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg/v1/fill/w_640,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94a51f_73781c63931a4bbea817499e1ea5820a~mv2.jpg",
     detail:
       "An Exotic Car Rental Club leading the way with innovation in an industry that desperately needed it. Think Big Technology revamped their business model and provided new strategies to create monetization streams.",
     percentage: "54%",
@@ -486,6 +497,17 @@ export const clientExperience = [
     techs: techStack.slice(1, 3),
     image: team09,
   },
+  {
+    id: "emp_11",
+    title: "Bryan Palma",
+    subtitle: "Social Media Marketing / Content Generation",
+    // location: "Seattle",
+    // activeYear: "2016 - 2020",
+    detail:
+      "Meet Bryan, the youthful dynamo of our team, responsible for the exciting realms of social media marketing and content creation. While his age might belie his experience, don't be fooled, Bryan is a digital prodigy with a talent for storytelling that's simply unmatched.Bryan's journey into the world of social media and content creation has been nothing short of extraordinary. Armed with an innate flair for cinematography and photography, he transforms ordinary moments into visually stunning narratives. His camera lens is his magic wand, conjuring up visuals that captivate and immerse audiences in brand stories.",
+    techs: techStack.slice(1, 3),
+    image: team10,
+  },
 ];
 
 export const teamDetails = [
@@ -542,5 +564,20 @@ export const teamDetails = [
     name: "Bryan Palma",
     designation: "Social Media Marketing / Content Generation",
     image: team04,
+  },
+];
+
+export const aboutDetail = [
+  {
+    value: `Welcome to the epicenter of technological innovation, just beyond the bustling landscape of New York City. Founded in 2021, our journey commenced with a vision - to be at the forefront of pioneering technological solutions that reshape industries and empower businesses to thrive in a rapidly evolving digital landscape.`,
+  },
+  {
+    value: `At the heart of our operation resides a team of 15 in-house developers, each a maestro in their respective domains, wielding the power of code to craft solutions that transcend the ordinary. Our assembly of brilliant minds extends beyond developers to encompass a cadre of UI/UX designers, the architects of seamless and intuitive user experiences that define excellence in the digital realm. But we don't stop there. Beyond the realms of software and design, we boast a battalion of network and IT engineers who orchestrate the complex symphony of infrastructure, ensuring uninterrupted connectivity and security in a world where data is paramount.`,
+  },
+  {
+    value: `In a world where information flows ceaselessly, our social media marketing team serves as the gatekeepers of visibility and engagement, strategically deploying campaigns that captivate, engage, and convert. In every line of code, every pixel perfected, every network secured, and every campaign launched, we engineer not just products and services but also futures. Futures where innovation is a given, transformation is the norm, and excellence is the benchmark.`,
+  },
+  {
+    value: `Join us as we navigate the frontiers of technology, not just as observers but as pioneers. Welcome to a world where boundaries are not constraints but canvases, waiting to be filled with the brushstrokes of innovation. Explore our technological sanctuary, where ideas evolve into solutions, and aspirations ascend into achievements. This is more than technology; this is the future, and we invite you to be a part of it.`,
   },
 ];

@@ -57,21 +57,88 @@ section {
   text-align: center;
   width: 100%;
 } */
-.overlay_overlay__Rb7bs2 {
+
+.transitionContainer {
   position: relative;
-  width: calc(100vw + 4px);
-  min-height: 124vh;
+  z-index: -1;
+  margin-top: 45px;
+  height: 1200px;
+  /* padding: 100px;
+  margin-top: 200vh;
+  background: #111; */
+}
+
+.containerFixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 120vh;
+  z-index: -1;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 80px; */
+}
+
+.overlay {
+  position: relative;
+  width: 100vw;
+  height: 120vh;
+  /* top: -15px; */
+  padding-top: 90px;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform 0.4s ease-in;
+
+  background-color: #fff;
+  /* left: -2px; */
+}
+
+.overlay,
+.overlay .title > h1,
+.overlay .headingText > h3,
+.overlay hr,
+.overlay .projectheading1 > h2,
+.overlay .projectheading1 > h1,
+.overlay .projectheading2 > h1,
+.overlay .projectHeadingdeatial > p,
+.overlay .projectPercendetail > p,
+.overlay .dividerText .dividerText1 {
+  background-color: #ebecf3;
+  color: #111;
+  border-color: #111;
+}
+
+/* .overlay {
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+} */
+/* .overlay .title > h1 {
+  z-index: 999;
+  color: #111;
+  font-size: 5em;
+  text-align: center;
+} */
+
+/* .overlay {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
   top: -2px;
   left: -2px;
   z-index: -1;
   background-color: #cc9292;
   contain: layout;
   pointer-events: none;
-  margin-top:150px ;
+  margin-top: 150px;
   max-width: 100%;
   clip-path: circle(100px at center center);
 }
-.overlay_overlay__Rb7bs {
+.overlayMasked {
   position: sticky;
   width: calc(100vw + 4px);
   height: 124vh;
@@ -80,21 +147,20 @@ section {
   z-index: 10;
   contain: layout;
   pointer-events: none;
-  margin-top:-1px ;
+  margin-top: -1px;
   max-width: 100%;
 }
 
-
-.text-center{
-width: 100%;
-height: auto;
-position: fixed;
-top:0;
-left: 0;
- z-index: 9999;
- overflow: hidden;
+.text-center {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
 }
 
-.text-center>h1{
-  color: #000!important;
-}
+.text-center > h1 {
+  color: #000 !important;
+} */
