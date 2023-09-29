@@ -116,7 +116,7 @@ const Home = () => {
         <ZoomableVideo src={thinkBigVideo} />
 
         <ClipEffect>
-          <div className={`scroll-div section1 m-top-full`} id="about">
+          <div className={`scroll-div`} id="about">
             <div className="">
               <Heading text="About" />
               <div className="divider">
