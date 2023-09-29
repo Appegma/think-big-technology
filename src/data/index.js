@@ -498,13 +498,13 @@ export const clientExperience = [
     image: team09,
   },
   {
-    id: "emp_11",
-    title: "Bryan Palma",
-    subtitle: "Social Media Marketing / Content Generation",
+    id: "emp_10",
+    title: "Muhammad R. Paracha",
+    subtitle: "Wordpress Developer",
     // location: "Seattle",
     // activeYear: "2016 - 2020",
     detail:
-      "Meet Bryan, the youthful dynamo of our team, responsible for the exciting realms of social media marketing and content creation. While his age might belie his experience, don't be fooled, Bryan is a digital prodigy with a talent for storytelling that's simply unmatched.Bryan's journey into the world of social media and content creation has been nothing short of extraordinary. Armed with an innate flair for cinematography and photography, he transforms ordinary moments into visually stunning narratives. His camera lens is his magic wand, conjuring up visuals that captivate and immerse audiences in brand stories.",
+      "Muhammad R. Paracha is a skilled WordPress Developer recognized for his expertise in crafting elegant and functional websites. With a passion for coding and a keen eye for design, he transforms visions into captivating online experiences. Muhammad's dedication lies in creating websites that not only aesthetically impress but also deliver seamless user experiences. He thrives on staying updated with the latest trends int eh dynamic field of web development, ensuring his projects are at the forefront of design and functionality.",
     techs: techStack.slice(1, 3),
     image: team10,
   },
