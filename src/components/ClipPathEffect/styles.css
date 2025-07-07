@@ -8,7 +8,7 @@
 .containerFixed,
 .overlay {
   width: 100vw;
-  height: 120vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
